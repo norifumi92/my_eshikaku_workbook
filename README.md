@@ -11,4 +11,9 @@ Quartoを使用して、本の形式（PDF / HTML / EPUB）で出力できます
 
 ```bash
 quarto preview
+```
 
+### 📚 参考資料・ドキュメント
+
+- [Quarto公式：Books の書き方](https://quarto.org/docs/books/)
+  本プロジェクトの構成や、複数章にわたる執筆のためのガイドライン。
