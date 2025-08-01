@@ -1,0 +1,12 @@
+# 解答一覧
+
+## 4. 自然言語処理 (Natural Language Processing)
+問1. B  
+問2. C  
+
+## 7. 深層強化学習 (Reinforcement Learning)
+問1. D  
+
+## 8. 様々な学習方法 (Various Learning Methods)
+問1. A  
+問2. A  

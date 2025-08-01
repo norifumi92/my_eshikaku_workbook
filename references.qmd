@@ -1,4 +1,6 @@
-# References {.unnumbered}
+# 参考文献
 
-::: {#refs}
-:::
+問題作成及び内容の理解を深めるにあたり、以下のリソースを参考にしました。
+
+- [【深層学習】Transformer - Multi-Head Attentionを理解してやろうじゃないの【ディープラーニングの世界vol.28】](https://www.youtube.com/watch?v=50XvMaWhiTY)
+- [情報理論：KLダイバージェンス](https://note.com/kikaben/n/n1b8b8fa1a0e6)

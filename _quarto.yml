@@ -2,18 +2,33 @@ project:
   type: book
 
 book:
-  title: "統計準1級・E資格 レベルアップ問題集"
+  title: "E資格 レベルアップ問題集"
   author: "IRIE NORIFUMI"
   chapters:
     - index.qmd
     - intro.qmd
-    - summary.qmd
+    # - summary.qmd
+    - part: "2.機械学習(Machine Learning)"
+      chapters:
+      - chapters/01_ml_basics.qmd
+    - part: "3.深層学習基礎(Basic Deep-learning)"
+      chapters:
+      - chapters/02_feedforward_neural_network.qmd
+      - chapters/03_regularization.qmd
+    - part: "4.深層学習応用(Advanced Deep-learning)"
+      chapters:
+      - chapters/part4/04_natural_language_processing.qmd
+      - chapters/part4/07_reinforcement_learning.qmd
+      - chapters/part4/08_various_learning_methods.qmd
+      - chapters/part4/09_explainability.qmd
+    - chapters/answer_key.qmd
     - references.qmd
 
-bibliography: references.bib
+# bibliography: references.bib
 
 format:
   html:
+    number-sections: false
     theme:
       - cosmo
       - brand

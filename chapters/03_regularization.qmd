@@ -1,0 +1,25 @@
+# 3. 深層モデルのための正則化 (Regularization for Deep Learning)
+
+### 問1
+
+損失関数に正則化項を加えることでモデルの過学習を防ぐことができます。このとき、損失関数 \( J(w; X, y) \) に正則化項 \( \Omega(w) \) を加えた目的関数の一般的な定式化として最も適切なものはどれか？
+
+1.
+$$
+\tilde{J}(w) = J(w; X, y) + \alpha \cdot \Omega(w)
+$$
+
+2.
+$$
+\tilde{J}(w) = \alpha \cdot J(w; X, y) + \Omega(w)
+$$
+
+3.
+$$
+\tilde{J}(w) = J(w; X, y) - \alpha \cdot \Omega(w)
+$$
+
+4.
+$$
+\tilde{J}(w) = J(w; X, y) + \Omega(w) - \alpha
+$$
