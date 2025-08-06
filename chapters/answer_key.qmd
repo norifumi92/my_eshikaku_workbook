@@ -1,12 +1,34 @@
 # 解答一覧
 
+# 第3章.深層学習基礎(Basic Deep-learning)
+## 3. 畳み込みニューラルネットワーク (Convolutional Neural)
+問1. B
+
+# 第4章.深層学習応用(Advanced Deep-learning)
+## 2. 物体検出(Object Detection)
+問1. A  
+
+## 3. Semantic Segmentation (Semantic Segmentation)
+問1. C  
+
 ## 4. 自然言語処理 (Natural Language Processing)
 問1. B  
 問2. C  
 
+## 5. Recurrent Neural Network (Recurrent Neural Network)
+問1. D  
+
+## 6. 生成モデル (Generative Model)
+問1. C  
+
 ## 7. 深層強化学習 (Reinforcement Learning)
 問1. D  
+問2. A  
 
 ## 8. 様々な学習方法 (Various Learning Methods)
 問1. A  
 問2. A  
+
+# 第5章.開発・運用環境(Infrastructure)
+## 4. アクセラレーター (Accelerator)
+問1. A

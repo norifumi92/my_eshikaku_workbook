@@ -13,14 +13,21 @@ book:
       - chapters/01_ml_basics.qmd
     - part: "3.深層学習基礎(Basic Deep-learning)"
       chapters:
-      - chapters/02_feedforward_neural_network.qmd
-      - chapters/03_regularization.qmd
-    - part: "4.深層学習応用(Advanced Deep-learning)"
+      - chapters/part3/02_feedforward_neural_network.qmd
+      - chapters/part3/03_convolutional_neural_network.qmd
+    - part: "第4章.深層学習応用(Advanced Deep-learning)"
       chapters:
+      - chapters/part4/02_object_detection.qmd
+      - chapters/part4/03_semantic_segmentation.qmd
       - chapters/part4/04_natural_language_processing.qmd
+      - chapters/part4/05_recurrent_neural_network.qmd
+      - chapters/part4/06_generative_model.qmd
       - chapters/part4/07_reinforcement_learning.qmd
       - chapters/part4/08_various_learning_methods.qmd
       - chapters/part4/09_explainability.qmd
+    - part: "第5章.開発・運用環境(Infrastructure)"
+      chapters:
+      - chapters/part5/04_accelerator.qmd
     - chapters/answer_key.qmd
     - references.qmd
 

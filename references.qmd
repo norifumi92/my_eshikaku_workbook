@@ -4,3 +4,5 @@
 
 - [【深層学習】Transformer - Multi-Head Attentionを理解してやろうじゃないの【ディープラーニングの世界vol.28】](https://www.youtube.com/watch?v=50XvMaWhiTY)
 - [情報理論：KLダイバージェンス](https://note.com/kikaben/n/n1b8b8fa1a0e6)
+- [E資格のためのフローベース生成モデル](https://engineernoi.hatenablog.com/entry/2024/05/12/233601)
+- [E資格合格へのロードマップ](https://ai4mdx.com/index.html)
