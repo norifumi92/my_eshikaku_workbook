@@ -18,6 +18,7 @@ book:
       - chapters/part3/03_convolutional_neural_network.qmd
     - part: "第4章.深層学習応用(Advanced Deep-learning)"
       chapters:
+      - chapters/part4/01_image_recognition.qmd
       - chapters/part4/02_object_detection.qmd
       - chapters/part4/03_semantic_segmentation.qmd
       - chapters/part4/04_natural_language_processing.qmd

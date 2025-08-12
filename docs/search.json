@@ -1,0 +1,123 @@
+[
+  {
+    "objectID": "chapters/part4/01_image_recognition.html",
+    "href": "chapters/part4/01_image_recognition.html",
+    "title": "1. 画像認識(Image Recognition)",
+    "section": "",
+    "text": "問1\nVision Transformer（ViT）の特徴として正しいものを1つ選べ。\nA. 画像を1ピクセルごとに分割して系列として入力し、CNNよりもパラメータ数が少なくなる傾向がある。\nB. 画像を固定サイズのパッチに分割し、系列としてTransformerに入力するため、自己注意機構で画像全体の依存関係を学習できる。\nC. CNNの畳み込み層を多用するため、自然言語処理タスクへの応用は困難である。\nD. 入力画像サイズを大きくしてもパラメータ数が比例して増えるため、高解像度画像の学習は計算負荷が低い。",
+    "crumbs": [
+      "第4章.深層学習応用(Advanced Deep-learning)",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>1. 画像認識(Image Recognition)</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/answer_key.html",
+    "href": "chapters/answer_key.html",
+    "title": "解答一覧",
+    "section": "",
+    "text": "第3章.深層学習基礎(Basic Deep-learning)",
+    "crumbs": [
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>解答一覧</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/answer_key.html#畳み込みニューラルネットワーク-convolutional-neural",
+    "href": "chapters/answer_key.html#畳み込みニューラルネットワーク-convolutional-neural",
+    "title": "解答一覧",
+    "section": "3. 畳み込みニューラルネットワーク (Convolutional Neural)",
+    "text": "3. 畳み込みニューラルネットワーク (Convolutional Neural)\n問1. B",
+    "crumbs": [
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>解答一覧</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/answer_key.html#物体検出object-detection",
+    "href": "chapters/answer_key.html#物体検出object-detection",
+    "title": "解答一覧",
+    "section": "2. 物体検出(Object Detection)",
+    "text": "2. 物体検出(Object Detection)\n問1. A\n問2. A: Region-based Convolutional Neural Network\nB: Region Proposal(領域探索)\nC: Selective Search",
+    "crumbs": [
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>解答一覧</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/answer_key.html#semantic-segmentation-semantic-segmentation",
+    "href": "chapters/answer_key.html#semantic-segmentation-semantic-segmentation",
+    "title": "解答一覧",
+    "section": "3. Semantic Segmentation (Semantic Segmentation)",
+    "text": "3. Semantic Segmentation (Semantic Segmentation)\n問1. C",
+    "crumbs": [
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>解答一覧</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/answer_key.html#自然言語処理-natural-language-processing",
+    "href": "chapters/answer_key.html#自然言語処理-natural-language-processing",
+    "title": "解答一覧",
+    "section": "4. 自然言語処理 (Natural Language Processing)",
+    "text": "4. 自然言語処理 (Natural Language Processing)\n問1. B\n問2. C",
+    "crumbs": [
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>解答一覧</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/answer_key.html#recurrent-neural-network-recurrent-neural-network",
+    "href": "chapters/answer_key.html#recurrent-neural-network-recurrent-neural-network",
+    "title": "解答一覧",
+    "section": "5. Recurrent Neural Network (Recurrent Neural Network)",
+    "text": "5. Recurrent Neural Network (Recurrent Neural Network)\n問1. D\n問2. LSTM: 忘却ゲート(Forget Gate)、入力ゲート(Input Gate)、出力ゲート(Output Gate)、記憶セル(Memory Cell)\nGRU: リセットゲート(Reset Gate)、更新ゲート(Update Gate)",
+    "crumbs": [
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>解答一覧</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/answer_key.html#生成モデル-generative-model",
+    "href": "chapters/answer_key.html#生成モデル-generative-model",
+    "title": "解答一覧",
+    "section": "6. 生成モデル (Generative Model)",
+    "text": "6. 生成モデル (Generative Model)\n問1. C",
+    "crumbs": [
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>解答一覧</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/answer_key.html#深層強化学習-reinforcement-learning",
+    "href": "chapters/answer_key.html#深層強化学習-reinforcement-learning",
+    "title": "解答一覧",
+    "section": "7. 深層強化学習 (Reinforcement Learning)",
+    "text": "7. 深層強化学習 (Reinforcement Learning)\n問1. D\n問2. A",
+    "crumbs": [
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>解答一覧</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/answer_key.html#様々な学習方法-various-learning-methods",
+    "href": "chapters/answer_key.html#様々な学習方法-various-learning-methods",
+    "title": "解答一覧",
+    "section": "8. 様々な学習方法 (Various Learning Methods)",
+    "text": "8. 様々な学習方法 (Various Learning Methods)\n問1. A\n問2. A",
+    "crumbs": [
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>解答一覧</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/answer_key.html#深層学習の説明性-explainability-of-deep-learning",
+    "href": "chapters/answer_key.html#深層学習の説明性-explainability-of-deep-learning",
+    "title": "解答一覧",
+    "section": "9. 深層学習の説明性 (Explainability of Deep-learning)",
+    "text": "9. 深層学習の説明性 (Explainability of Deep-learning)\n問1. A\n問2. B",
+    "crumbs": [
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>解答一覧</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/answer_key.html#アクセラレーター-accelerator",
+    "href": "chapters/answer_key.html#アクセラレーター-accelerator",
+    "title": "解答一覧",
+    "section": "4. アクセラレーター (Accelerator)",
+    "text": "4. アクセラレーター (Accelerator)\n問1. A",
+    "crumbs": [
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>解答一覧</span>"
+    ]
+  }
+]

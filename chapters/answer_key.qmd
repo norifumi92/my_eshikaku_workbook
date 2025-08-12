@@ -5,6 +5,9 @@
 問1. B
 
 # 第4章.深層学習応用(Advanced Deep-learning)
+# 1. 画像認識(Image Recognition)
+問1. B  
+
 ## 2. 物体検出(Object Detection)
 問1. A  
 問2. A: Region-based Convolutional Neural Network  
