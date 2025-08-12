@@ -27,3 +27,7 @@ A. np.random.randn(n_input * n_hidden, n_hidden * 3)
 B. np.random.randn(n_input * n_hidden, n_hidden * 4)  
 C. np.random.randn(n_input + n_hidden, n_hidden * 3)  
 D np.random.randn(n_input + n_hidden, n_hidden * 4)
+
+### 問2
+
+LSTMとGRU(Gated Recurrent Unit)について、それぞれに含まれるゲートの名称を答えよ。

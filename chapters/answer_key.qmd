@@ -7,6 +7,9 @@
 # 第4章.深層学習応用(Advanced Deep-learning)
 ## 2. 物体検出(Object Detection)
 問1. A  
+問2. A: Region-based Convolutional Neural Network  
+B: Region Proposal(領域探索)  
+C: Selective Search
 
 ## 3. Semantic Segmentation (Semantic Segmentation)
 問1. C  
@@ -17,6 +20,8 @@
 
 ## 5. Recurrent Neural Network (Recurrent Neural Network)
 問1. D  
+問2. LSTM: 忘却ゲート(Forget Gate)、入力ゲート(Input Gate)、出力ゲート(Output Gate)、記憶セル(Memory Cell)  
+     GRU: リセットゲート(Reset Gate)、更新ゲート(Update Gate)
 
 ## 6. 生成モデル (Generative Model)
 問1. C  
@@ -28,6 +33,10 @@
 ## 8. 様々な学習方法 (Various Learning Methods)
 問1. A  
 問2. A  
+
+## 9. 深層学習の説明性 (Explainability of Deep-learning)
+問1. A  
+問2. B
 
 # 第5章.開発・運用環境(Infrastructure)
 ## 4. アクセラレーター (Accelerator)
