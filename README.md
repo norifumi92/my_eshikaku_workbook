@@ -3,10 +3,15 @@
 統計検定２級レベルの知識を有する識者がE資格に対応できるまでレベルアップをすることを目的とした問題集を作成しています。
 Quartoを使用して、本の形式（PDF / HTML / EPUB）で出力できます。
 
-## 📖 公開版
+## 公開版
 
 本問題集は以下のリンクで公開しています：
 https://norifumi92.github.io/my_eshikaku_jssc_semi1_book/
+
+## 📞 Q&A・お問い合わせ
+
+間違いの指摘、問題に関する質問、Quartoに関する問い合わせ等あれば以下の連絡先へご連絡ください。  
+📧 norifumiiriebiz@gmail.com
 
 ## 🚀 Quartoの使い方
 
