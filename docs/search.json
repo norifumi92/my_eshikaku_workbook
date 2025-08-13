@@ -17,7 +17,7 @@
     "section": "",
     "text": "第3章.深層学習基礎(Basic Deep-learning)",
     "crumbs": [
-      "<span class='chapter-number'>15</span>  <span class='chapter-title'>解答一覧</span>"
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>解答一覧</span>"
     ]
   },
   {
@@ -27,7 +27,7 @@
     "section": "3. 畳み込みニューラルネットワーク (Convolutional Neural)",
     "text": "3. 畳み込みニューラルネットワーク (Convolutional Neural)\n問1. B",
     "crumbs": [
-      "<span class='chapter-number'>15</span>  <span class='chapter-title'>解答一覧</span>"
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>解答一覧</span>"
     ]
   },
   {
@@ -37,7 +37,7 @@
     "section": "2. 物体検出(Object Detection)",
     "text": "2. 物体検出(Object Detection)\n問1. A\n問2. A: Region-based Convolutional Neural Network\nB: Region Proposal(領域探索)\nC: Selective Search",
     "crumbs": [
-      "<span class='chapter-number'>15</span>  <span class='chapter-title'>解答一覧</span>"
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>解答一覧</span>"
     ]
   },
   {
@@ -47,7 +47,7 @@
     "section": "3. Semantic Segmentation (Semantic Segmentation)",
     "text": "3. Semantic Segmentation (Semantic Segmentation)\n問1. C",
     "crumbs": [
-      "<span class='chapter-number'>15</span>  <span class='chapter-title'>解答一覧</span>"
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>解答一覧</span>"
     ]
   },
   {
@@ -57,7 +57,7 @@
     "section": "4. 自然言語処理 (Natural Language Processing)",
     "text": "4. 自然言語処理 (Natural Language Processing)\n問1. B\n問2. C",
     "crumbs": [
-      "<span class='chapter-number'>15</span>  <span class='chapter-title'>解答一覧</span>"
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>解答一覧</span>"
     ]
   },
   {
@@ -67,7 +67,7 @@
     "section": "5. Recurrent Neural Network (Recurrent Neural Network)",
     "text": "5. Recurrent Neural Network (Recurrent Neural Network)\n問1. D\n問2. LSTM: 忘却ゲート(Forget Gate)、入力ゲート(Input Gate)、出力ゲート(Output Gate)、記憶セル(Memory Cell)\nGRU: リセットゲート(Reset Gate)、更新ゲート(Update Gate)",
     "crumbs": [
-      "<span class='chapter-number'>15</span>  <span class='chapter-title'>解答一覧</span>"
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>解答一覧</span>"
     ]
   },
   {
@@ -77,7 +77,7 @@
     "section": "6. 生成モデル (Generative Model)",
     "text": "6. 生成モデル (Generative Model)\n問1. C",
     "crumbs": [
-      "<span class='chapter-number'>15</span>  <span class='chapter-title'>解答一覧</span>"
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>解答一覧</span>"
     ]
   },
   {
@@ -87,7 +87,7 @@
     "section": "7. 深層強化学習 (Reinforcement Learning)",
     "text": "7. 深層強化学習 (Reinforcement Learning)\n問1. D\n問2. A",
     "crumbs": [
-      "<span class='chapter-number'>15</span>  <span class='chapter-title'>解答一覧</span>"
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>解答一覧</span>"
     ]
   },
   {
@@ -97,7 +97,7 @@
     "section": "8. 様々な学習方法 (Various Learning Methods)",
     "text": "8. 様々な学習方法 (Various Learning Methods)\n問1. A\n問2. A",
     "crumbs": [
-      "<span class='chapter-number'>15</span>  <span class='chapter-title'>解答一覧</span>"
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>解答一覧</span>"
     ]
   },
   {
@@ -107,7 +107,7 @@
     "section": "9. 深層学習の説明性 (Explainability of Deep-learning)",
     "text": "9. 深層学習の説明性 (Explainability of Deep-learning)\n問1. A\n問2. B",
     "crumbs": [
-      "<span class='chapter-number'>15</span>  <span class='chapter-title'>解答一覧</span>"
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>解答一覧</span>"
     ]
   },
   {
@@ -117,7 +117,82 @@
     "section": "4. アクセラレーター (Accelerator)",
     "text": "4. アクセラレーター (Accelerator)\n問1. A",
     "crumbs": [
-      "<span class='chapter-number'>15</span>  <span class='chapter-title'>解答一覧</span>"
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>解答一覧</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/part3/01_feedforward_neural_network.html",
+    "href": "chapters/part3/01_feedforward_neural_network.html",
+    "title": "1. 順伝播型ネットワーク (Feedforward Neural Network)",
+    "section": "",
+    "text": "問1\n以下は2値分類のバイナリクロスエントロピー損失を実装するコードである。空欄（ア）に入る正しいコードを選べ。\nimport numpy as np\n\ndef binary_crossentropy(y_true, y_pred):\n    \"\"\"\n    y_true: 真のラベル [batch_size] (0 or 1)\n    y_pred: 予測確率 [batch_size] (0~1の値)\n    \"\"\"\n    # クリッピング\n    epsilon = 1e-15\n    y_pred = （ア）\n    \n    # バイナリクロスエントロピー計算\n    loss = -np.mean(y_true * np.log(y_pred) + (1 - y_true) * np.log(1 - y_pred))\n    return loss\nA. np.clip(y_pred, epsilon, 1.0)\nB. np.clip(y_pred, 0.0, 1 - epsilon)\nC. np.clip(y_pred, epsilon, 1 - epsilon)\nD. np.maximum(y_pred, epsilon)\n\n\n問2\n以下は多クラス分類のソフトマックス関数を実装するコードである。数値安定性を考慮した空欄（ア）、（イ）に入る正しいコードを選べ。\nimport numpy as np\n\ndef softmax(x):\n    \"\"\"\n    x: ロジット [batch_size, num_classes]\n    \"\"\"\n    # 数値安定性のため最大値を引く\n    x_max = （ア）\n    x_shifted = x - x_max\n    \n    # ソフトマックス計算\n    exp_x = np.exp(x_shifted)\n    sum_exp = （イ）\n    \n    return exp_x / sum_exp\nA. ア: np.max(x, axis=1, keepdims=True), イ: np.sum(exp_x, axis=1, keepdims=True)\nB. ア: np.max(x, axis=0, keepdims=True), イ: np.sum(exp_x, axis=0, keepdims=True)\nC. ア: np.max(x, axis=1), イ: np.sum(exp_x, axis=1)\nD. ア: np.maximum(x, 0), イ: np.sum(exp_x)\n\n\n問3\n以下のtanh関数のプログラムで空欄（ア）に入るものを選べ。\nimport numpy as np\n\ndef tanh(x):\n    y = （ア）\n    return y\nA. (np.exp(x) + np.exp(-x)) / (np.exp(x) + np.exp(-x))\nB. (np.exp(x) + np.exp(-x)) / (np.exp(x) - np.exp(-x))\nC. (np.exp(x) – np.exp(-x)) / (np.exp(x) - np.exp(-x))\nD. (np.exp(x) – np.exp(-x)) / (np.exp(x) + np.exp(-x))",
+    "crumbs": [
+      "3.深層学習基礎(Basic Deep-learning)",
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>1. 順伝播型ネットワーク (Feedforward Neural Network)</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/part3/02_optimization.html",
+    "href": "chapters/part3/02_optimization.html",
+    "title": "2. 深層学習のための最適化 (Optimization)",
+    "section": "",
+    "text": "問1\n次の計算グラフは、ロジット ( z = [z_1, z_2, z_3] ) からソフトマックスを計算し、クロスエントロピー損失 ( L ) を求める順伝播を表している。\n\n\n\n\n\ngraph LR\n    Z1[z1] ---&gt; S[softmax]\n    Z2[z2] ---&gt; S[softmax]\n    Z3[z3] ---&gt; S[softmax]\n    S ---&gt; Yhat1[ŷ1]\n    S ---&gt; Yhat2[ŷ2]\n    S ---&gt; Yhat3[ŷ3]\n    Y1[y1=0] ---&gt; CE[Cross-Entropy Loss L]\n    Y2[y2=1] ---&gt; CE\n    Y3[y3=0] ---&gt; CE\n    Yhat1 ---&gt; CE\n    Yhat2 ---&gt; CE\n    Yhat3 ---&gt; CE\n\n\n\n\n\n\nI. 逆伝播で\\(\\frac{∂𝐿}{∂𝑧_j}\\)を求めたときの一般公式として正しいものを選べ。\nただし、ソフトマックスとクロスエントロピー損失は以下で表せるものとする。\n\\[\n\\hat{y}_i = \\frac{\\exp(z_i)}{\\sum_{k} \\exp(z_k)}\n\\]\n\\[\nL = - \\sum_{i} y_i \\log(\\hat{y}_i)\n\\]\nA. \\(𝑦_j−\\hat{y}_j\\)\nB. \\(\\hat{y}_j-𝑦_j\\)\nC. \\(\\frac{-y_j}{\\hat{y}_j}\\)\nD. \\(\\hat{y}_j(1-𝑦_j)\\)\nII.3クラス分類問題で、真のラベル\\(y = [0,1,0]\\)、ソフトマックスの出力\\(\\hat{y}=[0.2, 0.3, 0.5]\\)のとき、 \\(\\frac{∂𝐿}{∂𝑧_2}\\)を求めよ。\nA. -0.7\nB. 0.7\nC. -0.3\nD. 0.3",
+    "crumbs": [
+      "3.深層学習基礎(Basic Deep-learning)",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>2. 深層学習のための最適化 (Optimization)</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/answer_key.html#深層学習のための最適化-optimization",
+    "href": "chapters/answer_key.html#深層学習のための最適化-optimization",
+    "title": "解答一覧",
+    "section": "2. 深層学習のための最適化 (Optimization)",
+    "text": "2. 深層学習のための最適化 (Optimization)\n問1 I: B II: A",
+    "crumbs": [
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>解答一覧</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/answer_key.html#順伝播型ネットワーク-feedforward-neural-network",
+    "href": "chapters/answer_key.html#順伝播型ネットワーク-feedforward-neural-network",
+    "title": "解答一覧",
+    "section": "1. 順伝播型ネットワーク (Feedforward Neural Network)",
+    "text": "1. 順伝播型ネットワーク (Feedforward Neural Network)\n問1. C\n問2. A\n問3. D",
+    "crumbs": [
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>解答一覧</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/part4/02_object_detection.html",
+    "href": "chapters/part4/02_object_detection.html",
+    "title": "2. 物体検出(Object Detection)",
+    "section": "",
+    "text": "問1\n以下のうち、FCOSについて誤っているものはどれか。\nA. FCOSはアンカーボックスのサイズ・アスペクト比・数を事前に設定する。\nB. FCOSはFeature Pyramid Network(FPN)により生成される複数のサイズの特徴マップを用いて、大小様々な物体を検出できる。\nC. FCOS はバウンディングボックスの座標ではなく、各ピクセル座標においてフレームまでの距離を回帰する。\nD. FCOS では対象物体の中心から離れた位置に低品質の予測バウンディングボックスが生成されるため、対策としてCenter-nessブランチが導入された。\n\n\n問2\nR-CNNの英語名(A)を答えよ。 また、この名称の由来となったROIに関して、ROIを見つけ出すアルゴリズムの総称(B)と、R-CNNにおけるアルゴリズムの手法(C)を答えよ。",
+    "crumbs": [
+      "第4章.深層学習応用(Advanced Deep-learning)",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>2. 物体検出(Object Detection)</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/part4/04_natural_language_processing.html",
+    "href": "chapters/part4/04_natural_language_processing.html",
+    "title": "4. 自然言語処理 (Natural Language Processing)",
+    "section": "",
+    "text": "問1\n以下のSeq2Seqの説明について、空欄（ア）～（ウ）に埋まる言葉として正しいものを選べ。 エンコーダへの入力系列とデコーダからの出力系列は（ア）にすることができる。 最小化する対象は、（イ） で表すことができる。 文脈の長さを固定したとき、入力系列が（ウ）とエンコードの性能を担保することができない。\nA.（ア）異なる長さ（イ）+logP（yの系列|✕の系列）（ウ）短すぎる\nB.（ア） 異なる長さ（イ）-logP（yの系列|xの系列）（ウ） 長すぎる\nC.（ア）同じ重み（イ）+logP（yの系列|✕の系列）（ウ） 長すぎる\nD.（ア） 同じ重み（イ）-logP（yの系列xの系列）（ウ） 短すぎる\n\n\n問2\nWord2VecのSkip-gramモデルは、ある単語からその周囲の単語を予測することで単語ベクトル（埋め込み）を学習する手法である。しかし語彙数が多い自然言語コーパスでは、softmax関数を使って全語彙から予測対象の単語を選ぶことは非常に高コストである。この問題を解決するために導入される技法のひとつが「ネガティブサンプリング」である。ネガティブサンプリングに関する以下の記述のうち、最も適切なものはどれか。\nA. ネガティブサンプリングでは、語彙全体にsoftmaxを適用し、確率分布を正規化して損失関数を計算することで効率化を実現している。\nB. ネガティブサンプリングでは、実際に出現したコンテキスト語のみを使用し、負例を使わずに分類を行う。\nC. ネガティブサンプリングでは、中心語と正しいコンテキスト語のペアを正例として扱い、それ以外のランダムに選んだ語を負例とすることで、計算負荷を大幅に削減している。\nD. ネガティブサンプリングでは、skip-gramではなくCBOWモデルにのみ適用可能であるため、効率性の面で制限がある。",
+    "crumbs": [
+      "第4章.深層学習応用(Advanced Deep-learning)",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>4. 自然言語処理 (Natural Language Processing)</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/part5/04_accelerator.html",
+    "href": "chapters/part5/04_accelerator.html",
+    "title": "4. アクセラレーター (Accelerator)",
+    "section": "",
+    "text": "問1\n近年、ディープラーニングによるAIが大きな成功を収めつつあることを背景として、ディープラーニングの演算に適した新しいプロセッサが開発されている。代表的なプロセッサに Googleが開発したTPU （Tensor Processing Unit）がある。次の選択肢はTPUあるいはGPUを説明した記述である。GPUに当てはまる記述を選べ。\nA.メモリにデータとプログラムを内蔵しメモリから命令を逐次取り出し実行するノイマン型プロセッサの一種である。\nB.数千の積和演算器が配置され、それらが互いに直接接続されている。このアーキテクチャはシストリックアレイと呼ばれている。\nC.演算の結果をメモリではなく次の乗算器に渡すことでメモリアクセスの必要を無くし、スループットを向上させている。\nD.演算器の計算精度を8bitや16bitのみにすることで、スループットの向上や低消費電力化を図っている。",
+    "crumbs": [
+      "第5章.開発・運用環境(Infrastructure)",
+      "<span class='chapter-number'>15</span>  <span class='chapter-title'>4. アクセラレーター (Accelerator)</span>"
     ]
   }
 ]

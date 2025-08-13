@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>4. アクセラレーター (Accelerator) – E資格 レベルアップ問題集</title>
+<title>2. 深層学習のための最適化 (Optimization) – E資格 レベルアップ問題集</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../chapters/answer_key.html" rel="next">
-<link href="../../chapters/part4/09_explainability.html" rel="prev">
+<link href="../../chapters/part3/03_convolutional_neural_network.html" rel="next">
+<link href="../../chapters/part3/01_feedforward_neural_network.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
@@ -69,7 +69,39 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script src="../../site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="../../site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -82,7 +114,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../chapters/part5/04_accelerator.html">第5章.開発・運用環境(Infrastructure)</a></li><li class="breadcrumb-item"><a href="../../chapters/part5/04_accelerator.html"><span class="chapter-title">4. アクセラレーター (Accelerator)</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../chapters/part3/01_feedforward_neural_network.html">3.深層学習基礎(Basic Deep-learning)</a></li><li class="breadcrumb-item"><a href="../../chapters/part3/02_optimization.html"><span class="chapter-title">2. 深層学習のための最適化 (Optimization)</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -150,7 +182,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../chapters/part3/02_optimization.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">2. 深層学習のための最適化 (Optimization)</span></a>
+  <a href="../../chapters/part3/02_optimization.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">2. 深層学習のための最適化 (Optimization)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -227,7 +259,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../chapters/part5/04_accelerator.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">4. アクセラレーター (Accelerator)</span></a>
+  <a href="../../chapters/part5/04_accelerator.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">4. アクセラレーター (Accelerator)</span></a>
   </div>
 </li>
       </ul>
@@ -259,9 +291,9 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../chapters/part5/04_accelerator.html">第5章.開発・運用環境(Infrastructure)</a></li><li class="breadcrumb-item"><a href="../../chapters/part5/04_accelerator.html"><span class="chapter-title">4. アクセラレーター (Accelerator)</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../chapters/part3/01_feedforward_neural_network.html">3.深層学習基礎(Basic Deep-learning)</a></li><li class="breadcrumb-item"><a href="../../chapters/part3/02_optimization.html"><span class="chapter-title">2. 深層学習のための最適化 (Optimization)</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-title">4. アクセラレーター (Accelerator)</span></h1>
+<h1 class="title"><span class="chapter-title">2. 深層学習のための最適化 (Optimization)</span></h1>
 </div>
 
 
@@ -280,11 +312,48 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="問1" class="level3">
 <h3 class="anchored" data-anchor-id="問1">問1</h3>
-<p>近年、ディープラーニングによるAIが大きな成功を収めつつあることを背景として、ディープラーニングの演算に適した新しいプロセッサが開発されている。代表的なプロセッサに Googleが開発したTPU （Tensor Processing Unit）がある。次の選択肢はTPUあるいはGPUを説明した記述である。GPUに当てはまる記述を選べ。</p>
-<p>A.メモリにデータとプログラムを内蔵しメモリから命令を逐次取り出し実行するノイマン型プロセッサの一種である。<br>
-B.数千の積和演算器が配置され、それらが互いに直接接続されている。このアーキテクチャはシストリックアレイと呼ばれている。<br>
-C.演算の結果をメモリではなく次の乗算器に渡すことでメモリアクセスの必要を無くし、スループットを向上させている。<br>
-D.演算器の計算精度を8bitや16bitのみにすることで、スループットの向上や低消費電力化を図っている。</p>
+<p>次の計算グラフは、ロジット ( z = [z_1, z_2, z_3] ) からソフトマックスを計算し、クロスエントロピー損失 ( L ) を求める順伝播を表している。</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">graph LR
+    Z1[z1] ---&gt; S[softmax]
+    Z2[z2] ---&gt; S[softmax]
+    Z3[z3] ---&gt; S[softmax]
+    S ---&gt; Yhat1[ŷ1]
+    S ---&gt; Yhat2[ŷ2]
+    S ---&gt; Yhat3[ŷ3]
+    Y1[y1=0] ---&gt; CE[Cross-Entropy Loss L]
+    Y2[y2=1] ---&gt; CE
+    Y3[y3=0] ---&gt; CE
+    Yhat1 ---&gt; CE
+    Yhat2 ---&gt; CE
+    Yhat3 ---&gt; CE
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+<p>I. 逆伝播で<span class="math inline">\(\frac{∂𝐿}{∂𝑧_j}\)</span>を求めたときの一般公式として正しいものを選べ。<br>
+ただし、ソフトマックスとクロスエントロピー損失は以下で表せるものとする。</p>
+<p><span class="math display">\[
+\hat{y}_i = \frac{\exp(z_i)}{\sum_{k} \exp(z_k)}
+\]</span></p>
+<p><span class="math display">\[
+L = - \sum_{i} y_i \log(\hat{y}_i)
+\]</span></p>
+<p>A. <span class="math inline">\(𝑦_j−\hat{y}_j\)</span><br>
+B. <span class="math inline">\(\hat{y}_j-𝑦_j\)</span><br>
+C. <span class="math inline">\(\frac{-y_j}{\hat{y}_j}\)</span><br>
+D. <span class="math inline">\(\hat{y}_j(1-𝑦_j)\)</span></p>
+<p>II.3クラス分類問題で、真のラベル<span class="math inline">\(y = [0,1,0]\)</span>、ソフトマックスの出力<span class="math inline">\(\hat{y}=[0.2, 0.3, 0.5]\)</span>のとき、 <span class="math inline">\(\frac{∂𝐿}{∂𝑧_2}\)</span>を求めよ。<br>
+A. -0.7<br>
+B. 0.7<br>
+C. -0.3<br>
+D. 0.3</p>
 
 
 </section>
@@ -691,13 +760,13 @@ D.演算器の計算精度を8bitや16bitのみにすることで、スループ
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../chapters/part4/09_explainability.html" class="pagination-link" aria-label="9. 深層学習の説明性 (Explainability of Deep-learning)">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">9. 深層学習の説明性 (Explainability of Deep-learning)</span></span>
+      <a href="../../chapters/part3/01_feedforward_neural_network.html" class="pagination-link" aria-label="1. 順伝播型ネットワーク (Feedforward Neural Network)">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">1. 順伝播型ネットワーク (Feedforward Neural Network)</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../chapters/answer_key.html" class="pagination-link" aria-label="解答一覧">
-        <span class="nav-page-text"><span class="chapter-title">解答一覧</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../chapters/part3/03_convolutional_neural_network.html" class="pagination-link" aria-label="3. 畳み込みニューラルネットワーク (Convolutional Neural)">
+        <span class="nav-page-text"><span class="chapter-title">3. 畳み込みニューラルネットワーク (Convolutional Neural)</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

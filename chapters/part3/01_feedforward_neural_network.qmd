@@ -1,0 +1,70 @@
+# 1. 順伝播型ネットワーク (Feedforward Neural Network)
+
+### 問1
+
+以下は2値分類のバイナリクロスエントロピー損失を実装するコードである。空欄（ア）に入る正しいコードを選べ。
+
+```python
+import numpy as np
+
+def binary_crossentropy(y_true, y_pred):
+    """
+    y_true: 真のラベル [batch_size] (0 or 1)
+    y_pred: 予測確率 [batch_size] (0~1の値)
+    """
+    # クリッピング
+    epsilon = 1e-15
+    y_pred = （ア）
+    
+    # バイナリクロスエントロピー計算
+    loss = -np.mean(y_true * np.log(y_pred) + (1 - y_true) * np.log(1 - y_pred))
+    return loss
+```
+
+A. np.clip(y_pred, epsilon, 1.0)  
+B. np.clip(y_pred, 0.0, 1 - epsilon)  
+C. np.clip(y_pred, epsilon, 1 - epsilon)  
+D. np.maximum(y_pred, epsilon)  
+
+### 問2
+
+以下は多クラス分類のソフトマックス関数を実装するコードである。数値安定性を考慮した空欄（ア）、（イ）に入る正しいコードを選べ。
+
+```python
+import numpy as np
+
+def softmax(x):
+    """
+    x: ロジット [batch_size, num_classes]
+    """
+    # 数値安定性のため最大値を引く
+    x_max = （ア）
+    x_shifted = x - x_max
+    
+    # ソフトマックス計算
+    exp_x = np.exp(x_shifted)
+    sum_exp = （イ）
+    
+    return exp_x / sum_exp
+```
+
+A. ア: np.max(x, axis=1, keepdims=True), イ: np.sum(exp_x, axis=1, keepdims=True)  
+B. ア: np.max(x, axis=0, keepdims=True), イ: np.sum(exp_x, axis=0, keepdims=True)  
+C. ア: np.max(x, axis=1), イ: np.sum(exp_x, axis=1)  
+D. ア: np.maximum(x, 0), イ: np.sum(exp_x)  
+
+### 問3
+以下のtanh関数のプログラムで空欄（ア）に入るものを選べ。
+
+```python
+import numpy as np
+
+def tanh(x):
+    y = （ア）
+    return y
+```
+
+A. (np.exp(x) + np.exp(-x)) / (np.exp(x) + np.exp(-x))  
+B. (np.exp(x) + np.exp(-x)) / (np.exp(x) - np.exp(-x))  
+C. (np.exp(x) – np.exp(-x)) / (np.exp(x) - np.exp(-x))  
+D. (np.exp(x) – np.exp(-x)) / (np.exp(x) + np.exp(-x))

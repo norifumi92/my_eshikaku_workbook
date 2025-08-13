@@ -1,6 +1,14 @@
 # 解答一覧
 
 # 第3章.深層学習基礎(Basic Deep-learning)
+## 1. 順伝播型ネットワーク (Feedforward Neural Network)
+問1. C  
+問2. A  
+問3. D  
+
+## 2. 深層学習のための最適化 (Optimization)
+問1 I: B II: A  
+
 ## 3. 畳み込みニューラルネットワーク (Convolutional Neural)
 問1. B
 

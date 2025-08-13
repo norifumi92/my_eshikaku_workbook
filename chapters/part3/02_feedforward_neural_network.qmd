@@ -1,2 +1,0 @@
-# 2. 順伝播型ネットワーク (Feedforward Neural Network)
-
