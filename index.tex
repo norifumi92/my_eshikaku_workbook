@@ -245,8 +245,121 @@ Basics)}\label{ux6a5fux68b0ux5b66ux7fd2ux306eux57faux790e-machine-learning-basic
 
 \part{3.深層学習基礎(Basic Deep-learning)}
 
-\chapter{2. 順伝播型ネットワーク (Feedforward Neural
+\chapter{1. 順伝播型ネットワーク (Feedforward Neural
 Network)}\label{ux9806ux4f1dux64adux578bux30cdux30c3ux30c8ux30efux30fcux30af-feedforward-neural-network}
+
+\subsection{問1}\label{ux554f1}
+
+以下は2値分類のバイナリクロスエントロピー損失を実装するコードである。空欄（ア）に入る正しいコードを選べ。
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ImportTok{import}\NormalTok{ numpy }\ImportTok{as}\NormalTok{ np}
+
+\KeywordTok{def}\NormalTok{ binary\_crossentropy(y\_true, y\_pred):}
+    \CommentTok{"""}
+\CommentTok{    y\_true: 真のラベル [batch\_size] (0 or 1)}
+\CommentTok{    y\_pred: 予測確率 [batch\_size] (0\textasciitilde{}1の値)}
+\CommentTok{    """}
+    \CommentTok{\# クリッピング}
+\NormalTok{    epsilon }\OperatorTok{=} \FloatTok{1e{-}15}
+\NormalTok{    y\_pred }\OperatorTok{=}\NormalTok{ （ア）}
+    
+    \CommentTok{\# バイナリクロスエントロピー計算}
+\NormalTok{    loss }\OperatorTok{=} \OperatorTok{{-}}\NormalTok{np.mean(y\_true }\OperatorTok{*}\NormalTok{ np.log(y\_pred) }\OperatorTok{+}\NormalTok{ (}\DecValTok{1} \OperatorTok{{-}}\NormalTok{ y\_true) }\OperatorTok{*}\NormalTok{ np.log(}\DecValTok{1} \OperatorTok{{-}}\NormalTok{ y\_pred))}
+    \ControlFlowTok{return}\NormalTok{ loss}
+\end{Highlighting}
+\end{Shaded}
+
+A. np.clip(y\_pred, epsilon, 1.0)\\
+B. np.clip(y\_pred, 0.0, 1 - epsilon)\\
+C. np.clip(y\_pred, epsilon, 1 - epsilon)\\
+D. np.maximum(y\_pred, epsilon)
+
+\subsection{問2}\label{ux554f2}
+
+以下は多クラス分類のソフトマックス関数を実装するコードである。数値安定性を考慮した空欄（ア）、（イ）に入る正しいコードを選べ。
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ImportTok{import}\NormalTok{ numpy }\ImportTok{as}\NormalTok{ np}
+
+\KeywordTok{def}\NormalTok{ softmax(x):}
+    \CommentTok{"""}
+\CommentTok{    x: ロジット [batch\_size, num\_classes]}
+\CommentTok{    """}
+    \CommentTok{\# 数値安定性のため最大値を引く}
+\NormalTok{    x\_max }\OperatorTok{=}\NormalTok{ （ア）}
+\NormalTok{    x\_shifted }\OperatorTok{=}\NormalTok{ x }\OperatorTok{{-}}\NormalTok{ x\_max}
+    
+    \CommentTok{\# ソフトマックス計算}
+\NormalTok{    exp\_x }\OperatorTok{=}\NormalTok{ np.exp(x\_shifted)}
+\NormalTok{    sum\_exp }\OperatorTok{=}\NormalTok{ （イ）}
+    
+    \ControlFlowTok{return}\NormalTok{ exp\_x }\OperatorTok{/}\NormalTok{ sum\_exp}
+\end{Highlighting}
+\end{Shaded}
+
+A. ア: np.max(x, axis=1, keepdims=True), イ: np.sum(exp\_x, axis=1,
+keepdims=True)\\
+B. ア: np.max(x, axis=0, keepdims=True), イ: np.sum(exp\_x, axis=0,
+keepdims=True)\\
+C. ア: np.max(x, axis=1), イ: np.sum(exp\_x, axis=1)\\
+D. ア: np.maximum(x, 0), イ: np.sum(exp\_x)
+
+\subsection{問3}\label{ux554f3}
+
+以下のtanh関数のプログラムで空欄（ア）に入るものを選べ。
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ImportTok{import}\NormalTok{ numpy }\ImportTok{as}\NormalTok{ np}
+
+\KeywordTok{def}\NormalTok{ tanh(x):}
+\NormalTok{    y }\OperatorTok{=}\NormalTok{ （ア）}
+    \ControlFlowTok{return}\NormalTok{ y}
+\end{Highlighting}
+\end{Shaded}
+
+A. (np.exp(x) + np.exp(-x)) / (np.exp(x) + np.exp(-x))\\
+B. (np.exp(x) + np.exp(-x)) / (np.exp(x) - np.exp(-x))\\
+C. (np.exp(x) -- np.exp(-x)) / (np.exp(x) - np.exp(-x))\\
+D. (np.exp(x) -- np.exp(-x)) / (np.exp(x) + np.exp(-x))
+
+\chapter{2. 深層学習のための最適化
+(Optimization)}\label{ux6df1ux5c64ux5b66ux7fd2ux306eux305fux3081ux306eux6700ux9069ux5316-optimization}
+
+\subsection{問1}\label{ux554f1-1}
+
+次の計算グラフは、ロジット ( z = {[}z\_1, z\_2, z\_3{]} )
+からソフトマックスを計算し、クロスエントロピー損失 ( L )
+を求める順伝播を表している。
+
+\includegraphics[width=8.42in,height=6.15in]{chapters/part3/02_optimization_files/figure-latex/mermaid-figure-1.png}
+
+I.
+逆伝播で\(\frac{∂𝐿}{∂𝑧_j}\)を求めたときの一般公式として正しいものを選べ。\\
+ただし、ソフトマックスとクロスエントロピー損失は以下で表せるものとする。
+
+\[
+\hat{y}_i = \frac{\exp(z_i)}{\sum_{k} \exp(z_k)}
+\]
+
+\[
+L = - \sum_{i} y_i \log(\hat{y}_i)
+\]
+
+A. \(𝑦_j−\hat{y}_j\)\\
+B. \(\hat{y}_j-𝑦_j\)\\
+C. \(\frac{-y_j}{\hat{y}_j}\)\\
+D. \(\hat{y}_j(1-𝑦_j)\)
+
+II.3クラス分類問題で、真のラベル\(y = [0,1,0]\)、ソフトマックスの出力\(\hat{y}=[0.2, 0.3, 0.5]\)のとき、
+\(\frac{∂𝐿}{∂𝑧_2}\)を求めよ。\\
+A. -0.7\\
+B. 0.7\\
+C. -0.3\\
+D. 0.3
 
 \chapter{3. 畳み込みニューラルネットワーク (Convolutional
 Neural)}\label{ux7573ux307fux8fbcux307fux30cbux30e5ux30fcux30e9ux30ebux30cdux30c3ux30c8ux30efux30fcux30af-convolutional-neural}
@@ -266,10 +379,25 @@ D. (3, 9)
 
 \part{第4章.深層学習応用(Advanced Deep-learning)}
 
+\chapter{1. 画像認識(Image
+Recognition)}\label{ux753bux50cfux8a8dux8b58image-recognition}
+
+\subsection{問1}\label{ux554f1-2}
+
+Vision Transformer（ViT）の特徴として正しいものを1つ選べ。\\
+A.
+画像を1ピクセルごとに分割して系列として入力し、CNNよりもパラメータ数が少なくなる傾向がある。\\
+B.
+画像を固定サイズのパッチに分割し、系列としてTransformerに入力するため、自己注意機構で画像全体の依存関係を学習できる。\\
+C.
+CNNの畳み込み層を多用するため、自然言語処理タスクへの応用は困難である。\\
+D.
+入力画像サイズを大きくしてもパラメータ数が比例して増えるため、高解像度画像の学習は計算負荷が低い。
+
 \chapter{2. 物体検出(Object
 Detection)}\label{ux7269ux4f53ux691cux51faobject-detection}
 
-\subsection{問1}\label{ux554f1}
+\subsection{問1}\label{ux554f1-3}
 
 以下のうち、FCOSについて誤っているものはどれか。\\
 A. FCOSはアンカーボックスのサイズ・アスペクト比・数を事前に設定する。\\
@@ -280,7 +408,7 @@ C. FCOS
 D. FCOS
 では対象物体の中心から離れた位置に低品質の予測バウンディングボックスが生成されるため、対策としてCenter-nessブランチが導入された。
 
-\subsection{問2}\label{ux554f2}
+\subsection{問2}\label{ux554f2-1}
 
 R-CNNの英語名(A)を答えよ。
 また、この名称の由来となったROIに関して、ROIを見つけ出すアルゴリズムの総称(B)と、R-CNNにおけるアルゴリズムの手法(C)を答えよ。
@@ -288,7 +416,7 @@ R-CNNの英語名(A)を答えよ。
 \chapter{3. Semantic Segmentation (Semantic
 Segmentation)}\label{semantic-segmentation-semantic-segmentation}
 
-\subsection{問1}\label{ux554f1-1}
+\subsection{問1}\label{ux554f1-4}
 
 FCN（Fully Convolutional
 Network）は、画像のセマンティックセグメンテーションのために設計されたネットワークであり、全結合層の代わりに（あ）を用いて、入力画像と同じ空間解像度の出力を得ることが可能である。また、分類タスクで用いられる典型的なCNN（例：VGG,
@@ -310,7 +438,7 @@ D. (あ) 全結合層 (い) プーリング (う) 逆畳み込み (え) シグ�
 \chapter{4. 自然言語処理 (Natural Language
 Processing)}\label{ux81eaux7136ux8a00ux8a9eux51e6ux7406-natural-language-processing}
 
-\subsection{問1}\label{ux554f1-2}
+\subsection{問1}\label{ux554f1-5}
 
 以下のSeq2Seqの説明について、空欄（ア）～（ウ）に埋まる言葉として正しいものを選べ。
 エンコーダへの入力系列とデコーダからの出力系列は（ア）にすることができる。
@@ -323,7 +451,7 @@ B.（ア） 異なる長さ（イ）-logP（yの系列\textbar xの系列）（�
 C.（ア）同じ重み（イ）+logP（yの系列\textbar✕の系列）（ウ） 長すぎる\\
 D.（ア） 同じ重み（イ）-logP（yの系列xの系列）（ウ） 短すぎる
 
-\subsection{問2}\label{ux554f2-1}
+\subsection{問2}\label{ux554f2-2}
 
 Word2VecのSkip-gramモデルは、ある単語からその周囲の単語を予測することで単語ベクトル（埋め込み）を学習する手法である。しかし語彙数が多い自然言語コーパスでは、softmax関数を使って全語彙から予測対象の単語を選ぶことは非常に高コストである。この問題を解決するために導入される技法のひとつが「ネガティブサンプリング」である。ネガティブサンプリングに関する以下の記述のうち、最も適切なものはどれか。
 
@@ -339,7 +467,7 @@ D.
 \chapter{5. Recurrent Neural Network (Recurrent Neural
 Network)}\label{recurrent-neural-network-recurrent-neural-network}
 
-\subsection{問1}\label{ux554f1-3}
+\subsection{問1}\label{ux554f1-6}
 
 次のプログラムはLSTMの各時刻tでの中間層計算の処理を記述したものである。
 LSTMは従来のRNNに比べてゲート制御用の重みの重みやバイアスの種類が多く、似たような計算をなんども行う必要がある。計算を効率よく行うために中間層伝播、ゲート3種類を計算するために必要な、「入力」と「前時刻の中間層出力」の重み付き線形和はまとめて計算する。
@@ -370,7 +498,7 @@ B. np.random.randn(n\_input * n\_hidden, n\_hidden * 4)\\
 C. np.random.randn(n\_input + n\_hidden, n\_hidden * 3)\\
 D np.random.randn(n\_input + n\_hidden, n\_hidden * 4)
 
-\subsection{問2}\label{ux554f2-2}
+\subsection{問2}\label{ux554f2-3}
 
 LSTMとGRU(Gated Recurrent
 Unit)について、それぞれに含まれるゲートの名称を答えよ。
@@ -378,7 +506,7 @@ Unit)について、それぞれに含まれるゲートの名称を答えよ。
 \chapter{6. 生成モデル (Generative
 Model)}\label{ux751fux6210ux30e2ux30c7ux30eb-generative-model}
 
-\subsection{問1}\label{ux554f1-4}
+\subsection{問1}\label{ux554f1-7}
 
 次の選択肢の中から誤ったものを1つ選べ。
 
@@ -395,7 +523,7 @@ D.
 \chapter{7. 深層強化学習 (Reinforcement
 Learning)}\label{ux6df1ux5c64ux5f37ux5316ux5b66ux7fd2-reinforcement-learning}
 
-\subsection{問1}\label{ux554f1-5}
+\subsection{問1}\label{ux554f1-8}
 
 DQNにおいて、Q学習の一部である「TD誤差」は以下のように定義される。
 次の空欄（あ）に入る適切な語句を選べ。 \[
@@ -405,7 +533,7 @@ B. 実際に得られた報酬\\
 C. \({γ * Q(s, a)}\)\\
 D. \({R(s, a) + γ * maxQ(s', a')}\)
 
-\subsection{問2}\label{ux554f2-3}
+\subsection{問2}\label{ux554f2-4}
 
 強化学習の基本的なアルゴリズムのうちの一つとして、ベルマン方程式に従って行動価値関数\(𝑄(𝑠, 𝑎)\)をモデル化する価値反復に基づく方法が挙げられる。しかしこの方法では行動𝑎が連続な値を取る場合ような場合を自然に扱えないといった欠点がある。そうした問題に対応する方法として、方策自体をパラメータ𝜃を用いて\(𝜋_𝜃(𝑎|𝑠)\)のようにモデル化した方策勾配に基づくアルゴリズムが挙げられる。方策勾配に基づくアルゴリズムにおいては方策勾配の定理により目的関数\(𝐽_𝜃 = 𝑉(𝑠_0)\)の𝜃に関する勾配\(∇_𝜃𝐽(𝜃)\)を以下のように計算できる。
 \[
@@ -424,7 +552,7 @@ D. \(\frac{𝑄^𝜋(𝑠,𝑎)}{∇_𝜃𝜋_𝜃(𝑎|𝑠)}\)
 \chapter{8. 様々な学習方法 (Various Learning
 Methods)}\label{ux69d8ux3005ux306aux5b66ux7fd2ux65b9ux6cd5-various-learning-methods}
 
-\subsection{問1}\label{ux554f1-6}
+\subsection{問1}\label{ux554f1-9}
 
 深層学習技術を用いた距離学習手法としては他にも、Triplet
 Networkなどがある。Triplet NetworkもSiamese
@@ -442,7 +570,7 @@ B. \({max(d_p - d_n, m)}\)\\
 C. \({max(-d_p + d_n, m)}\)\\
 D. \({max(d_p - d_n - m, 0)}\)
 
-\subsection{問2}\label{ux554f2-4}
+\subsection{問2}\label{ux554f2-5}
 
 以下の選択肢から、距離学習に関する説明として間違っているものを選べ。
 
@@ -460,7 +588,7 @@ D. Triplet Network
 \chapter{9. 深層学習の説明性 (Explainability of
 Deep-learning)}\label{ux6df1ux5c64ux5b66ux7fd2ux306eux8aacux660eux6027-explainability-of-deep-learning}
 
-\subsection{問1}\label{ux554f1-7}
+\subsection{問1}\label{ux554f1-10}
 
 次の文章は Grad-CAM（Gradient-weighted Class Activation
 Mapping）の説明である。間違っているものはどれか、1つ選びなさい。
@@ -474,7 +602,7 @@ Backpropagationを組み合わせたものである\\
 D.
 CNNの最終的な畳み込み層の出力値に対する勾配を利用してカラーマップ表示するための値を求める
 
-\subsection{問2}\label{ux554f2-5}
+\subsection{問2}\label{ux554f2-6}
 
 Shapley値は協力ゲーム理論に基づき、特徴量の寄与度を計算する。
 次のうち、Shapley値の計算に必ず含まれる考え方として正しいものを選べ。
@@ -490,7 +618,7 @@ D. 各特徴量の寄与度は必ず正の値になる
 \chapter{4. アクセラレーター
 (Accelerator)}\label{ux30a2ux30afux30bbux30e9ux30ecux30fcux30bfux30fc-accelerator}
 
-\subsection{問1}\label{ux554f1-8}
+\subsection{問1}\label{ux554f1-11}
 
 近年、ディープラーニングによるAIが大きな成功を収めつつあることを背景として、ディープラーニングの演算に適した新しいプロセッサが開発されている。代表的なプロセッサに
 Googleが開発したTPU （Tensor Processing
@@ -510,6 +638,18 @@ D.演算器の計算精度を8bitや16bitのみにすることで、スループ
 \chapter{第3章.深層学習基礎(Basic
 Deep-learning)}\label{ux7b2c3ux7ae0.ux6df1ux5c64ux5b66ux7fd2ux57faux790ebasic-deep-learning}
 
+\section{1. 順伝播型ネットワーク (Feedforward Neural
+Network)}\label{ux9806ux4f1dux64adux578bux30cdux30c3ux30c8ux30efux30fcux30af-feedforward-neural-network-1}
+
+問1. C\\
+問2. A\\
+問3. D
+
+\section{2. 深層学習のための最適化
+(Optimization)}\label{ux6df1ux5c64ux5b66ux7fd2ux306eux305fux3081ux306eux6700ux9069ux5316-optimization-1}
+
+問1 I: B II: A
+
 \section{3. 畳み込みニューラルネットワーク (Convolutional
 Neural)}\label{ux7573ux307fux8fbcux307fux30cbux30e5ux30fcux30e9ux30ebux30cdux30c3ux30c8ux30efux30fcux30af-convolutional-neural-1}
 
@@ -519,6 +659,13 @@ Neural)}\label{ux7573ux307fux8fbcux307fux30cbux30e5ux30fcux30e9ux30ebux30cdux30c
 
 \chapter{第4章.深層学習応用(Advanced
 Deep-learning)}\label{ux7b2c4ux7ae0.ux6df1ux5c64ux5b66ux7fd2ux5fdcux7528advanced-deep-learning-1}
+
+\bookmarksetup{startatroot}
+
+\chapter{1. 画像認識(Image
+Recognition)}\label{ux753bux50cfux8a8dux8b58image-recognition-1}
+
+問1. B
 
 \section{2. 物体検出(Object
 Detection)}\label{ux7269ux4f53ux691cux51faobject-detection-1}
