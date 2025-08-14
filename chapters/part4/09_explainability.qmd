@@ -2,7 +2,7 @@
 
 ### 問1
 
-次の文章は Grad-CAM（Gradient-weighted Class Activation Mapping）の説明である。間違っているものはどれか、1つ選びなさい。
+次の文章は Grad-CAM（Gradient-weighted Class Activation Mapping）の説明である。間違っているものはどれか。
 
 A. AlexNetのように最後が畳み込み層ではなく、全結合層であるCNNには適用出来ない  
 B. Grad-CAMを適用するために、アーキテクチャの変更や再トレーニングを行う必要がない  
@@ -10,6 +10,16 @@ C. Guided Grad-CAMは、Grad-CAMとGuided Backpropagationを組み合わせた�
 D. CNNの最終的な畳み込み層の出力値に対する勾配を利用してカラーマップ表示するための値を求める  
 
 ### 問2
+
+以下の説明のうち、正しいものを1つ選べ。
+
+A. CAMはGlobal Average Pooling層がないモデルでも、そのまま適用できる。  
+B. Grad-CAMは最後の畳み込み層の勾配情報を利用するため、Global Average Pooling層は不要である。  
+C. GoogLeNetは最後がFlatten→全結合層なので、オリジナルCAMは適用できない。  
+D. VGGは最後にGlobal Average Pooling層を持つため、オリジナルCAMをそのまま適用できる。  
+
+
+### 問3
 
 Shapley値は協力ゲーム理論に基づき、特徴量の寄与度を計算する。
 次のうち、Shapley値の計算に必ず含まれる考え方として正しいものを選べ。

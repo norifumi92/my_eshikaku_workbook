@@ -285,6 +285,7 @@ window.Quarto = {
    
   <ul>
   <li><a href="#問1" id="toc-問1" class="nav-link active" data-scroll-target="#問1">問1</a></li>
+  <li><a href="#問2" id="toc-問2" class="nav-link" data-scroll-target="#問2">問2</a></li>
   </ul>
 </nav>
     </div>
@@ -354,6 +355,20 @@ A. -0.7<br>
 B. 0.7<br>
 C. -0.3<br>
 D. 0.3</p>
+</section>
+<section id="問2" class="level3">
+<h3 class="anchored" data-anchor-id="問2">問2</h3>
+<p>AdaGradアルゴリズムの数式は以下のように表される：</p>
+<p><span class="math display">\[
+h_t = h_{t-1} + ∇E(W_t) ⊙ ∇E(W_t)
+α_t = α_0 × (1/√(h_t + ε))
+W_{t+1} = W_t - α_t ⊙ ∇E(W_t)
+\]</span></p>
+<p>この数式に関する説明として正しくないものはどれか。</p>
+<p>A. h_tは各パラメータの累積二乗勾配を表し、そのパラメータがどれだけ激しく更新されてきたかを記録する<br>
+B. α_tは各パラメータごとに適応的に調整される学習率で、累積二乗勾配が大きいほど学習率は小さくなる<br>
+C. ⊙はアダマール積（要素ごとの積）を表し、各パラメータを独立して扱うために使用される<br>
+D. εは数値安定化項で、h_tが大きくなりすぎて学習率が極端に小さくなることを防ぐ</p>
 
 
 </section>

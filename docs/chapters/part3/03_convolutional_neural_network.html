@@ -247,8 +247,14 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">Table of contents</h2>
+   
+  <ul>
+  <li><a href="#問1." id="toc-問1." class="nav-link active" data-scroll-target="#問1.">問1.</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -272,18 +278,28 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
+<section id="問1." class="level3">
+<h3 class="anchored" data-anchor-id="問1.">問1.</h3>
 <p>ある1枚の画像（1チャンネル）に対して、次の条件で im2col 変換を行う。<br>
 入力画像サイズ：5×5<br>
 フィルターサイズ：3×3<br>
 ストライド：1<br>
-パディング：0<br>
-このとき、im2colによって生成される行列の形状（im_col.shape）として最も適切なものはどれか。 ただし、フィルターは1枚であり、チャンネル数は1とする。</p>
+パディング：0</p>
+<p>I. この時、畳み込み演算の出力サイズの公式を用いて、出力の高さと幅を計算せよ。<br>
+A. (2, 2)<br>
+B. (3, 3)<br>
+C. (4, 4)<br>
+D. (5, 5)</p>
+<ol start="2" type="I">
+<li>このとき、im2colによって生成される行列の形状（im_col.shape）として最も適切なものはどれか。 ただし、フィルターは1枚であり、チャンネル数は1とする。</li>
+</ol>
 <p>A. (3, 3)<br>
 B. (9, 9)<br>
 C. (9, 25)<br>
 D. (3, 9)</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

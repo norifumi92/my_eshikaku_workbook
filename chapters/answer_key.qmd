@@ -7,10 +7,16 @@
 問3. D  
 
 ## 2. 深層学習のための最適化 (Optimization)
-問1 I: B II: A  
+問1. I: B II: A  
+問2. D  
+
+```{note}
+εは数値安定化項だが、分母に0をかけられるゼロ除算を防ぐためであり、
+学習率が極端に下がるのを防ぐためではない
+```
 
 ## 3. 畳み込みニューラルネットワーク (Convolutional Neural)
-問1. B
+問1. I: B II: B  
 
 # 第4章.深層学習応用(Advanced Deep-learning)
 ## 1. 画像認識(Image Recognition)
@@ -47,7 +53,8 @@ C: Selective Search
 
 ## 9. 深層学習の説明性 (Explainability of Deep-learning)
 問1. A  
-問2. B
+問2. B  
+問3. B
 
 # 第5章.開発・運用環境(Infrastructure)
 ## 4. アクセラレーター (Accelerator)

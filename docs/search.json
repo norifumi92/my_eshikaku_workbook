@@ -1,0 +1,273 @@
+[
+  {
+    "objectID": "chapters/part4/09_explainability.html",
+    "href": "chapters/part4/09_explainability.html",
+    "title": "9. 深層学習の説明性 (Explainability of Deep-learning)",
+    "section": "",
+    "text": "問1\n次の文章は Grad-CAM（Gradient-weighted Class Activation Mapping）の説明である。間違っているものはどれか。\nA. AlexNetのように最後が畳み込み層ではなく、全結合層であるCNNには適用出来ない\nB. Grad-CAMを適用するために、アーキテクチャの変更や再トレーニングを行う必要がない\nC. Guided Grad-CAMは、Grad-CAMとGuided Backpropagationを組み合わせたものである\nD. CNNの最終的な畳み込み層の出力値に対する勾配を利用してカラーマップ表示するための値を求める\n\n\n問2\n以下の説明のうち、正しいものを1つ選べ。\nA. CAMはGlobal Average Pooling層がないモデルでも、そのまま適用できる。\nB. Grad-CAMは最後の畳み込み層の勾配情報を利用するため、Global Average Pooling層は不要である。\nC. GoogLeNetは最後がFlatten→全結合層なので、オリジナルCAMは適用できない。\nD. VGGは最後にGlobal Average Pooling層を持つため、オリジナルCAMをそのまま適用できる。\n\n\n問3\nShapley値は協力ゲーム理論に基づき、特徴量の寄与度を計算する。 次のうち、Shapley値の計算に必ず含まれる考え方として正しいものを選べ。\nA. 各特徴量を1つずつ除去したモデルの予測差を合計して寄与度とする。\nB. 全ての特徴量の順列（Permutation）について、各特徴量が追加されたときの限界貢献度の平均を取る。\nC. 特徴量間の相関を完全に無視して寄与度を算出する。\nD. 各特徴量の寄与度は必ず正の値になる",
+    "crumbs": [
+      "第4章.深層学習応用(Advanced Deep-learning)",
+      "<span class='chapter-number'>14</span>  <span class='chapter-title'>9. 深層学習の説明性 (Explainability of Deep-learning)</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/answer_key.html",
+    "href": "chapters/answer_key.html",
+    "title": "解答一覧",
+    "section": "",
+    "text": "第3章.深層学習基礎(Basic Deep-learning)",
+    "crumbs": [
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>解答一覧</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/answer_key.html#順伝播型ネットワーク-feedforward-neural-network",
+    "href": "chapters/answer_key.html#順伝播型ネットワーク-feedforward-neural-network",
+    "title": "解答一覧",
+    "section": "1. 順伝播型ネットワーク (Feedforward Neural Network)",
+    "text": "1. 順伝播型ネットワーク (Feedforward Neural Network)\n問1. C\n問2. A\n問3. D",
+    "crumbs": [
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>解答一覧</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/answer_key.html#深層学習のための最適化-optimization",
+    "href": "chapters/answer_key.html#深層学習のための最適化-optimization",
+    "title": "解答一覧",
+    "section": "2. 深層学習のための最適化 (Optimization)",
+    "text": "2. 深層学習のための最適化 (Optimization)\n問1. I: B II: A\n問2. D\nεは数値安定化項だが、分母に0をかけられるゼロ除算を防ぐためであり、\n学習率が極端に下がるのを防ぐためではない",
+    "crumbs": [
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>解答一覧</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/answer_key.html#畳み込みニューラルネットワーク-convolutional-neural",
+    "href": "chapters/answer_key.html#畳み込みニューラルネットワーク-convolutional-neural",
+    "title": "解答一覧",
+    "section": "3. 畳み込みニューラルネットワーク (Convolutional Neural)",
+    "text": "3. 畳み込みニューラルネットワーク (Convolutional Neural)\n問1. I: B II: B",
+    "crumbs": [
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>解答一覧</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/answer_key.html#画像認識image-recognition",
+    "href": "chapters/answer_key.html#画像認識image-recognition",
+    "title": "解答一覧",
+    "section": "1. 画像認識(Image Recognition)",
+    "text": "1. 画像認識(Image Recognition)\n問1. B",
+    "crumbs": [
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>解答一覧</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/answer_key.html#物体検出object-detection",
+    "href": "chapters/answer_key.html#物体検出object-detection",
+    "title": "解答一覧",
+    "section": "2. 物体検出(Object Detection)",
+    "text": "2. 物体検出(Object Detection)\n問1. A\n問2. A: Region-based Convolutional Neural Network\nB: Region Proposal(領域探索)\nC: Selective Search",
+    "crumbs": [
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>解答一覧</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/answer_key.html#semantic-segmentation-semantic-segmentation",
+    "href": "chapters/answer_key.html#semantic-segmentation-semantic-segmentation",
+    "title": "解答一覧",
+    "section": "3. Semantic Segmentation (Semantic Segmentation)",
+    "text": "3. Semantic Segmentation (Semantic Segmentation)\n問1. C",
+    "crumbs": [
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>解答一覧</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/answer_key.html#自然言語処理-natural-language-processing",
+    "href": "chapters/answer_key.html#自然言語処理-natural-language-processing",
+    "title": "解答一覧",
+    "section": "4. 自然言語処理 (Natural Language Processing)",
+    "text": "4. 自然言語処理 (Natural Language Processing)\n問1. B\n問2. C",
+    "crumbs": [
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>解答一覧</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/answer_key.html#recurrent-neural-network-recurrent-neural-network",
+    "href": "chapters/answer_key.html#recurrent-neural-network-recurrent-neural-network",
+    "title": "解答一覧",
+    "section": "5. Recurrent Neural Network (Recurrent Neural Network)",
+    "text": "5. Recurrent Neural Network (Recurrent Neural Network)\n問1. D\n問2. LSTM: 忘却ゲート(Forget Gate)、入力ゲート(Input Gate)、出力ゲート(Output Gate)、記憶セル(Memory Cell)\nGRU: リセットゲート(Reset Gate)、更新ゲート(Update Gate)",
+    "crumbs": [
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>解答一覧</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/answer_key.html#生成モデル-generative-model",
+    "href": "chapters/answer_key.html#生成モデル-generative-model",
+    "title": "解答一覧",
+    "section": "6. 生成モデル (Generative Model)",
+    "text": "6. 生成モデル (Generative Model)\n問1. C",
+    "crumbs": [
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>解答一覧</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/answer_key.html#深層強化学習-reinforcement-learning",
+    "href": "chapters/answer_key.html#深層強化学習-reinforcement-learning",
+    "title": "解答一覧",
+    "section": "7. 深層強化学習 (Reinforcement Learning)",
+    "text": "7. 深層強化学習 (Reinforcement Learning)\n問1. D\n問2. A",
+    "crumbs": [
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>解答一覧</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/answer_key.html#様々な学習方法-various-learning-methods",
+    "href": "chapters/answer_key.html#様々な学習方法-various-learning-methods",
+    "title": "解答一覧",
+    "section": "8. 様々な学習方法 (Various Learning Methods)",
+    "text": "8. 様々な学習方法 (Various Learning Methods)\n問1. A\n問2. A",
+    "crumbs": [
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>解答一覧</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/answer_key.html#深層学習の説明性-explainability-of-deep-learning",
+    "href": "chapters/answer_key.html#深層学習の説明性-explainability-of-deep-learning",
+    "title": "解答一覧",
+    "section": "9. 深層学習の説明性 (Explainability of Deep-learning)",
+    "text": "9. 深層学習の説明性 (Explainability of Deep-learning)\n問1. A\n問2. B\n問3. B",
+    "crumbs": [
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>解答一覧</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/answer_key.html#アクセラレーター-accelerator",
+    "href": "chapters/answer_key.html#アクセラレーター-accelerator",
+    "title": "解答一覧",
+    "section": "4. アクセラレーター (Accelerator)",
+    "text": "4. アクセラレーター (Accelerator)\n問1. A",
+    "crumbs": [
+      "<span class='chapter-number'>16</span>  <span class='chapter-title'>解答一覧</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/part4/01_image_recognition.html",
+    "href": "chapters/part4/01_image_recognition.html",
+    "title": "1. 画像認識(Image Recognition)",
+    "section": "",
+    "text": "問1\nVision Transformer（ViT）の特徴として正しいものを1つ選べ。\nA. 画像を1ピクセルごとに分割して系列として入力し、CNNよりもパラメータ数が少なくなる傾向がある。\nB. 画像を固定サイズのパッチに分割し、系列としてTransformerに入力するため、自己注意機構で画像全体の依存関係を学習できる。\nC. CNNの畳み込み層を多用するため、自然言語処理タスクへの応用は困難である。\nD. 入力画像サイズを大きくしてもパラメータ数が比例して増えるため、高解像度画像の学習は計算負荷が低い。",
+    "crumbs": [
+      "第4章.深層学習応用(Advanced Deep-learning)",
+      "<span class='chapter-number'>6</span>  <span class='chapter-title'>1. 画像認識(Image Recognition)</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/part4/02_object_detection.html",
+    "href": "chapters/part4/02_object_detection.html",
+    "title": "2. 物体検出(Object Detection)",
+    "section": "",
+    "text": "問1\n以下のうち、FCOSについて誤っているものはどれか。\nA. FCOSはアンカーボックスのサイズ・アスペクト比・数を事前に設定する。\nB. FCOSはFeature Pyramid Network(FPN)により生成される複数のサイズの特徴マップを用いて、大小様々な物体を検出できる。\nC. FCOS はバウンディングボックスの座標ではなく、各ピクセル座標においてフレームまでの距離を回帰する。\nD. FCOS では対象物体の中心から離れた位置に低品質の予測バウンディングボックスが生成されるため、対策としてCenter-nessブランチが導入された。\n\n\n問2\nR-CNNの英語名(A)を答えよ。 また、この名称の由来となったROIに関して、ROIを見つけ出すアルゴリズムの総称(B)と、R-CNNにおけるアルゴリズムの手法(C)を答えよ。",
+    "crumbs": [
+      "第4章.深層学習応用(Advanced Deep-learning)",
+      "<span class='chapter-number'>7</span>  <span class='chapter-title'>2. 物体検出(Object Detection)</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/part4/08_various_learning_methods.html",
+    "href": "chapters/part4/08_various_learning_methods.html",
+    "title": "8. 様々な学習方法 (Various Learning Methods)",
+    "section": "",
+    "text": "問1\n深層学習技術を用いた距離学習手法としては他にも、Triplet Networkなどがある。Triplet NetworkもSiamese Networkと同様に、類似サンプル間の距離を近く・非類似サンプル間の距離を遠くするように表現学習が行われる。Siamese Network は2つのサンプルを入力としたが、Triplet Networkでは3つのサンプルをひと組の入力とする。3つのサンプルは、基準となるアンカーサンプルと、アンカーサンプルとの類似サンプル及び非類似サンプルにより構成される。アンカーサンプルと類似サンプル間の距離を\\({d_p}\\)、アンカーサンプルと非類似サンプル間の距離を\\({d_n}\\)、類似サンプルと非類似サンプル間のマージンをmとしたとき、最小化したい目的関数 triplet loss Lは \\[\nL ＝（い）\n\\]\nと表される。空欄（い）に当てはまる式として正しいものを、以下の選択肢から選べ。\nA. \\({max(d_p - d_n + m, 0)}\\)\nB. \\({max(d_p - d_n, m)}\\)\nC. \\({max(-d_p + d_n, m)}\\)\nD. \\({max(d_p - d_n - m, 0)}\\)\n\n\n問2\n以下の選択肢から、距離学習に関する説明として間違っているものを選べ。\nA. Triplet Network では、学習時の入力ペアの選び方に、学習されたモデルの性能が依存しない。\nB. Siamese Network では、類似しない2つのサンプル間の距離が全てマージンの値に収束するように学習が行われる。\nC. Siamese Network では2つのサンプルが同じ・違うものというコンテキストを固定する必要があるが、Triplet Network では「アンカーサンプルが残り2つのサンプルのどちらにより類似しているか」という基準で学習できるため、学習時のコンテキストに関する制約が緩和されている。\nD. Triplet Network では、学習データセットサイズが増えるとペアの数が爆発的に増えるという課題がある。",
+    "crumbs": [
+      "第4章.深層学習応用(Advanced Deep-learning)",
+      "<span class='chapter-number'>13</span>  <span class='chapter-title'>8. 様々な学習方法 (Various Learning Methods)</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/part4/07_reinforcement_learning.html",
+    "href": "chapters/part4/07_reinforcement_learning.html",
+    "title": "7. 深層強化学習 (Reinforcement Learning)",
+    "section": "",
+    "text": "問1\nDQNにおいて、Q学習の一部である「TD誤差」は以下のように定義される。 次の空欄（あ）に入る適切な語句を選べ。 \\[\nTD誤差 = [あ] − Q(s, a)\n\\] A. Q(s’, a’) の平均値\nB. 実際に得られた報酬\nC. \\({γ * Q(s, a)}\\)\nD. \\({R(s, a) + γ * maxQ(s', a')}\\)\n\n\n問2\n強化学習の基本的なアルゴリズムのうちの一つとして、ベルマン方程式に従って行動価値関数\\(𝑄(𝑠, 𝑎)\\)をモデル化する価値反復に基づく方法が挙げられる。しかしこの方法では行動𝑎が連続な値を取る場合ような場合を自然に扱えないといった欠点がある。そうした問題に対応する方法として、方策自体をパラメータ𝜃を用いて\\(𝜋_𝜃(𝑎|𝑠)\\)のようにモデル化した方策勾配に基づくアルゴリズムが挙げられる。方策勾配に基づくアルゴリズムにおいては方策勾配の定理により目的関数\\(𝐽_𝜃 = 𝑉(𝑠_0)\\)の𝜃に関する勾配\\(∇_𝜃𝐽(𝜃)\\)を以下のように計算できる。 \\[\n∇_𝜃𝐽(𝜃) = 𝔼_{𝜋_𝜃}[(あ)]\n\\]\nこうして計算された勾配を用いて勾配法により、方策𝜋_𝜃(𝑎|𝑠) をアップデートするのが方策勾配に 基づくアルゴリズムである。 (あ)に当てはまる式として正しいものを、以下の選択肢から選べ。\nA. \\(∇_𝜃log𝜋_𝜃(𝑎|𝑠)𝑄^𝜋(𝑠,𝑎)\\)\nB. \\(∇_𝜃𝜋_𝜃(𝑎|𝑠)𝑄^𝜋(𝑠,𝑎)\\)\nC. \\(\\frac{∇_𝜃𝜋_𝜃(𝑎|𝑠)}{𝑄^𝜋(𝑠,𝑎)}\\)\nD. \\(\\frac{𝑄^𝜋(𝑠,𝑎)}{∇_𝜃𝜋_𝜃(𝑎|𝑠)}\\)",
+    "crumbs": [
+      "第4章.深層学習応用(Advanced Deep-learning)",
+      "<span class='chapter-number'>12</span>  <span class='chapter-title'>7. 深層強化学習 (Reinforcement Learning)</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/part4/04_natural_language_processing.html",
+    "href": "chapters/part4/04_natural_language_processing.html",
+    "title": "4. 自然言語処理 (Natural Language Processing)",
+    "section": "",
+    "text": "問1\n以下のSeq2Seqの説明について、空欄（ア）～（ウ）に埋まる言葉として正しいものを選べ。\nエンコーダへの入力系列とデコーダからの出力系列は（ア）にすることができる。 最小化する対象は、（イ） で表すことができる。 文脈の長さを固定したとき、入力系列が（ウ）とエンコードの性能を担保することができない。\nA.（ア）異なる長さ（イ）+logP（yの系列|✕の系列）（ウ）短すぎる\nB.（ア） 異なる長さ（イ）-logP（yの系列|xの系列）（ウ） 長すぎる\nC.（ア）同じ重み（イ）+logP（yの系列|✕の系列）（ウ） 長すぎる\nD.（ア） 同じ重み（イ）-logP（yの系列xの系列）（ウ） 短すぎる\n\n\n問2\nWord2VecのSkip-gramモデルは、ある単語からその周囲の単語を予測することで単語ベクトル（埋め込み）を学習する手法である。しかし語彙数が多い自然言語コーパスでは、softmax関数を使って全語彙から予測対象の単語を選ぶことは非常に高コストである。この問題を解決するために導入される技法のひとつが「ネガティブサンプリング」である。ネガティブサンプリングに関する以下の記述のうち、最も適切なものはどれか。\nA. ネガティブサンプリングでは、語彙全体にsoftmaxを適用し、確率分布を正規化して損失関数を計算することで効率化を実現している。\nB. ネガティブサンプリングでは、実際に出現したコンテキスト語のみを使用し、負例を使わずに分類を行う。\nC. ネガティブサンプリングでは、中心語と正しいコンテキスト語のペアを正例として扱い、それ以外のランダムに選んだ語を負例とすることで、計算負荷を大幅に削減している。\nD. ネガティブサンプリングでは、skip-gramではなくCBOWモデルにのみ適用可能であるため、効率性の面で制限がある。",
+    "crumbs": [
+      "第4章.深層学習応用(Advanced Deep-learning)",
+      "<span class='chapter-number'>9</span>  <span class='chapter-title'>4. 自然言語処理 (Natural Language Processing)</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/part4/03_semantic_segmentation.html",
+    "href": "chapters/part4/03_semantic_segmentation.html",
+    "title": "3. Semantic Segmentation (Semantic Segmentation)",
+    "section": "",
+    "text": "問1\nFCN（Fully Convolutional Network）は、画像のセマンティックセグメンテーションのために設計されたネットワークであり、全結合層の代わりに（あ）を用いて、入力画像と同じ空間解像度の出力を得ることが可能である。また、分類タスクで用いられる典型的なCNN（例：VGG, ResNet）をベースとして、出力特徴マップを元の画像サイズに戻すために、（い）と呼ばれる処理を用いてアップサンプリングを行う。このとき、例えばFCN-32s、FCN-16s、FCN-8sのようにダウンサンプリング段階ごとの特徴マップを結合することで、より高解像度な出力を得ることができる。これにより、粗い予測に対して（う）の情報を加えることが可能となる。 FCNの出力に対して、セマンティックセグメンテーションでは次のようなピクセル単位の損失関数が用いられる。 \\[\n𝐿=−∑_{𝑥∈Ω}∑_{c∈C}y_c(x)logP_c(x)\n\\] ここで、\\(y_c(x)\\)は位置\\(x\\)における正解ラベルのone-hot表現、\\(P_c(x)\\)はクラス\\(c\\)に属する確率であり、（え）関数により出力される。\nA. (あ) 全結合層 (い) 転置畳み込み（Transposed Conv） (う) スキップコネクション (え) シグモイド\nB. (あ) 畳み込み層 (い) 補間（Interpolation） (う) バッチ正規化 (え) ReLU\nC. (あ) 畳み込み層 (い) 転置畳み込み（Transposed Conv） (う) スキップコネクション (え) ソフトマックス\nD. (あ) 全結合層 (い) プーリング (う) 逆畳み込み (え) シグモイド",
+    "crumbs": [
+      "第4章.深層学習応用(Advanced Deep-learning)",
+      "<span class='chapter-number'>8</span>  <span class='chapter-title'>3. Semantic Segmentation (Semantic Segmentation)</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/part4/05_recurrent_neural_network.html",
+    "href": "chapters/part4/05_recurrent_neural_network.html",
+    "title": "5. Recurrent Neural Network (Recurrent Neural Network)",
+    "section": "",
+    "text": "問1\n次のプログラムはLSTMの各時刻tでの中間層計算の処理を記述したものである。 LSTMは従来のRNNに比べてゲート制御用の重みの重みやバイアスの種類が多く、似たような計算をなんども行う必要がある。計算を効率よく行うために中間層伝播、ゲート3種類を計算するために必要な、「入力」と「前時刻の中間層出力」の重み付き線形和はまとめて計算する。\nn_input = 100  \nn_hidden = 256\n\nw = （あ）  \nb = np.zeros(n_hidden * 4)\n\n# x は（バッチサイズ、入力長）の行列  \n# h, c は（バッチサイズ、中間層ユニット数）の行列  \ndef lstm(x, h, c):  \n    # ゲートおよび入力の Wx + Uh + b の項をまとめて計算  \n    inputs = np.concatenate((x, h), axis=1)  \n    inputs = np.matmul(inputs, w) + b  \n    z, i, f, o = np.hsplit(inputs, 4)  \n    ...\n(あ)に当てはまる式として正しいものを、以下の選択肢から選べ。\nA. np.random.randn(n_input * n_hidden, n_hidden * 3)\nB. np.random.randn(n_input * n_hidden, n_hidden * 4)\nC. np.random.randn(n_input + n_hidden, n_hidden * 3)\nD np.random.randn(n_input + n_hidden, n_hidden * 4)\n\n\n問2\nLSTMとGRU(Gated Recurrent Unit)について、それぞれに含まれるゲートの名称を答えよ。",
+    "crumbs": [
+      "第4章.深層学習応用(Advanced Deep-learning)",
+      "<span class='chapter-number'>10</span>  <span class='chapter-title'>5. Recurrent Neural Network (Recurrent Neural Network)</span>"
+    ]
+  },
+  {
+    "objectID": "references.html",
+    "href": "references.html",
+    "title": "参考文献",
+    "section": "",
+    "text": "問題作成及び内容の理解を深めるにあたり、以下のリソースを参考にしました。\n\n【深層学習】Transformer - Multi-Head Attentionを理解してやろうじゃないの【ディープラーニングの世界vol.28】\n情報理論：KLダイバージェンス\nE資格のためのフローベース生成モデル\nE資格合格へのロードマップ",
+    "crumbs": [
+      "<span class='chapter-number'>17</span>  <span class='chapter-title'>参考文献</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/part4/06_generative_model.html",
+    "href": "chapters/part4/06_generative_model.html",
+    "title": "6. 生成モデル (Generative Model)",
+    "section": "",
+    "text": "問1\n次の選択肢の中から誤ったものを1つ選べ。\nA. 変分自己符号化器（VAE）は潜在空間の分布を正規分布などの簡単な分布に制約することで、生成過程を安定化させている。Reparameterization Trick により、勾配のバックプロパゲーションが可能となっている。\nB. Denoising Autoencoder は、入力データにノイズを加えてから復元することで、より堅牢な特徴表現の学習を促進するオートエンコーダの一種である。\nC. フローベース生成モデルは、潜在空間からサンプルを生成するときに、逆変換を用いて生成過程を効率的に計算できるが、逆変換のヤコビアン行列の行列式を計算するコストが非常に低いことも特徴の一つである。\nD. 敵対的生成ネットワーク（GAN）は、生成器と識別器が交互に学習し、生成器は識別器を欺くためのリアルなサンプル生成を目指すが、VAEと比較して生成されるサンプルの多様性が劣る傾向がある。",
+    "crumbs": [
+      "第4章.深層学習応用(Advanced Deep-learning)",
+      "<span class='chapter-number'>11</span>  <span class='chapter-title'>6. 生成モデル (Generative Model)</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/part3/03_convolutional_neural_network.html",
+    "href": "chapters/part3/03_convolutional_neural_network.html",
+    "title": "3. 畳み込みニューラルネットワーク (Convolutional Neural)",
+    "section": "",
+    "text": "問1.\nある1枚の画像（1チャンネル）に対して、次の条件で im2col 変換を行う。\n入力画像サイズ：5×5\nフィルターサイズ：3×3\nストライド：1\nパディング：0\nI. この時、畳み込み演算の出力サイズの公式を用いて、出力の高さと幅を計算せよ。\nA. (2, 2)\nB. (3, 3)\nC. (4, 4)\nD. (5, 5)\n\nこのとき、im2colによって生成される行列の形状（im_col.shape）として最も適切なものはどれか。 ただし、フィルターは1枚であり、チャンネル数は1とする。\n\nA. (3, 3)\nB. (9, 9)\nC. (9, 25)\nD. (3, 9)",
+    "crumbs": [
+      "3.深層学習基礎(Basic Deep-learning)",
+      "<span class='chapter-number'>5</span>  <span class='chapter-title'>3. 畳み込みニューラルネットワーク (Convolutional Neural)</span>"
+    ]
+  },
+  {
+    "objectID": "chapters/part3/02_optimization.html",
+    "href": "chapters/part3/02_optimization.html",
+    "title": "2. 深層学習のための最適化 (Optimization)",
+    "section": "",
+    "text": "問1\n次の計算グラフは、ロジット ( z = [z_1, z_2, z_3] ) からソフトマックスを計算し、クロスエントロピー損失 ( L ) を求める順伝播を表している。\n\n\n\n\n\ngraph LR\n    Z1[z1] ---&gt; S[softmax]\n    Z2[z2] ---&gt; S[softmax]\n    Z3[z3] ---&gt; S[softmax]\n    S ---&gt; Yhat1[ŷ1]\n    S ---&gt; Yhat2[ŷ2]\n    S ---&gt; Yhat3[ŷ3]\n    Y1[y1=0] ---&gt; CE[Cross-Entropy Loss L]\n    Y2[y2=1] ---&gt; CE\n    Y3[y3=0] ---&gt; CE\n    Yhat1 ---&gt; CE\n    Yhat2 ---&gt; CE\n    Yhat3 ---&gt; CE\n\n\n\n\n\n\nI. 逆伝播で\\(\\frac{∂𝐿}{∂𝑧_j}\\)を求めたときの一般公式として正しいものを選べ。\nただし、ソフトマックスとクロスエントロピー損失は以下で表せるものとする。\n\\[\n\\hat{y}_i = \\frac{\\exp(z_i)}{\\sum_{k} \\exp(z_k)}\n\\]\n\\[\nL = - \\sum_{i} y_i \\log(\\hat{y}_i)\n\\]\nA. \\(𝑦_j−\\hat{y}_j\\)\nB. \\(\\hat{y}_j-𝑦_j\\)\nC. \\(\\frac{-y_j}{\\hat{y}_j}\\)\nD. \\(\\hat{y}_j(1-𝑦_j)\\)\nII.3クラス分類問題で、真のラベル\\(y = [0,1,0]\\)、ソフトマックスの出力\\(\\hat{y}=[0.2, 0.3, 0.5]\\)のとき、 \\(\\frac{∂𝐿}{∂𝑧_2}\\)を求めよ。\nA. -0.7\nB. 0.7\nC. -0.3\nD. 0.3\n\n\n問2\nAdaGradアルゴリズムの数式は以下のように表される：\n\\[\nh_t = h_{t-1} + ∇E(W_t) ⊙ ∇E(W_t)\nα_t = α_0 × (1/√(h_t + ε))\nW_{t+1} = W_t - α_t ⊙ ∇E(W_t)\n\\]\nこの数式に関する説明として正しくないものはどれか。\nA. h_tは各パラメータの累積二乗勾配を表し、そのパラメータがどれだけ激しく更新されてきたかを記録する\nB. α_tは各パラメータごとに適応的に調整される学習率で、累積二乗勾配が大きいほど学習率は小さくなる\nC. ⊙はアダマール積（要素ごとの積）を表し、各パラメータを独立して扱うために使用される\nD. εは数値安定化項で、h_tが大きくなりすぎて学習率が極端に小さくなることを防ぐ",
+    "crumbs": [
+      "3.深層学習基礎(Basic Deep-learning)",
+      "<span class='chapter-number'>4</span>  <span class='chapter-title'>2. 深層学習のための最適化 (Optimization)</span>"
+    ]
+  }
+]
