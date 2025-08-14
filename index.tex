@@ -148,6 +148,22 @@
 
 \KOMAoption{captions}{tableheading}
 \makeatletter
+\@ifpackageloaded{tcolorbox}{}{\usepackage[skins,breakable]{tcolorbox}}
+\@ifpackageloaded{fontawesome5}{}{\usepackage{fontawesome5}}
+\definecolor{quarto-callout-color}{HTML}{909090}
+\definecolor{quarto-callout-note-color}{HTML}{0758E5}
+\definecolor{quarto-callout-important-color}{HTML}{CC1914}
+\definecolor{quarto-callout-warning-color}{HTML}{EB9113}
+\definecolor{quarto-callout-tip-color}{HTML}{00A047}
+\definecolor{quarto-callout-caution-color}{HTML}{FC5300}
+\definecolor{quarto-callout-color-frame}{HTML}{acacac}
+\definecolor{quarto-callout-note-color-frame}{HTML}{4582ec}
+\definecolor{quarto-callout-important-color-frame}{HTML}{d9534f}
+\definecolor{quarto-callout-warning-color-frame}{HTML}{f0ad4e}
+\definecolor{quarto-callout-tip-color-frame}{HTML}{02b875}
+\definecolor{quarto-callout-caution-color-frame}{HTML}{fd7e14}
+\makeatother
+\makeatletter
 \@ifpackageloaded{bookmark}{}{\usepackage{bookmark}}
 \makeatother
 \makeatletter
@@ -220,23 +236,44 @@
 
 \bookmarksetup{startatroot}
 
-\chapter*{Preface}\label{preface}
-\addcontentsline{toc}{chapter}{Preface}
+\chapter*{前書き}\label{ux524dux66f8ux304d}
+\addcontentsline{toc}{chapter}{前書き}
 
-\markboth{Preface}{Preface}
+\markboth{前書き}{前書き}
 
-This is a Quarto book.
+本問題集では日本ディープラーニング協会（JDLA）が実施する「E資格」に向け、E2024\#2のシラバスに沿った問題を掲載しています。\\
+暗記で解ける問題というよりは数学的・論理的背景を問うような問題になるよう心がけて作成しています。\\
+個人的にE資格は統計検定２級以上・準１級以下のレベルである印象です。準１級に苦戦している方は息抜きに受けてみるといいかもしれません。\\
+他にも、E資格が受かるレベルになると、GPT5などの最新モデルの発表があった際に論文やまとめ記事をざっくり読んでその特徴を掴めます。\\
+機械学習が必要なくなる時代になっても、他の人よりモデルの特徴を汲んだ上質なプロンプトが書けるかもしれません。
 
-To learn more about Quarto books visit
-\url{https://quarto.org/docs/books}.
+\section*{対象読者}\label{ux5bfeux8c61ux8aadux8005}
+\addcontentsline{toc}{section}{対象読者}
+
+\markright{対象読者}
+
+\begin{itemize}
+\tightlist
+\item
+  E資格の受験を予定している方
+\item
+  統計検定２級でもの足りていない方
+\item
+  深層学習を実務で使う方
+\item
+  GPT5などSOTAを達成した最新モデルの背景をより深く理解したい方
+\end{itemize}
+
+\begin{center}\rule{0.5\linewidth}{0.5pt}\end{center}
+
+本書が、受験勉強の効率化と深層学習理解の一助となることを願っています。
 
 \bookmarksetup{startatroot}
 
-\chapter{Introduction}\label{introduction}
+\chapter{目次}\label{ux76eeux6b21}
 
-This is a book created from markdown and executable code.
-
-See @knuth84 for additional discussion of literate programming.
+本書はE資格のE2024\#2のシラバスに沿った以下の章節で構成しています。\\
+解答・解説は「解答一覧」をご覧ください。
 
 \part{2.機械学習(Machine Learning)}
 
@@ -701,12 +738,12 @@ Network)}\label{ux9806ux4f1dux64adux578bux30cdux30c3ux30c8ux30efux30fcux30af-fee
 問1. I: B II: A\\
 問2. D
 
-\begin{Shaded}
-\begin{Highlighting}[]
-\NormalTok{εは数値安定化項だが、分母に0をかけられるゼロ除算を防ぐためであり、}
-\NormalTok{学習率が極端に下がるのを防ぐためではない}
-\end{Highlighting}
-\end{Shaded}
+\begin{tcolorbox}[enhanced jigsaw, opacitybacktitle=0.6, colbacktitle=quarto-callout-note-color!10!white, breakable, colframe=quarto-callout-note-color-frame, coltitle=black, colback=white, titlerule=0mm, rightrule=.15mm, title=\textcolor{quarto-callout-note-color}{\faInfo}\hspace{0.5em}{解説}, arc=.35mm, left=2mm, leftrule=.75mm, bottomtitle=1mm, bottomrule=.15mm, toptitle=1mm, toprule=.15mm, opacityback=0]
+
+εは数値安定化項なのは正しいが分母に0をかけられるゼロ除算を防ぐためであり、
+学習率が極端に下がるのを防ぐためではない
+
+\end{tcolorbox}
 
 \section{3. 畳み込みニューラルネットワーク (Convolutional
 Neural)}\label{ux7573ux307fux8fbcux307fux30cbux30e5ux30fcux30e9ux30ebux30cdux30c3ux30c8ux30efux30fcux30af-convolutional-neural-1}
