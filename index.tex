@@ -361,16 +361,53 @@ B. 0.7\\
 C. -0.3\\
 D. 0.3
 
+\subsection{問2}\label{ux554f2-1}
+
+AdaGradアルゴリズムの数式は以下のように表される：
+
+\[
+h_t = h_{t-1} + ∇E(W_t) ⊙ ∇E(W_t)
+α_t = α_0 × (1/√(h_t + ε))
+W_{t+1} = W_t - α_t ⊙ ∇E(W_t)
+\]
+
+この数式に関する説明として正しくないものはどれか。
+
+A.
+h\_tは各パラメータの累積二乗勾配を表し、そのパラメータがどれだけ激しく更新されてきたかを記録する\\
+B.
+α\_tは各パラメータごとに適応的に調整される学習率で、累積二乗勾配が大きいほど学習率は小さくなる\\
+C.
+⊙はアダマール積（要素ごとの積）を表し、各パラメータを独立して扱うために使用される\\
+D.
+εは数値安定化項で、h\_tが大きくなりすぎて学習率が極端に小さくなることを防ぐ
+
 \chapter{3. 畳み込みニューラルネットワーク (Convolutional
 Neural)}\label{ux7573ux307fux8fbcux307fux30cbux30e5ux30fcux30e9ux30ebux30cdux30c3ux30c8ux30efux30fcux30af-convolutional-neural}
+
+\subsection{問1.}\label{ux554f1.}
 
 ある1枚の画像（1チャンネル）に対して、次の条件で im2col 変換を行う。\\
 入力画像サイズ：5×5\\
 フィルターサイズ：3×3\\
 ストライド：1\\
-パディング：0\\
-このとき、im2colによって生成される行列の形状（im\_col.shape）として最も適切なものはどれか。
-ただし、フィルターは1枚であり、チャンネル数は1とする。
+パディング：0
+
+I.
+この時、畳み込み演算の出力サイズの公式を用いて、出力の高さと幅を計算せよ。\\
+A. (2, 2)\\
+B. (3, 3)\\
+C. (4, 4)\\
+D. (5, 5)
+
+\begin{enumerate}
+\def\labelenumi{\Roman{enumi}.}
+\setcounter{enumi}{1}
+\tightlist
+\item
+  このとき、im2colによって生成される行列の形状（im\_col.shape）として最も適切なものはどれか。
+  ただし、フィルターは1枚であり、チャンネル数は1とする。
+\end{enumerate}
 
 A. (3, 3)\\
 B. (9, 9)\\
@@ -408,7 +445,7 @@ C. FCOS
 D. FCOS
 では対象物体の中心から離れた位置に低品質の予測バウンディングボックスが生成されるため、対策としてCenter-nessブランチが導入された。
 
-\subsection{問2}\label{ux554f2-1}
+\subsection{問2}\label{ux554f2-2}
 
 R-CNNの英語名(A)を答えよ。
 また、この名称の由来となったROIに関して、ROIを見つけ出すアルゴリズムの総称(B)と、R-CNNにおけるアルゴリズムの手法(C)を答えよ。
@@ -441,6 +478,7 @@ Processing)}\label{ux81eaux7136ux8a00ux8a9eux51e6ux7406-natural-language-process
 \subsection{問1}\label{ux554f1-5}
 
 以下のSeq2Seqの説明について、空欄（ア）～（ウ）に埋まる言葉として正しいものを選べ。
+
 エンコーダへの入力系列とデコーダからの出力系列は（ア）にすることができる。
 最小化する対象は、（イ） で表すことができる。
 文脈の長さを固定したとき、入力系列が（ウ）とエンコードの性能を担保することができない。
@@ -451,7 +489,7 @@ B.（ア） 異なる長さ（イ）-logP（yの系列\textbar xの系列）（�
 C.（ア）同じ重み（イ）+logP（yの系列\textbar✕の系列）（ウ） 長すぎる\\
 D.（ア） 同じ重み（イ）-logP（yの系列xの系列）（ウ） 短すぎる
 
-\subsection{問2}\label{ux554f2-2}
+\subsection{問2}\label{ux554f2-3}
 
 Word2VecのSkip-gramモデルは、ある単語からその周囲の単語を予測することで単語ベクトル（埋め込み）を学習する手法である。しかし語彙数が多い自然言語コーパスでは、softmax関数を使って全語彙から予測対象の単語を選ぶことは非常に高コストである。この問題を解決するために導入される技法のひとつが「ネガティブサンプリング」である。ネガティブサンプリングに関する以下の記述のうち、最も適切なものはどれか。
 
@@ -498,7 +536,7 @@ B. np.random.randn(n\_input * n\_hidden, n\_hidden * 4)\\
 C. np.random.randn(n\_input + n\_hidden, n\_hidden * 3)\\
 D np.random.randn(n\_input + n\_hidden, n\_hidden * 4)
 
-\subsection{問2}\label{ux554f2-3}
+\subsection{問2}\label{ux554f2-4}
 
 LSTMとGRU(Gated Recurrent
 Unit)について、それぞれに含まれるゲートの名称を答えよ。
@@ -533,7 +571,7 @@ B. 実際に得られた報酬\\
 C. \({γ * Q(s, a)}\)\\
 D. \({R(s, a) + γ * maxQ(s', a')}\)
 
-\subsection{問2}\label{ux554f2-4}
+\subsection{問2}\label{ux554f2-5}
 
 強化学習の基本的なアルゴリズムのうちの一つとして、ベルマン方程式に従って行動価値関数\(𝑄(𝑠, 𝑎)\)をモデル化する価値反復に基づく方法が挙げられる。しかしこの方法では行動𝑎が連続な値を取る場合ような場合を自然に扱えないといった欠点がある。そうした問題に対応する方法として、方策自体をパラメータ𝜃を用いて\(𝜋_𝜃(𝑎|𝑠)\)のようにモデル化した方策勾配に基づくアルゴリズムが挙げられる。方策勾配に基づくアルゴリズムにおいては方策勾配の定理により目的関数\(𝐽_𝜃 = 𝑉(𝑠_0)\)の𝜃に関する勾配\(∇_𝜃𝐽(𝜃)\)を以下のように計算できる。
 \[
@@ -570,7 +608,7 @@ B. \({max(d_p - d_n, m)}\)\\
 C. \({max(-d_p + d_n, m)}\)\\
 D. \({max(d_p - d_n - m, 0)}\)
 
-\subsection{問2}\label{ux554f2-5}
+\subsection{問2}\label{ux554f2-6}
 
 以下の選択肢から、距離学習に関する説明として間違っているものを選べ。
 
@@ -591,7 +629,7 @@ Deep-learning)}\label{ux6df1ux5c64ux5b66ux7fd2ux306eux8aacux660eux6027-explainab
 \subsection{問1}\label{ux554f1-10}
 
 次の文章は Grad-CAM（Gradient-weighted Class Activation
-Mapping）の説明である。間違っているものはどれか、1つ選びなさい。
+Mapping）の説明である。間違っているものはどれか。
 
 A.
 AlexNetのように最後が畳み込み層ではなく、全結合層であるCNNには適用出来ない\\
@@ -602,7 +640,19 @@ Backpropagationを組み合わせたものである\\
 D.
 CNNの最終的な畳み込み層の出力値に対する勾配を利用してカラーマップ表示するための値を求める
 
-\subsection{問2}\label{ux554f2-6}
+\subsection{問2}\label{ux554f2-7}
+
+以下の説明のうち、正しいものを1つ選べ。
+
+A. CAMはGlobal Average Pooling層がないモデルでも、そのまま適用できる。\\
+B. Grad-CAMは最後の畳み込み層の勾配情報を利用するため、Global Average
+Pooling層は不要である。\\
+C.
+GoogLeNetは最後がFlatten→全結合層なので、オリジナルCAMは適用できない。\\
+D. VGGは最後にGlobal Average
+Pooling層を持つため、オリジナルCAMをそのまま適用できる。
+
+\subsection{問3}\label{ux554f3-1}
 
 Shapley値は協力ゲーム理論に基づき、特徴量の寄与度を計算する。
 次のうち、Shapley値の計算に必ず含まれる考え方として正しいものを選べ。
@@ -648,21 +698,27 @@ Network)}\label{ux9806ux4f1dux64adux578bux30cdux30c3ux30c8ux30efux30fcux30af-fee
 \section{2. 深層学習のための最適化
 (Optimization)}\label{ux6df1ux5c64ux5b66ux7fd2ux306eux305fux3081ux306eux6700ux9069ux5316-optimization-1}
 
-問1 I: B II: A
+問1. I: B II: A\\
+問2. D
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{εは数値安定化項だが、分母に0をかけられるゼロ除算を防ぐためであり、}
+\NormalTok{学習率が極端に下がるのを防ぐためではない}
+\end{Highlighting}
+\end{Shaded}
 
 \section{3. 畳み込みニューラルネットワーク (Convolutional
 Neural)}\label{ux7573ux307fux8fbcux307fux30cbux30e5ux30fcux30e9ux30ebux30cdux30c3ux30c8ux30efux30fcux30af-convolutional-neural-1}
 
-問1. B
+問1. I: B II: B
 
 \bookmarksetup{startatroot}
 
 \chapter{第4章.深層学習応用(Advanced
 Deep-learning)}\label{ux7b2c4ux7ae0.ux6df1ux5c64ux5b66ux7fd2ux5fdcux7528advanced-deep-learning-1}
 
-\bookmarksetup{startatroot}
-
-\chapter{1. 画像認識(Image
+\section{1. 画像認識(Image
 Recognition)}\label{ux753bux50cfux8a8dux8b58image-recognition-1}
 
 問1. B
@@ -715,7 +771,8 @@ Methods)}\label{ux69d8ux3005ux306aux5b66ux7fd2ux65b9ux6cd5-various-learning-meth
 Deep-learning)}\label{ux6df1ux5c64ux5b66ux7fd2ux306eux8aacux660eux6027-explainability-of-deep-learning-1}
 
 問1. A\\
-問2. B
+問2. B\\
+問3. B
 
 \bookmarksetup{startatroot}
 
