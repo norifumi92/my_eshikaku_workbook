@@ -1,5 +1,4 @@
-# Introduction
+# 目次
 
-This is a book created from markdown and executable code.
-
-See @knuth84 for additional discussion of literate programming.
+本書はE資格のE2024#2のシラバスに沿った以下の章節で構成しています。  
+解答・解説は「解答一覧」をご覧ください。
