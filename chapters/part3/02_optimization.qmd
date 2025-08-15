@@ -58,4 +58,51 @@ $$
 A. h_tは各パラメータの累積二乗勾配を表し、そのパラメータがどれだけ激しく更新されてきたかを記録する  
 B. α_tは各パラメータごとに適応的に調整される学習率で、累積二乗勾配が大きいほど学習率は小さくなる  
 C. ⊙はアダマール積（要素ごとの積）を表し、各パラメータを独立して扱うために使用される  
-D. εは数値安定化項で、h_tが大きくなりすぎて学習率が極端に小さくなることを防ぐ
+D. εは数値安定化項で、h_tが大きくなりすぎて学習率が極端に小さくなることを防ぐ  
+
+### 問3
+
+ドロップアウトの実装を記述した以下のコードを参照し、空欄に当てはまる選択肢をそれぞれ1つずつ選べ。ただし、実装内のtrain_flagは、訓練時にはTrue、予測時にはFalseに設定するものとし、dropout_ratioは、ニューロンを消去する割合を表すものとする。
+
+```python
+1  import numpy as np
+2
+3  class Dropout:
+4      def __init__(self, dropout_ratio=0.5):
+5          self.dropout_ratio = dropout_ratio
+6          self.mask = None
+7
+8      def forward(self, x, train_flg=True):
+9          if train_flg:
+10             self.mask = ( ア ) self.dropout_ratio
+11             return ( イ )
+12         else:
+13             return ( ウ )
+14
+15     def backward(self, dout):
+16         return ( エ )
+```
+
+（ア）の選択肢  
+A. `np.random.rand(*x.shape) >`  
+B. `np.random.rand(*x.shape) >`  
+C. `np.random.randn(*x.shape) <`  
+D. `np.random.rand(*x.shape) <`  
+
+（イ）の選択肢  
+A. `x * self.mask`  
+B. `x * (1.0 + self.mask)`  
+C. `x - self.mask`  
+D. `x * (1.0 - self.mask)`  
+
+（ウ）の選択肢  
+A. `x * self.mask`  
+B. `x * (1.0 - self.mask)`  
+C. `x * self.dropout_ratio`  
+D. `x * (1.0 - self.dropout_ratio)`  
+
+（エ）の選択肢  
+A. `dout * self.mask`  
+B. `dout * (1.0 - self.mask)`  
+C. `dout * self.dropout_ratio`  
+D. `dout * (1.0 - self.dropout_ratio)`  

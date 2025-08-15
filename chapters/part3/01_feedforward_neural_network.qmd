@@ -21,10 +21,10 @@ def binary_crossentropy(y_true, y_pred):
     return loss
 ```
 
-A. np.clip(y_pred, epsilon, 1.0)  
-B. np.clip(y_pred, 0.0, 1 - epsilon)  
-C. np.clip(y_pred, epsilon, 1 - epsilon)  
-D. np.maximum(y_pred, epsilon)  
+A. `np.clip(y_pred, epsilon, 1.0)`  
+B. `np.clip(y_pred, 0.0, 1 - epsilon)`  
+C. `np.clip(y_pred, epsilon, 1 - epsilon)`  
+D. `np.maximum(y_pred, epsilon)`  
 
 ### 問2
 
@@ -48,10 +48,10 @@ def softmax(x):
     return exp_x / sum_exp
 ```
 
-A. ア: np.max(x, axis=1, keepdims=True), イ: np.sum(exp_x, axis=1, keepdims=True)  
-B. ア: np.max(x, axis=0, keepdims=True), イ: np.sum(exp_x, axis=0, keepdims=True)  
-C. ア: np.max(x, axis=1), イ: np.sum(exp_x, axis=1)  
-D. ア: np.maximum(x, 0), イ: np.sum(exp_x)  
+A. ア: `np.max(x, axis=1, keepdims=True)`, イ: `np.sum(exp_x, axis=1, keepdims=True)`  
+B. ア: `np.max(x, axis=0, keepdims=True)`, イ: `np.sum(exp_x, axis=0, keepdims=True)`  
+C. ア: `np.max(x, axis=1)`, イ: `np.sum(exp_x, axis=1)`  
+D. ア: `np.maximum(x, 0)`, イ: `np.sum(exp_x)`  
 
 ### 問3
 以下のtanh関数のプログラムで空欄（ア）に入るものを選べ。
@@ -64,7 +64,7 @@ def tanh(x):
     return y
 ```
 
-A. (np.exp(x) + np.exp(-x)) / (np.exp(x) + np.exp(-x))  
-B. (np.exp(x) + np.exp(-x)) / (np.exp(x) - np.exp(-x))  
-C. (np.exp(x) – np.exp(-x)) / (np.exp(x) - np.exp(-x))  
-D. (np.exp(x) – np.exp(-x)) / (np.exp(x) + np.exp(-x))
+A. `(np.exp(x) + np.exp(-x)) / (np.exp(x) + np.exp(-x))`  
+B. `(np.exp(x) + np.exp(-x)) / (np.exp(x) - np.exp(-x))`  
+C. `(np.exp(x) – np.exp(-x)) / (np.exp(x) - np.exp(-x))`  
+D. `(np.exp(x) – np.exp(-x)) / (np.exp(x) + np.exp(-x))`
