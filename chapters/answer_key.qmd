@@ -34,7 +34,8 @@
 問1. A  
 問2. A: Region-based Convolutional Neural Network  
 B: Region Proposal(領域探索)  
-C: Selective Search
+C: Selective Search  
+問3. B
 
 ## 3. Semantic Segmentation (Semantic Segmentation)
 問1. C  
