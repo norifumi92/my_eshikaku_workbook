@@ -1,0 +1,26 @@
+# 1. 機械学習の基礎(Machine Learning Basics)
+
+### 問1
+
+以下の MAP に関する説明について、空欄 （ア）、（イ）に埋まる言葉として正しいものを選べ。
+  
+MAP推定は Maximum A Posteriori Estimation の略語であり、MLE（Maximum Likelihood Estimation）と比べて、（ア）という特徴がある。
+MAPによって得られるパラメータを $\theta_{\mathrm{MAP}}$ とすると、$\theta_{\mathrm{MAP}}$ は以下の式によって与えられる。
+
+I.（ア）に入るものを選べ。
+
+A. MLEは事前分布を考慮しないが、MAPは事前分布を考慮する  
+B. MLEは事後分布を最大化するが、MAPは尤度を最大化する  
+C. MLEとMAPは常に同じ解を与える  
+D. MAPは損失関数として必ず平均二乗誤差を用いる  
+
+II.（イ）に入るものを選べ。
+$$
+\theta_{\mathrm{MAP}} = \arg\max_{\theta}\, P(\theta \mid X) \;=\; \text{（イ）}
+$$
+
+A. $\arg\max_{\theta}\, P(X \mid \theta)$  
+B. $\arg\max_{\theta} \, \dfrac{P(\theta)}{P(X)}$  
+C. $\arg\max_{\theta} \, P(X \mid \theta)\, P(\theta)$  
+D. $\arg\max_{\theta} \, \log P(X)$  
+

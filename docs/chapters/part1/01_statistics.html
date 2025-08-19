@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>1. 順伝播型ネットワーク (Feedforward Neural Network) – E資格 レベルアップ問題集</title>
+<title>1. 確率・統計 (Statistics) – E資格 レベルアップ問題集</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,41 +20,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-html { -webkit-text-size-adjust: 100%; }
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -65,8 +30,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../chapters/part3/02_optimization.html" rel="next">
-<link href="../../chapters/part1/01_statistics.html" rel="prev">
+<link href="../../chapters/part3/01_feedforward_neural_network.html" rel="next">
+<link href="../../intro.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
@@ -105,6 +70,35 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -117,7 +111,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../chapters/part3/01_feedforward_neural_network.html">3.深層学習基礎(Basic Deep-learning)</a></li><li class="breadcrumb-item"><a href="../../chapters/part3/01_feedforward_neural_network.html"><span class="chapter-title">1. 順伝播型ネットワーク (Feedforward Neural Network)</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../chapters/part1/01_statistics.html">1.数学的学習(Mach Basics)</a></li><li class="breadcrumb-item"><a href="../../chapters/part1/01_statistics.html"><span class="chapter-title">1. 確率・統計 (Statistics)</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -164,7 +158,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../chapters/part1/01_statistics.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">1. 数学的基礎 (Math Basics)</span></a>
+  <a href="../../chapters/part1/01_statistics.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">1. 確率・統計 (Statistics)</span></a>
   </div>
 </li>
       </ul>
@@ -184,7 +178,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../chapters/part3/01_feedforward_neural_network.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">1. 順伝播型ネットワーク (Feedforward Neural Network)</span></a>
+  <a href="../../chapters/part3/01_feedforward_neural_network.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">1. 順伝播型ネットワーク (Feedforward Neural Network)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -292,17 +286,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    
   <ul>
   <li><a href="#問1" id="toc-問1" class="nav-link active" data-scroll-target="#問1">問1</a></li>
-  <li><a href="#問2" id="toc-問2" class="nav-link" data-scroll-target="#問2">問2</a></li>
-  <li><a href="#問3" id="toc-問3" class="nav-link" data-scroll-target="#問3">問3</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../chapters/part3/01_feedforward_neural_network.html">3.深層学習基礎(Basic Deep-learning)</a></li><li class="breadcrumb-item"><a href="../../chapters/part3/01_feedforward_neural_network.html"><span class="chapter-title">1. 順伝播型ネットワーク (Feedforward Neural Network)</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../chapters/part1/01_statistics.html">1.数学的学習(Mach Basics)</a></li><li class="breadcrumb-item"><a href="../../chapters/part1/01_statistics.html"><span class="chapter-title">1. 確率・統計 (Statistics)</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-title">1. 順伝播型ネットワーク (Feedforward Neural Network)</span></h1>
+<h1 class="title"><span class="chapter-title">1. 確率・統計 (Statistics)</span></h1>
 </div>
 
 
@@ -321,61 +313,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="問1" class="level3">
 <h3 class="anchored" data-anchor-id="問1">問1</h3>
-<p>以下は2値分類のバイナリクロスエントロピー損失を実装するコードである。空欄（ア）に入る正しいコードを選べ。</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> binary_crossentropy(y_true, y_pred):</span>
-<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
-<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co">    y_true: 真のラベル [batch_size] (0 or 1)</span></span>
-<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="co">    y_pred: 予測確率 [batch_size] (0~1の値)</span></span>
-<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
-<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    <span class="co"># クリッピング</span></span>
-<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    epsilon <span class="op">=</span> <span class="fl">1e-15</span></span>
-<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    y_pred <span class="op">=</span> （ア）</span>
-<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    <span class="co"># バイナリクロスエントロピー計算</span></span>
-<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    loss <span class="op">=</span> <span class="op">-</span>np.mean(y_true <span class="op">*</span> np.log(y_pred) <span class="op">+</span> (<span class="dv">1</span> <span class="op">-</span> y_true) <span class="op">*</span> np.log(<span class="dv">1</span> <span class="op">-</span> y_pred))</span>
-<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> loss</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>A. <code>np.clip(y_pred, epsilon, 1.0)</code><br>
-B. <code>np.clip(y_pred, 0.0, 1 - epsilon)</code><br>
-C. <code>np.clip(y_pred, epsilon, 1 - epsilon)</code><br>
-D. <code>np.maximum(y_pred, epsilon)</code></p>
-</section>
-<section id="問2" class="level3">
-<h3 class="anchored" data-anchor-id="問2">問2</h3>
-<p>以下は多クラス分類のソフトマックス関数を実装するコードである。数値安定性を考慮した空欄（ア）、（イ）に入る正しいコードを選べ。</p>
-<div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> softmax(x):</span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="co">    x: ロジット [batch_size, num_classes]</span></span>
-<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
-<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    <span class="co"># 数値安定性のため最大値を引く</span></span>
-<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    x_max <span class="op">=</span> （ア）</span>
-<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    x_shifted <span class="op">=</span> x <span class="op">-</span> x_max</span>
-<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    <span class="co"># ソフトマックス計算</span></span>
-<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>    exp_x <span class="op">=</span> np.exp(x_shifted)</span>
-<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>    sum_exp <span class="op">=</span> （イ）</span>
-<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>    </span>
-<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> exp_x <span class="op">/</span> sum_exp</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>A. ア: <code>np.max(x, axis=1, keepdims=True)</code>, イ: <code>np.sum(exp_x, axis=1, keepdims=True)</code><br>
-B. ア: <code>np.max(x, axis=0, keepdims=True)</code>, イ: <code>np.sum(exp_x, axis=0, keepdims=True)</code><br>
-C. ア: <code>np.max(x, axis=1)</code>, イ: <code>np.sum(exp_x, axis=1)</code><br>
-D. ア: <code>np.maximum(x, 0)</code>, イ: <code>np.sum(exp_x)</code></p>
-</section>
-<section id="問3" class="level3">
-<h3 class="anchored" data-anchor-id="問3">問3</h3>
-<p>以下のtanh関数のプログラムで空欄（ア）に入るものを選べ。</p>
-<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> tanh(x):</span>
-<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    y <span class="op">=</span> （ア）</span>
-<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> y</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>A. <code>(np.exp(x) + np.exp(-x)) / (np.exp(x) + np.exp(-x))</code><br>
-B. <code>(np.exp(x) + np.exp(-x)) / (np.exp(x) - np.exp(-x))</code><br>
-C. <code>(np.exp(x) – np.exp(-x)) / (np.exp(x) - np.exp(-x))</code><br>
-D. <code>(np.exp(x) – np.exp(-x)) / (np.exp(x) + np.exp(-x))</code></p>
+<p>KLダイバージェンス <span class="math inline">\(D_{KL}(P||Q)\)</span> と交差エントロピー H(P,Q) の関係式は以下のように表される。<br>
+<span class="math display">\[
+D_{KL}(P||Q) = H(P,Q) - H(P)
+\]</span></p>
+<p>ここで、P は真の分布、Q は予測分布、H(P)はPのエントロピーである。 この関係に関する説明として正しくないものはどれか。</p>
+<p>A. 交差エントロピー損失を最小化することは、予測分布Qを真の分布Pに近づけることと等価である。<br>
+B. 真の分布PのエントロピーH(P)は固定値なので、交差エントロピーの最小化はKLダイバージェンスの最小化と等価である。<br>
+C. KLダイバージェンスは常に非負の値を取り、P=Qの時に最小値0となる。<br>
+D. KLダイバージェンスは対称性を持つため、<span class="math inline">\(D_{KL}(P||Q) = D_{KL}(Q||P)\)</span> が常に成立する。</p>
 
 
 </section>
@@ -782,13 +728,13 @@ D. <code>(np.exp(x) – np.exp(-x)) / (np.exp(x) + np.exp(-x))</code></p>
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../chapters/part1/01_statistics.html" class="pagination-link" aria-label="1. 数学的基礎 (Math Basics)">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">1. 数学的基礎 (Math Basics)</span></span>
+      <a href="../../intro.html" class="pagination-link" aria-label="目次">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">目次</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../chapters/part3/02_optimization.html" class="pagination-link" aria-label="2. 深層学習のための最適化 (Optimization)">
-        <span class="nav-page-text"><span class="chapter-title">2. 深層学習のための最適化 (Optimization)</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../chapters/part3/01_feedforward_neural_network.html" class="pagination-link" aria-label="1. 順伝播型ネットワーク (Feedforward Neural Network)">
+        <span class="nav-page-text"><span class="chapter-title">1. 順伝播型ネットワーク (Feedforward Neural Network)</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

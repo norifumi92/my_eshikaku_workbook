@@ -1,5 +1,13 @@
 # 解答一覧
 
+# 第1章.数学的学習(Mach Basics)
+## 1. 確率・統計 (Statistics)
+問1. D
+
+# 第2章.機械学習(Machine Learning)
+## 1. 機械学習の基礎(Machine Learning Basics)
+問1. I: A II: C  
+
 # 第3章.深層学習基礎(Basic Deep-learning)
 ## 1. 順伝播型ネットワーク (Feedforward Neural Network)
 問1. C  

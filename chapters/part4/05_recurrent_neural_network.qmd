@@ -23,11 +23,11 @@ def lstm(x, h, c):
 ```
 (あ)に当てはまる式として正しいものを、以下の選択肢から選べ。
 
-A. np.random.randn(n_input * n_hidden, n_hidden * 3)  
-B. np.random.randn(n_input * n_hidden, n_hidden * 4)  
-C. np.random.randn(n_input + n_hidden, n_hidden * 3)  
-D np.random.randn(n_input + n_hidden, n_hidden * 4)
+A. `np.random.randn(n_input * n_hidden, n_hidden * 3)`  
+B. `np.random.randn(n_input * n_hidden, n_hidden * 4)`  
+C. `np.random.randn(n_input + n_hidden, n_hidden * 3)`  
+D. `np.random.randn(n_input + n_hidden, n_hidden * 4)`
 
 ### 問2
 
-LSTMとGRU(Gated Recurrent Unit)について、それぞれに含まれるゲートの名称を答えよ。
+LSTMとGRU(Gated Recurrent Unit)について、それぞれに含まれるゲートの名称を全て答えよ。
