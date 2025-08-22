@@ -53,8 +53,9 @@ C: Selective Search
 問1. C  
 
 ## 7. 深層強化学習 (Reinforcement Learning)
-問1. D  
-問2. A  
+問1. I: 4 II: 4  
+問2. D  
+問3. A  
 
 ## 8. 様々な学習方法 (Various Learning Methods)
 問1. A  
