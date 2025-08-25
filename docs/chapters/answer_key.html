@@ -70,6 +70,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -343,7 +372,54 @@ ul.task-list li input[type="checkbox"] {
 <h2 class="anchored" data-anchor-id="順伝播型ネットワーク-feedforward-neural-network">1. 順伝播型ネットワーク (Feedforward Neural Network)</h2>
 <p>問1. C<br>
 問2. A<br>
-問3. D</p>
+問3. D<br>
+問4. (あ):A<br>
+(い):B</p>
+<div class="callout callout-style-default callout-note callout-titled" title="解説">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+解説
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>まずは導関数の基本公式を使う <span class="math display">\[
+\frac{d}{dx} \frac{1}{f(x)} = - \frac{f'(x)}{f(x)^2}
+\]</span></p>
+<p>f(x) = <span class="math inline">\(1 + e^{-x}\)</span> と置くと、 <span class="math display">\[
+f(x) = 1 + e^{-x}, \quad f'(x) = - e^{-x}
+\]</span></p>
+<p>連鎖律を使って微分すると、</p>
+<p><span class="math display">\[
+\frac{d\sigma(x)}{dx} = \frac{d}{dx} \frac{1}{f(x)} = - \frac{f'(x)}{f(x)^2} = - \frac{-e^{-x}}{(1+e^{-x})^2} = \frac{e^{-x}}{(1+e^{-x})^2}
+\]</span></p>
+<p>これをσ(x)を使った形に書き換える。</p>
+<p><span class="math display">\[
+\sigma(x) = \frac{1}{1+e^{-x}} \implies 1 - \sigma(x) = \frac{e^{-x}}{1 + e^{-x}}
+\]</span></p>
+<p>よって、 <span class="math display">\[
+\frac{d}{dx}\sigma(x) = \frac{e^{-x}}{(1+e^{-x})^2} = \sigma(x)(1 - \sigma(x))
+\]</span></p>
+</div>
+</div>
+<p>(う):D<br>
+(え):B<br>
+(お)、(か):B,C</p>
+<div class="callout callout-style-default callout-note callout-titled" title="解説">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+解説
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>シグモイドが使われるのは２値問題で確率を結果として得たい場合のみであることを考慮していると解きやすい。 ちなみに、(D)のTransformerのMulti-Head Attentionのスコアにはソフトマックスが使われる。</p>
+</div>
+</div>
 </section>
 <section id="深層学習のための最適化-optimization" class="level2">
 <h2 class="anchored" data-anchor-id="深層学習のための最適化-optimization">2. 深層学習のための最適化 (Optimization)</h2>
@@ -389,6 +465,8 @@ C: Selective Search<br>
 <section id="自然言語処理-natural-language-processing" class="level2">
 <h2 class="anchored" data-anchor-id="自然言語処理-natural-language-processing">4. 自然言語処理 (Natural Language Processing)</h2>
 <p>問1. B<br>
+問2. C<br>
+問3. B<br>
 問2. C</p>
 </section>
 <section id="recurrent-neural-network-recurrent-neural-network" class="level2">

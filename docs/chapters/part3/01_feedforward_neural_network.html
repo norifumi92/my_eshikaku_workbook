@@ -105,6 +105,35 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -306,6 +335,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#問1" id="toc-問1" class="nav-link active" data-scroll-target="#問1">問1</a></li>
   <li><a href="#問2" id="toc-問2" class="nav-link" data-scroll-target="#問2">問2</a></li>
   <li><a href="#問3" id="toc-問3" class="nav-link" data-scroll-target="#問3">問3</a></li>
+  <li><a href="#問4." id="toc-問4." class="nav-link" data-scroll-target="#問4.">問4.</a></li>
   </ul>
 </nav>
     </div>
@@ -388,6 +418,35 @@ D. ア: <code>np.maximum(x, 0)</code>, イ: <code>np.sum(exp_x)</code></p>
 B. <code>(np.exp(x) + np.exp(-x)) / (np.exp(x) - np.exp(-x))</code><br>
 C. <code>(np.exp(x) – np.exp(-x)) / (np.exp(x) - np.exp(-x))</code><br>
 D. <code>(np.exp(x) – np.exp(-x)) / (np.exp(x) + np.exp(-x))</code></p>
+</section>
+<section id="問4." class="level3">
+<h3 class="anchored" data-anchor-id="問4.">問4.</h3>
+<p>活性化関数について、空欄 (あ) ~ (か) に当てはまるものを選べ。 活性化関数としては、かつてシグモイド関数が広く用いられていた。シグモイド関数 <span class="math inline">\(\sigma(x)\)</span> は (あ) の式で表され、その微分は <span class="math inline">\(\sigma(x)\)</span> の記号を使うと (い) で表すことができる。しかし、近年では (う) の理由により、中間層の活性化関数としては ReLU に置き換えられることが多い。一方で、(え) という利点があるため、(お)、(か) では現在でもシグモイドが採用されている。</p>
+<p>(あ) の選択肢:<br>
+A. <span class="math inline">\(\frac{1}{1+e^{-x}}\)</span><br>
+B. <span class="math inline">\(\frac{e^x}{1+e^x}\)</span><br>
+C. <span class="math inline">\(\frac{1}{1+e^{x}}\)</span><br>
+D. <span class="math inline">\(\frac{1}{1-e^{x}}\)</span></p>
+<p>(い)の選択肢:<br>
+A. <span class="math inline">\(1-\sigma(x)\)</span><br>
+B. <span class="math inline">\(\sigma(x)(1-\sigma(x))\)</span><br>
+C. <span class="math inline">\(x(1-x)\)</span><br>
+D. <span class="math inline">\(e^{-x}\)</span></p>
+<p>(う)の選択肢:<br>
+A. シグモイドは計算コストが高い<br>
+B. シグモイドは常に線形<br>
+C. シグモイドは出力が離散的<br>
+D. 勾配消失が起きる</p>
+<p>(え)の選択肢:<br>
+A. シグモイドは負の値も出せるから確率表現に適している<br>
+B. シグモイドは出力を <span class="math inline">\((0,1)\)</span> の範囲に制限でき、確率として解釈できる<br>
+C. ReLU は非線形性を持たないため、確率を出せない<br>
+D. ReLU は常に勾配が1になるため、分類には不向き</p>
+<p>(お)、(か) の選択肢:<br>
+A. ResNet の中間層活性化関数<br>
+B. Word2Vec（Negative Sampling 損失関数）<br>
+C. GAN の識別器（Discriminator 出力層）<br>
+D. Transformer の Multi-Head Attention のスコア計算</p>
 
 
 </section>

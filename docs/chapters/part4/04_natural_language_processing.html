@@ -129,14 +129,26 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../chapters/part1/01_statistics.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">1. 数学的基礎 (Math Basics)</span></a>
+  <a href="../../chapters/part1/01_statistics.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">1. 確率・統計 (Statistics)</span></a>
   </div>
 </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
-      <span class="sidebar-item-text sidebar-link text-start">
- <span class="menu-text">2.機械学習(Machine Learning)</span></span>
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
+ <span class="menu-text">2.機械学習(Machine Learning)</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/part2/01_machine_learning_basics.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">1. 機械学習の基礎(Machine Learning Basics)</span></a>
+  </div>
+</li>
+      </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
@@ -258,6 +270,8 @@ ul.task-list li input[type="checkbox"] {
   <ul>
   <li><a href="#問1" id="toc-問1" class="nav-link active" data-scroll-target="#問1">問1</a></li>
   <li><a href="#問2" id="toc-問2" class="nav-link" data-scroll-target="#問2">問2</a></li>
+  <li><a href="#問3" id="toc-問3" class="nav-link" data-scroll-target="#問3">問3</a></li>
+  <li><a href="#問4" id="toc-問4" class="nav-link" data-scroll-target="#問4">問4</a></li>
   </ul>
 </nav>
     </div>
@@ -294,6 +308,22 @@ D.（ア） 同じ重み（イ）-logP（yの系列xの系列）（ウ） 短す
 </section>
 <section id="問2" class="level3">
 <h3 class="anchored" data-anchor-id="問2">問2</h3>
+<p>Word2Vecに関する記述として正しいものを選べ。</p>
+<p>A. CBOWは中心の単語から周囲の単語を予測するモデルである。<br>
+B. Skip-gramは周囲の単語から中心の単語を予測するモデルである。<br>
+C. ネガティブサンプリングは学習コストを削減するために導入された手法である。<br>
+D. LSIはニューラルネットワークを用いた分散表現の学習手法である。</p>
+</section>
+<section id="問3" class="level3">
+<h3 class="anchored" data-anchor-id="問3">問3</h3>
+<p>GPTに関する記述として正しいものを選べ。</p>
+<p>A. GPTは双方向の文脈を同時に考慮する。<br>
+B. GPTは自己回帰型モデルであり、次の単語を順番に予測する。<br>
+C. GPTの事前学習はMasked Language Modelingを用いる。<br>
+D. GPTは主にFew-shot LearningよりもFine-tuningに依存して性能を発揮する。</p>
+</section>
+<section id="問4" class="level3">
+<h3 class="anchored" data-anchor-id="問4">問4</h3>
 <p>Word2VecのSkip-gramモデルは、ある単語からその周囲の単語を予測することで単語ベクトル（埋め込み）を学習する手法である。しかし語彙数が多い自然言語コーパスでは、softmax関数を使って全語彙から予測対象の単語を選ぶことは非常に高コストである。この問題を解決するために導入される技法のひとつが「ネガティブサンプリング」である。ネガティブサンプリングに関する以下の記述のうち、最も適切なものはどれか。</p>
 <p>A. ネガティブサンプリングでは、語彙全体にsoftmaxを適用し、確率分布を正規化して損失関数を計算することで効率化を実現している。<br>
 B. ネガティブサンプリングでは、実際に出現したコンテキスト語のみを使用し、負例を使わずに分類を行う。<br>
