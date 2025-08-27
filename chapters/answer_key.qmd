@@ -125,7 +125,8 @@ C: Selective Search
 ## 9. 深層学習の説明性 (Explainability of Deep-learning)
 問1. A  
 問2. B  
-問3. B
+問3. B,C  
+問4. B  
 
 # 第5章.開発・運用環境(Infrastructure)
 ## 4. アクセラレーター (Accelerator)

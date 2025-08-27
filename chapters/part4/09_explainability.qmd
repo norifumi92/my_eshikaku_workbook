@@ -1,6 +1,6 @@
 # 9. 深層学習の説明性 (Explainability of Deep-learning)
 
-### 問1
+**問1**
 
 次の文章は Grad-CAM（Gradient-weighted Class Activation Mapping）の説明である。間違っているものはどれか。
 
@@ -9,7 +9,7 @@ B. Grad-CAMを適用するために、アーキテクチャの変更や再トレ
 C. Guided Grad-CAMは、Grad-CAMとGuided Backpropagationを組み合わせたものである  
 D. CNNの最終的な畳み込み層の出力値に対する勾配を利用してカラーマップ表示するための値を求める  
 
-### 問2
+**問2**
 
 以下の説明のうち、正しいものを1つ選べ。
 
@@ -18,8 +18,15 @@ B. Grad-CAMは最後の畳み込み層の勾配情報を利用するため、Glo
 C. GoogLeNetは最後がFlatten→全結合層なので、オリジナルCAMは適用できない。  
 D. VGGは最後にGlobal Average Pooling層を持つため、オリジナルCAMをそのまま適用できる。  
 
+**問3**
 
-### 問3
+次のうち、Class Activation Map (CAM) をそのまま適用可能なモデルを２つ選べ。  
+A. VGG16  
+B. ResNet50  
+C. GoogLeNet  
+D. AlexNet  
+
+**問4**
 
 Shapley値は協力ゲーム理論に基づき、特徴量の寄与度を計算する。
 次のうち、Shapley値の計算に必ず含まれる考え方として正しいものを選べ。
@@ -27,4 +34,4 @@ Shapley値は協力ゲーム理論に基づき、特徴量の寄与度を計算�
 A. 各特徴量を1つずつ除去したモデルの予測差を合計して寄与度とする。  
 B. 全ての特徴量の順列（Permutation）について、各特徴量が追加されたときの限界貢献度の平均を取る。  
 C. 特徴量間の相関を完全に無視して寄与度を算出する。  
-D. 各特徴量の寄与度は必ず正の値になる
+D. 各特徴量の寄与度は必ず正の値になる。  
