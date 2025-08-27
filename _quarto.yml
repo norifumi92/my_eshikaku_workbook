@@ -50,13 +50,13 @@ format:
     pdf-engine: xelatex
     mainfont: "Hiragino Kaku Gothic ProN"
     sansfont: "Hiragino Kaku Gothic ProN"
-    monofont: "Courier New"
+    monofont: "Hiragino Kaku Gothic ProN"
     include-in-header:
       - text: |
           \usepackage{xeCJK}
           \setCJKmainfont{Hiragino Kaku Gothic ProN}
           \setCJKsansfont{Hiragino Kaku Gothic ProN}
-          \setCJKmonofont{Courier New}
+          \setCJKmonofont{Hiragino Kaku Gothic ProN}
 
 
 
