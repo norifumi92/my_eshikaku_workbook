@@ -47,6 +47,16 @@ format:
       - brand
   pdf:
     documentclass: scrreprt
+    pdf-engine: xelatex
+    mainfont: "Hiragino Kaku Gothic ProN"
+    sansfont: "Hiragino Kaku Gothic ProN"
+    monofont: "Courier New"
+    include-in-header:
+      - text: |
+          \usepackage{xeCJK}
+          \setCJKmainfont{Hiragino Kaku Gothic ProN}
+          \setCJKsansfont{Hiragino Kaku Gothic ProN}
+          \setCJKmonofont{Courier New}
 
 
 

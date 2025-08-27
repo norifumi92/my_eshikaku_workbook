@@ -330,19 +330,8 @@ window.Quarto = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
-   
-  <ul>
-  <li><a href="#問1" id="toc-問1" class="nav-link active" data-scroll-target="#問1">問1</a></li>
-  <li><a href="#問2" id="toc-問2" class="nav-link" data-scroll-target="#問2">問2</a></li>
-  <li><a href="#問3" id="toc-問3" class="nav-link" data-scroll-target="#問3">問3</a>
-  <ul class="collapse">
-  <li><a href="#問4" id="toc-問4" class="nav-link" data-scroll-target="#問4">問4</a></li>
-  </ul></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -366,8 +355,7 @@ window.Quarto = {
 </header>
 
 
-<section id="問1" class="level3">
-<h3 class="anchored" data-anchor-id="問1">問1</h3>
+<p><strong>問1</strong></p>
 <p>次の計算グラフは、ロジット ( z = [<span class="math inline">\(z_1\)</span>, <span class="math inline">\(z_2\)</span>, <span class="math inline">\(z_3\)</span>] ) からソフトマックスを計算し、クロスエントロピー損失 ( L ) を求める順伝播を表している。</p>
 <div class="cell" data-layout-align="default">
 <div class="cell-output-display">
@@ -410,9 +398,7 @@ A. -0.7<br>
 B. 0.7<br>
 C. -0.3<br>
 D. 0.3</p>
-</section>
-<section id="問2" class="level3">
-<h3 class="anchored" data-anchor-id="問2">問2</h3>
+<p><strong>問2</strong></p>
 <p>AdaGradアルゴリズムの数式は以下のように表される：</p>
 <p><span class="math inline">\(h_t = h_{t-1} + ∇E(W_t) ⊙ ∇E(W_t)\)</span><br>
 <span class="math inline">\(α_t = α_0 × (1/√(h_t + ε))\)</span><br>
@@ -422,9 +408,7 @@ D. 0.3</p>
 B. <span class="math inline">\(α_t\)</span>は各パラメータごとに適応的に調整される学習率で、累積二乗勾配が大きいほど学習率は小さくなる<br>
 C. ⊙はアダマール積（要素ごとの積）を表し、各パラメータを独立して扱うために使用される<br>
 D. εは数値安定化項で、h_tが大きくなりすぎて学習率が極端に小さくなることを防ぐ</p>
-</section>
-<section id="問3" class="level2">
-<h2 class="anchored" data-anchor-id="問3">問3</h2>
+<p><strong>問3</strong></p>
 <p>以下のRMSpropのプログラムで空欄（ア）に入るものを選べ。</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> RMSprop:</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, lr<span class="op">=</span><span class="fl">0.01</span>, decay_rate<span class="op">=</span><span class="fl">0.99</span>):</span>
@@ -447,8 +431,7 @@ A. <code>(1 - self.decay_rate) + grads[key] * grads[key]</code><br>
 B. <code>(1 - self.decay_rate) - grads[key] * grads[key]</code><br>
 C. <code>(1 - self.decay_rate) * grads[key] * grads[key]</code><br>
 D. <code>(1 - self.decay_rate) / (grads[key] * grads[key])</code></p>
-<section id="問4" class="level3">
-<h3 class="anchored" data-anchor-id="問4">問4</h3>
+<p><strong>問4</strong></p>
 <p>ドロップアウトの実装を記述した以下のコードを参照し、空欄に当てはまる選択肢をそれぞれ1つずつ選べ。ただし、実装内の<code>train_flg</code>は、訓練時にはTrue、予測時にはFalseに設定するものとし、<code>dropout_ratio</code>は、ニューロンを消去する割合を表すものとする。</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span>  <span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="dv">2</span></span>
@@ -488,8 +471,6 @@ C. <code>dout * self.dropout_ratio</code><br>
 D. <code>dout * (1.0 - self.dropout_ratio)</code></p>
 
 
-</section>
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

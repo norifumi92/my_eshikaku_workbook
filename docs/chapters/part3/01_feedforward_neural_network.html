@@ -327,17 +327,8 @@ window.Quarto = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
-   
-  <ul>
-  <li><a href="#問1" id="toc-問1" class="nav-link active" data-scroll-target="#問1">問1</a></li>
-  <li><a href="#問2" id="toc-問2" class="nav-link" data-scroll-target="#問2">問2</a></li>
-  <li><a href="#問3" id="toc-問3" class="nav-link" data-scroll-target="#問3">問3</a></li>
-  <li><a href="#問4." id="toc-問4." class="nav-link" data-scroll-target="#問4.">問4.</a></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -361,8 +352,7 @@ window.Quarto = {
 </header>
 
 
-<section id="問1" class="level3">
-<h3 class="anchored" data-anchor-id="問1">問1</h3>
+<p><strong>問1</strong></p>
 <p>以下は2値分類のバイナリクロスエントロピー損失を実装するコードである。空欄（ア）に入る正しいコードを選べ。</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -382,9 +372,7 @@ window.Quarto = {
 B. <code>np.clip(y_pred, 0.0, 1 - epsilon)</code><br>
 C. <code>np.clip(y_pred, epsilon, 1 - epsilon)</code><br>
 D. <code>np.maximum(y_pred, epsilon)</code></p>
-</section>
-<section id="問2" class="level3">
-<h3 class="anchored" data-anchor-id="問2">問2</h3>
+<p><strong>問2</strong></p>
 <p>以下は多クラス分類のソフトマックス関数を実装するコードである。数値安定性を考慮した空欄（ア）、（イ）に入る正しいコードを選べ。</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
@@ -405,10 +393,7 @@ D. <code>np.maximum(y_pred, epsilon)</code></p>
 B. ア: <code>np.max(x, axis=0, keepdims=True)</code>, イ: <code>np.sum(exp_x, axis=0, keepdims=True)</code><br>
 C. ア: <code>np.max(x, axis=1)</code>, イ: <code>np.sum(exp_x, axis=1)</code><br>
 D. ア: <code>np.maximum(x, 0)</code>, イ: <code>np.sum(exp_x)</code></p>
-</section>
-<section id="問3" class="level3">
-<h3 class="anchored" data-anchor-id="問3">問3</h3>
-<p>以下のtanh関数のプログラムで空欄（ア）に入るものを選べ。</p>
+<p><strong>問3</strong> 以下のtanh関数のプログラムで空欄（ア）に入るものを選べ。</p>
 <div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> tanh(x):</span>
@@ -418,9 +403,7 @@ D. ア: <code>np.maximum(x, 0)</code>, イ: <code>np.sum(exp_x)</code></p>
 B. <code>(np.exp(x) + np.exp(-x)) / (np.exp(x) - np.exp(-x))</code><br>
 C. <code>(np.exp(x) – np.exp(-x)) / (np.exp(x) - np.exp(-x))</code><br>
 D. <code>(np.exp(x) – np.exp(-x)) / (np.exp(x) + np.exp(-x))</code></p>
-</section>
-<section id="問4." class="level3">
-<h3 class="anchored" data-anchor-id="問4.">問4.</h3>
+<p><strong>問4</strong></p>
 <p>活性化関数について、空欄 (あ) ~ (か) に当てはまるものを選べ。 活性化関数としては、かつてシグモイド関数が広く用いられていた。シグモイド関数 <span class="math inline">\(\sigma(x)\)</span> は (あ) の式で表され、その微分は <span class="math inline">\(\sigma(x)\)</span> の記号を使うと (い) で表すことができる。しかし、近年では (う) の理由により、中間層の活性化関数としては ReLU に置き換えられることが多い。一方で、(え) という利点があるため、(お)、(か) では現在でもシグモイドが採用されている。</p>
 <p>(あ) の選択肢:<br>
 A. <span class="math inline">\(\frac{1}{1+e^{-x}}\)</span><br>
@@ -449,7 +432,6 @@ C. GAN の識別器（Discriminator 出力層）<br>
 D. Transformer の Multi-Head Attention のスコア計算</p>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
