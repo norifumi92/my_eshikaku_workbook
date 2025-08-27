@@ -438,6 +438,21 @@ f(x) = 1 + e^{-x}, \quad f'(x) = - e^{-x}
 <p>AdaGrad の特徴は「勾配の二乗を累積」して、よく動くパラメータの学習率を抑える仕組みなので、(A)は正しいです。(D)に関して、εは数値安定化項なのは正しいですが分母に0をかけられるゼロ除算を防ぐためであり、学習率が極端に下がるのを防ぐためではありません。</p>
 </div>
 </div>
+<p>問3. C<br>
+問4.(あ):B</p>
+<div class="callout callout-style-default callout-note callout-titled" title="解説">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+解説
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p><code>np.random.rand</code>は分布[0, 1) の一様分布に従い乱数を生成する。 一方、<code>np.random.randn</code>は平均0, 分散1の標準正規分布N(0,1)に従い乱数を生成するため、必ずしも50％の要素が0.5以上にならない。 また、Numpyの<code>.shape</code>はtupleを返すが、tuple型のままだと扱いづらいため、アスタリスク(<code>*</code>)によるアンパックが必要となる。</p>
+</div>
+</div>
 </section>
 <section id="畳み込みニューラルネットワーク-convolutional-neural" class="level2">
 <h2 class="anchored" data-anchor-id="畳み込みニューラルネットワーク-convolutional-neural">3. 畳み込みニューラルネットワーク (Convolutional Neural)</h2>
@@ -448,7 +463,23 @@ f(x) = 1 + e^{-x}, \quad f'(x) = - e^{-x}
 <h1>第4章.深層学習応用(Advanced Deep-learning)</h1>
 <section id="画像認識image-recognition" class="level2">
 <h2 class="anchored" data-anchor-id="画像認識image-recognition">1. 画像認識(Image Recognition)</h2>
-<p>問1. B</p>
+<p>問1. A<br>
+問2. B</p>
+<div class="callout callout-style-default callout-note callout-titled" title="解説">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+解説
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>MAC数は以下で示される。暗記しても良いが、小さい特徴マップ・カーネルを考えて見ると自然に導ける。 <span class="math inline">\(MAC=H_{out}​×W_{out}​×C_{in}​×C_{out}​×K^2\)</span></p>
+</div>
+</div>
+<p>問3. C<br>
+問4. B</p>
 </section>
 <section id="物体検出object-detection" class="level2">
 <h2 class="anchored" data-anchor-id="物体検出object-detection">2. 物体検出(Object Detection)</h2>

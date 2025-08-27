@@ -58,9 +58,39 @@ B. $α_t$は各パラメータごとに適応的に調整される学習率で�
 C. ⊙はアダマール積（要素ごとの積）を表し、各パラメータを独立して扱うために使用される  
 D. εは数値安定化項で、h_tが大きくなりすぎて学習率が極端に小さくなることを防ぐ  
 
-### 問3
 
-ドロップアウトの実装を記述した以下のコードを参照し、空欄に当てはまる選択肢をそれぞれ1つずつ選べ。ただし、実装内のtrain_flagは、訓練時にはTrue、予測時にはFalseに設定するものとし、dropout_ratioは、ニューロンを消去する割合を表すものとする。
+## 問3
+
+以下のRMSpropのプログラムで空欄（ア）に入るものを選べ。
+
+```python
+class RMSprop:
+    def __init__(self, lr=0.01, decay_rate=0.99):
+        self.lr = lr
+        self.decay_rate = decay_rate
+        self.h = None
+    
+    def update(self, params, grads):
+        if self.h is None:
+            self.h = {}
+            for key, param in params.items():
+                self.h[key] = np.zeros_like(param)
+        
+        for key in params.keys():
+            self.h[key] *= self.decay_rate
+            self.h[key] += (ア)
+            params[key] -= self.lr * grads[key] / (np.sqrt(self.h[key]) + 1e-7)
+```
+
+（ア）の選択肢  
+A. `(1 - self.decay_rate) + grads[key] * grads[key]`  
+B. `(1 - self.decay_rate) - grads[key] * grads[key]`  
+C. `(1 - self.decay_rate) * grads[key] * grads[key]`  
+D. `(1 - self.decay_rate) / (grads[key] * grads[key])`  
+
+### 問4
+
+ドロップアウトの実装を記述した以下のコードを参照し、空欄に当てはまる選択肢をそれぞれ1つずつ選べ。ただし、実装内の`train_flg`は、訓練時にはTrue、予測時にはFalseに設定するものとし、`dropout_ratio`は、ニューロンを消去する割合を表すものとする。
 
 ```python
 1  import numpy as np
@@ -82,7 +112,7 @@ D. εは数値安定化項で、h_tが大きくなりすぎて学習率が極端
 ```
 
 （ア）の選択肢  
-A. `np.random.rand(*x.shape) >`  
+A. `np.random.randn(*x.shape) >`  
 B. `np.random.rand(*x.shape) >`  
 C. `np.random.randn(*x.shape) <`  
 D. `np.random.rand(*x.shape) <`  
