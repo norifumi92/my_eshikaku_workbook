@@ -103,7 +103,7 @@ C: Selective Search
 問1. B  
 問2. C  
 問3. B  
-問2. C  
+問4. C  
 
 ## 5. Recurrent Neural Network (Recurrent Neural Network)
 問1. D  

@@ -292,14 +292,8 @@ window.Quarto = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
-   
-  <ul>
-  <li><a href="#問1" id="toc-問1" class="nav-link active" data-scroll-target="#問1">問1</a></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -323,8 +317,7 @@ window.Quarto = {
 </header>
 
 
-<section id="問1" class="level3">
-<h3 class="anchored" data-anchor-id="問1">問1</h3>
+<p><strong>問1</strong></p>
 <p>FCN（Fully Convolutional Network）は、画像のセマンティックセグメンテーションのために設計されたネットワークであり、全結合層の代わりに（あ）を用いて、入力画像と同じ空間解像度の出力を得ることが可能である。また、分類タスクで用いられる典型的なCNN（例：VGG, ResNet）をベースとして、出力特徴マップを元の画像サイズに戻すために、（い）と呼ばれる処理を用いてアップサンプリングを行う。このとき、例えばFCN-32s、FCN-16s、FCN-8sのようにダウンサンプリング段階ごとの特徴マップを結合することで、より高解像度な出力を得ることができる。これにより、粗い予測に対して（う）の情報を加えることが可能となる。 FCNの出力に対して、セマンティックセグメンテーションでは次のようなピクセル単位の損失関数が用いられる。 <span class="math display">\[
 𝐿=−∑_{𝑥∈Ω}∑_{c∈C}y_c(x)logP_c(x)
 \]</span> ここで、<span class="math inline">\(y_c(x)\)</span>は位置<span class="math inline">\(x\)</span>における正解ラベルのone-hot表現、<span class="math inline">\(P_c(x)\)</span>はクラス<span class="math inline">\(c\)</span>に属する確率であり、（え）関数により出力される。</p>
@@ -334,7 +327,6 @@ C. (あ) 畳み込み層 (い) 転置畳み込み（Transposed Conv） (う) ス
 D. (あ) 全結合層 (い) プーリング (う) 逆畳み込み (え) シグモイド</p>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
