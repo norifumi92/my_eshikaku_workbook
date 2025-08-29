@@ -17,24 +17,64 @@ D. KLダイバージェンスは対称性を持つため、$D_{KL}(P||Q) = D_{KL
 
 **問２**
 
-ある分類モデルの性能を評価するため、検証データに対して予測を行った。  
-その結果、下表の混同行列を得た。  
+次の文章を読み、空欄に最もよく当てはまる選択肢をそれぞれ1つずつ選べ。  
 
-|               | 予測 Positive | 予測 Negative |
-|---------------|---------------|---------------|
-| 実際 Positive | 30            | 20            |
-| 実際 Negative | 10             | 40            |  
+平均が $\mu$、分散が1の一変量正規分布の確率密度関数は、
+
+$$
+f(x; \mu) = \frac{1}{\sqrt{2\pi}} \exp \left( -\frac{1}{2} (x - \mu)^2 \right)
+$$
+
+によって与えられる。
+
+このとき、実数値データの集合が $D = \{x_1, x_2, \ldots, x_n\}$ によって与えられる。  
+データが平均 $\mu$、分散1の一変量正規分布に独立に従うとして、最大推定法によってパラメータを求める。  
+
+尤度関数 $L(\mu) = (A)$ であることから、パラメータ$\mu$は$(B)$の最小化問題を解くことによって推定が可能である。  
+したがって、パラメータの最尤推定量は $\hat{\mu} = (C)$である。  
+
+I: (A)の選択肢
+
+A. $\sum_{i=1}^n f(x_i;\mu)$  
+B. $\sum_{i=1}^n \log f(x_i;\mu)$  
+C. $\prod_{i=1}^n f(x_i;\mu)$  
+D. $\prod_{i=1}^n \log f(x_i;\mu)$  
+
+II: (B)の選択肢
+
+A. $\frac{1}{2} \sum_{i=1}^n (x_i - \mu)^2$  
+B. $-\frac{1}{2} \sum_{i=1}^n (x_i - \mu)^2$  
+C. $\prod_{i=1}^n (x_i - \mu)^2$  
+D. $-\frac{1}{2} \prod_{i=1}^n (x_i - \mu)^2$  
+
+III: (C)の選択肢
+
+A. $\sum_{i=1}^n x_i$  
+B. $\frac{1}{n} \sum_{i=1}^n x_i$  
+C. $\prod_{i=1}^n x_i$  
+D. $\left(\prod_{i=1}^n x_i \right)^{1/n}$  
 
 
-I: (ア) 正解率 (Accuracy)、(イ) 適合率 (Precision)、(ウ) 再現率 (Recall)をそれぞれ次の選択肢から選べ。  
+**問３**
 
-A. 0.8  
-B. 0.75  
-C. 0.7  
-D. 0.6  
+以下の MAP に関する説明について、空欄 （ア）、（イ）に埋まる言葉として正しいものを選べ。
   
-II: F1値として最も近い値を次の選択肢から選べ。  
-A. 0.90  
-B. 0.67  
-C. 0.33  
-D. 1.35  
+MAP推定は Maximum A Posteriori Estimation の略語であり、MLE（Maximum Likelihood Estimation）と比べて、（ア）という特徴がある。  
+MAPによって得られるパラメータを $\theta_{\mathrm{MAP}}$ とすると、$\theta_{\mathrm{MAP}}$ は以下の式によって与えられる。  
+$$
+\theta_{\mathrm{MAP}} = \arg\max_{\theta}\, P(\theta \mid X) \;=\; \text{（イ）}
+$$
+
+I:（ア）に入るものを選べ。  
+
+A. MLEは事前分布を考慮しないが、MAPは事前分布を考慮する  
+B. MLEは事後分布を最大化するが、MAPは尤度を最大化する  
+C. MLEとMAPは常に同じ解を与える  
+D. MAPは損失関数として必ず平均二乗誤差を用いる  
+
+II:（イ）に入るものを選べ。  
+
+A. $\arg\max_{\theta}\, P(X \mid \theta)$  
+B. $\arg\max_{\theta} \, \dfrac{P(\theta)}{P(X)}$  
+C. $\arg\max_{\theta} \, P(X \mid \theta)\, P(\theta)$  
+D. $\arg\max_{\theta} \, \log P(X)$  

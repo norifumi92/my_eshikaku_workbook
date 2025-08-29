@@ -7,7 +7,6 @@ book:
   author: "IRIE NORIFUMI"
   chapters:
     - index.qmd
-    - intro.qmd
     # - summary.qmd
     - part: "1.数学的学習(Math Basics)"
       chapters:

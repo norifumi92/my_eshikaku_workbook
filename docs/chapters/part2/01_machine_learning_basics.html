@@ -70,35 +70,6 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 </head>
 
@@ -140,11 +111,6 @@ window.Quarto = {
   <div class="sidebar-item-container"> 
   <a href="../../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">前書き</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../intro.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">目次</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
@@ -190,12 +156,12 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../chapters/part3/01_feedforward_neural_network.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">1. 順伝播型ネットワーク (Feedforward Neural Network)</span></a>
+  <a href="../../chapters/part3/01_feedforward_neural_network.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">３-１. 順伝播型ネットワーク (Feedforward Neural Network)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../chapters/part3/02_optimization.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">2. 深層学習のための最適化 (Optimization)</span></a>
+  <a href="../../chapters/part3/02_optimization.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">３-２. 深層学習のための最適化 (Optimization)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -221,7 +187,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../chapters/part4/02_object_detection.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">2. 物体検出(Object Detection)</span></a>
+  <a href="../../chapters/part4/02_object_detection.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">４-２. 物体検出(Object Detection)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -246,7 +212,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../chapters/part4/07_reinforcement_learning.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">7. 深層強化学習 (Reinforcement Learning)</span></a>
+  <a href="../../chapters/part4/07_reinforcement_learning.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">４-７. 深層強化学習 (Reinforcement Learning)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -318,22 +284,46 @@ window.Quarto = {
 
 
 <p><strong>問１</strong></p>
-<p>以下の MAP に関する説明について、空欄 （ア）、（イ）に埋まる言葉として正しいものを選べ。</p>
-<p>MAP推定は Maximum A Posteriori Estimation の略語であり、MLE（Maximum Likelihood Estimation）と比べて、（ア）という特徴がある。<br>
-MAPによって得られるパラメータを <span class="math inline">\(\theta_{\mathrm{MAP}}\)</span> とすると、<span class="math inline">\(\theta_{\mathrm{MAP}}\)</span> は以下の式によって与えられる。<br>
-<span class="math display">\[
-\theta_{\mathrm{MAP}} = \arg\max_{\theta}\, P(\theta \mid X) \;=\; \text{（イ）}
-\]</span></p>
-<p>I:（ア）に入るものを選べ。</p>
-<p>A. MLEは事前分布を考慮しないが、MAPは事前分布を考慮する<br>
-B. MLEは事後分布を最大化するが、MAPは尤度を最大化する<br>
-C. MLEとMAPは常に同じ解を与える<br>
-D. MAPは損失関数として必ず平均二乗誤差を用いる</p>
-<p>II:（イ）に入るものを選べ。</p>
-<p>A. <span class="math inline">\(\arg\max_{\theta}\, P(X \mid \theta)\)</span><br>
-B. <span class="math inline">\(\arg\max_{\theta} \, \dfrac{P(\theta)}{P(X)}\)</span><br>
-C. <span class="math inline">\(\arg\max_{\theta} \, P(X \mid \theta)\, P(\theta)\)</span><br>
-D. <span class="math inline">\(\arg\max_{\theta} \, \log P(X)\)</span></p>
+<p>ある分類モデルの性能を評価するため、検証データに対して予測を行った。<br>
+その結果、下表の混同行列を得た。</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th></th>
+<th>予測 Positive</th>
+<th>予測 Negative</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>実際 Positive</td>
+<td>30</td>
+<td>20</td>
+</tr>
+<tr class="even">
+<td>実際 Negative</td>
+<td>10</td>
+<td>40</td>
+</tr>
+</tbody>
+</table>
+<p>I: (ア) 正解率 (Accuracy)、(イ) 適合率 (Precision)、(ウ) 再現率 (Recall)をそれぞれ次の選択肢から選べ。</p>
+<p>A. 0.8<br>
+B. 0.75<br>
+C. 0.7<br>
+D. 0.6</p>
+<p>II: F1値として最も近い値を次の選択肢から選べ。<br>
+A. 0.90<br>
+B. 0.67<br>
+C. 0.33<br>
+D. 1.35</p>
+<p><strong>問２</strong></p>
+<p>ROC曲線とAUCに関する次の記述について、正しいものをすべて選べ。</p>
+<p>A. ROC曲線の横軸は真陽性率（TPR）、縦軸は偽陽性率（FPR）である。<br>
+B. AUCの値が0.5であれば、分類器はランダム予測と同程度の性能であるとみなされる。<br>
+C. ROC曲線は、分類器の閾値を変化させることで得られる一連の点を結んだものである。<br>
+D. AUCが1.0の場合、その分類器は全ての正例と負例を完全に区別できる。<br>
+E. AUC の値は常に0.5以上であり、0.5未満になることはない。</p>
 
 
 
@@ -744,8 +734,8 @@ D. <span class="math inline">\(\arg\max_{\theta} \, \log P(X)\)</span></p>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../chapters/part3/01_feedforward_neural_network.html" class="pagination-link" aria-label="1. 順伝播型ネットワーク (Feedforward Neural Network)">
-        <span class="nav-page-text"><span class="chapter-title">1. 順伝播型ネットワーク (Feedforward Neural Network)</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../chapters/part3/01_feedforward_neural_network.html" class="pagination-link" aria-label="３-１. 順伝播型ネットワーク (Feedforward Neural Network)">
+        <span class="nav-page-text"><span class="chapter-title">３-１. 順伝播型ネットワーク (Feedforward Neural Network)</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

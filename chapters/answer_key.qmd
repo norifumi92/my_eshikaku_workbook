@@ -1,22 +1,25 @@
 # 解答一覧
 
-# 第1章.数学的学習(Mach Basics)
-## 1. 確率・統計 (Statistics)
+## 第1章.数学的学習(Math Basics)
+### 1-1. 確率・統計 (Statistics)
 問1. D  
-問2-I. 
+問2-I. C  
+問2-II. A  
+問2-III. B  
+問3-I. A  
+問3-II. C  
+
+## 第2章.機械学習(Machine Learning)
+### 2-1. 機械学習の基礎(Machine Learning Basics)
+問1-I. 
 (あ):C  
 (い):B  
 (う):D  
-問2-II. 
-B  
+問1-II. B  
+問2. B,C,D
 
-# 第2章.機械学習(Machine Learning)
-## 1. 機械学習の基礎(Machine Learning Basics)
-問1-I. A  
-問1-II. C  
-
-# 第3章.深層学習基礎(Basic Deep-learning)
-## 1. 順伝播型ネットワーク (Feedforward Neural Network)
+## 第3章.深層学習基礎(Basic Deep-learning)
+### 3-1. 順伝播型ネットワーク (Feedforward Neural Network)
 問1. C  
 問2. A  
 問3. D  
@@ -62,8 +65,19 @@ $$
 ちなみに、(D)のTransformerのMulti-Head Attentionのスコアにはソフトマックスが使われる。
 :::
 
-## 2. 深層学習のための最適化 (Optimization)
-問1. I: B II: A  
+### 3-2. 深層学習のための最適化 (Optimization)
+
+問1-I. B  
+
+::: {.callout-note title="解説"}
+Softmax の出力$\hat{y}_i$の逆伝播で入力ロジット$z_j$で微分した結果は以下のようになる。
+$$
+\frac{\partial \hat{y}_i}{\partial z_j} = \hat{y}_i \, (\delta_{ij} - \hat{y}_j)
+$$
+これは商の公式を使って導出してもいいが、試験直前であれば暗記しておいた方が時間短縮できる。
+:::
+
+問1-II. A  
 問2. D  
 
 ::: {.callout-note title="解説"}

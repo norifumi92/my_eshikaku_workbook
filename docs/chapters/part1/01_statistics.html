@@ -31,7 +31,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
 <link href="../../chapters/part2/01_machine_learning_basics.html" rel="next">
-<link href="../../intro.html" rel="prev">
+<link href="../../index.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
@@ -142,11 +142,6 @@ window.Quarto = {
  <span class="menu-text">前書き</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../intro.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">目次</span></a>
-  </div>
-</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
@@ -174,7 +169,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../chapters/part2/01_machine_learning_basics.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">1. 機械学習の基礎(Machine Learning Basics)</span></a>
+  <a href="../../chapters/part2/01_machine_learning_basics.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">２-１. 機械学習の基礎(Machine Learning Basics)</span></a>
   </div>
 </li>
       </ul>
@@ -190,12 +185,12 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../chapters/part3/01_feedforward_neural_network.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">1. 順伝播型ネットワーク (Feedforward Neural Network)</span></a>
+  <a href="../../chapters/part3/01_feedforward_neural_network.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">３-１. 順伝播型ネットワーク (Feedforward Neural Network)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../chapters/part3/02_optimization.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">2. 深層学習のための最適化 (Optimization)</span></a>
+  <a href="../../chapters/part3/02_optimization.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">３-２. 深層学習のための最適化 (Optimization)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -221,7 +216,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../chapters/part4/02_object_detection.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">2. 物体検出(Object Detection)</span></a>
+  <a href="../../chapters/part4/02_object_detection.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">４-２. 物体検出(Object Detection)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -246,7 +241,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../chapters/part4/07_reinforcement_learning.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">7. 深層強化学習 (Reinforcement Learning)</span></a>
+  <a href="../../chapters/part4/07_reinforcement_learning.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">４-７. 深層強化学習 (Reinforcement Learning)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -328,39 +323,48 @@ B. 真の分布PのエントロピーH(P)は固定値なので、交差エント
 C. KLダイバージェンスは常に非負の値を取り、P=Qの時に最小値0となる。<br>
 D. KLダイバージェンスは対称性を持つため、<span class="math inline">\(D_{KL}(P||Q) = D_{KL}(Q||P)\)</span> が常に成立する。</p>
 <p><strong>問２</strong></p>
-<p>ある分類モデルの性能を評価するため、検証データに対して予測を行った。<br>
-その結果、下表の混同行列を得た。</p>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th></th>
-<th>予測 Positive</th>
-<th>予測 Negative</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>実際 Positive</td>
-<td>30</td>
-<td>20</td>
-</tr>
-<tr class="even">
-<td>実際 Negative</td>
-<td>10</td>
-<td>40</td>
-</tr>
-</tbody>
-</table>
-<p>I: (ア) 正解率 (Accuracy)、(イ) 適合率 (Precision)、(ウ) 再現率 (Recall)をそれぞれ次の選択肢から選べ。</p>
-<p>A. 0.8<br>
-B. 0.75<br>
-C. 0.7<br>
-D. 0.6</p>
-<p>II: F1値として最も近い値を次の選択肢から選べ。<br>
-A. 0.90<br>
-B. 0.67<br>
-C. 0.33<br>
-D. 1.35</p>
+<p>次の文章を読み、空欄に最もよく当てはまる選択肢をそれぞれ1つずつ選べ。</p>
+<p>平均が <span class="math inline">\(\mu\)</span>、分散が1の一変量正規分布の確率密度関数は、</p>
+<p><span class="math display">\[
+f(x; \mu) = \frac{1}{\sqrt{2\pi}} \exp \left( -\frac{1}{2} (x - \mu)^2 \right)
+\]</span></p>
+<p>によって与えられる。</p>
+<p>このとき、実数値データの集合が <span class="math inline">\(D = \{x_1, x_2, \ldots, x_n\}\)</span> によって与えられる。<br>
+データが平均 <span class="math inline">\(\mu\)</span>、分散1の一変量正規分布に独立に従うとして、最大推定法によってパラメータを求める。</p>
+<p>尤度関数 <span class="math inline">\(L(\mu) = (A)\)</span> であることから、パラメータ<span class="math inline">\(\mu\)</span>は<span class="math inline">\((B)\)</span>の最小化問題を解くことによって推定が可能である。<br>
+したがって、パラメータの最尤推定量は <span class="math inline">\(\hat{\mu} = (C)\)</span>である。</p>
+<p>I: (A)の選択肢</p>
+<p>A. <span class="math inline">\(\sum_{i=1}^n f(x_i;\mu)\)</span><br>
+B. <span class="math inline">\(\sum_{i=1}^n \log f(x_i;\mu)\)</span><br>
+C. <span class="math inline">\(\prod_{i=1}^n f(x_i;\mu)\)</span><br>
+D. <span class="math inline">\(\prod_{i=1}^n \log f(x_i;\mu)\)</span></p>
+<p>II: (B)の選択肢</p>
+<p>A. <span class="math inline">\(\frac{1}{2} \sum_{i=1}^n (x_i - \mu)^2\)</span><br>
+B. <span class="math inline">\(-\frac{1}{2} \sum_{i=1}^n (x_i - \mu)^2\)</span><br>
+C. <span class="math inline">\(\prod_{i=1}^n (x_i - \mu)^2\)</span><br>
+D. <span class="math inline">\(-\frac{1}{2} \prod_{i=1}^n (x_i - \mu)^2\)</span></p>
+<p>III: (C)の選択肢</p>
+<p>A. <span class="math inline">\(\sum_{i=1}^n x_i\)</span><br>
+B. <span class="math inline">\(\frac{1}{n} \sum_{i=1}^n x_i\)</span><br>
+C. <span class="math inline">\(\prod_{i=1}^n x_i\)</span><br>
+D. <span class="math inline">\(\left(\prod_{i=1}^n x_i \right)^{1/n}\)</span></p>
+<p><strong>問３</strong></p>
+<p>以下の MAP に関する説明について、空欄 （ア）、（イ）に埋まる言葉として正しいものを選べ。</p>
+<p>MAP推定は Maximum A Posteriori Estimation の略語であり、MLE（Maximum Likelihood Estimation）と比べて、（ア）という特徴がある。<br>
+MAPによって得られるパラメータを <span class="math inline">\(\theta_{\mathrm{MAP}}\)</span> とすると、<span class="math inline">\(\theta_{\mathrm{MAP}}\)</span> は以下の式によって与えられる。<br>
+<span class="math display">\[
+\theta_{\mathrm{MAP}} = \arg\max_{\theta}\, P(\theta \mid X) \;=\; \text{（イ）}
+\]</span></p>
+<p>I:（ア）に入るものを選べ。</p>
+<p>A. MLEは事前分布を考慮しないが、MAPは事前分布を考慮する<br>
+B. MLEは事後分布を最大化するが、MAPは尤度を最大化する<br>
+C. MLEとMAPは常に同じ解を与える<br>
+D. MAPは損失関数として必ず平均二乗誤差を用いる</p>
+<p>II:（イ）に入るものを選べ。</p>
+<p>A. <span class="math inline">\(\arg\max_{\theta}\, P(X \mid \theta)\)</span><br>
+B. <span class="math inline">\(\arg\max_{\theta} \, \dfrac{P(\theta)}{P(X)}\)</span><br>
+C. <span class="math inline">\(\arg\max_{\theta} \, P(X \mid \theta)\, P(\theta)\)</span><br>
+D. <span class="math inline">\(\arg\max_{\theta} \, \log P(X)\)</span></p>
 
 
 
@@ -766,13 +770,13 @@ D. 1.35</p>
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../intro.html" class="pagination-link" aria-label="目次">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">目次</span></span>
+      <a href="../../index.html" class="pagination-link" aria-label="前書き">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">前書き</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../chapters/part2/01_machine_learning_basics.html" class="pagination-link" aria-label="1. 機械学習の基礎(Machine Learning Basics)">
-        <span class="nav-page-text"><span class="chapter-title">1. 機械学習の基礎(Machine Learning Basics)</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../chapters/part2/01_machine_learning_basics.html" class="pagination-link" aria-label="２-１. 機械学習の基礎(Machine Learning Basics)">
+        <span class="nav-page-text"><span class="chapter-title">２-１. 機械学習の基礎(Machine Learning Basics)</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
