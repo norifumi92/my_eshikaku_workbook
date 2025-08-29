@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>2. 物体検出(Object Detection) – E資格 レベルアップ問題集</title>
+<title>４-２. 物体検出(Object Detection) – E資格 レベルアップ問題集</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -82,7 +82,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../chapters/part4/01_image_recognition.html">第4章.深層学習応用(Advanced Deep-learning)</a></li><li class="breadcrumb-item"><a href="../../chapters/part4/02_object_detection.html"><span class="chapter-title">2. 物体検出(Object Detection)</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../chapters/part4/01_image_recognition.html">第4章.深層学習応用(Advanced Deep-learning)</a></li><li class="breadcrumb-item"><a href="../../chapters/part4/02_object_detection.html"><span class="chapter-title">４-２. 物体検出(Object Detection)</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -121,7 +121,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
- <span class="menu-text">1.数学的学習(Mach Basics)</span></a>
+ <span class="menu-text">1.数学的学習(Math Basics)</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -129,7 +129,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../chapters/part1/01_statistics.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">1. 確率・統計 (Statistics)</span></a>
+  <a href="../../chapters/part1/01_statistics.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">１-１. 確率・統計 (Statistics)</span></a>
   </div>
 </li>
       </ul>
@@ -145,7 +145,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../chapters/part2/01_machine_learning_basics.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">1. 機械学習の基礎(Machine Learning Basics)</span></a>
+  <a href="../../chapters/part2/01_machine_learning_basics.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">２-１. 機械学習の基礎(Machine Learning Basics)</span></a>
   </div>
 </li>
       </ul>
@@ -161,7 +161,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../chapters/part3/01_feedforward_neural_network.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">1. 順伝播型ネットワーク (Feedforward Neural Network)</span></a>
+  <a href="../../chapters/part3/01_feedforward_neural_network.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">３-１. 順伝播型ネットワーク (Feedforward Neural Network)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -192,7 +192,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../chapters/part4/02_object_detection.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">2. 物体検出(Object Detection)</span></a>
+  <a href="../../chapters/part4/02_object_detection.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">４-２. 物体検出(Object Detection)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -269,9 +269,9 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../chapters/part4/01_image_recognition.html">第4章.深層学習応用(Advanced Deep-learning)</a></li><li class="breadcrumb-item"><a href="../../chapters/part4/02_object_detection.html"><span class="chapter-title">2. 物体検出(Object Detection)</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../chapters/part4/01_image_recognition.html">第4章.深層学習応用(Advanced Deep-learning)</a></li><li class="breadcrumb-item"><a href="../../chapters/part4/02_object_detection.html"><span class="chapter-title">４-２. 物体検出(Object Detection)</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-title">2. 物体検出(Object Detection)</span></h1>
+<h1 class="title"><span class="chapter-title">４-２. 物体検出(Object Detection)</span></h1>
 </div>
 
 
@@ -288,15 +288,21 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p><strong>問1</strong></p>
+<p><strong>問１</strong></p>
+<p>Faster R-CNN の説明について間違っているものを一つ選べ。<br>
+A. Fast R-CNN と Faster R-CNN の違いの一つに矩形領域回帰の誤差関数が挙げられる。<br>
+B. Faster R-CNNでは提案領域に対してCNNで特徴マップを生成し、 Rol Poolingという手法で固定サイズに変形する。<br>
+C. Faster R-CNNではRegion Proposal Networkと呼ばれる NNで物体の候補領域を探しだす。<br>
+D. Faster R-CNNはend-to-end学習が可能なネットワークアーキテクチャである。</p>
+<p><strong>問２</strong></p>
 <p>以下のうち、FCOSについて誤っているものはどれか。<br>
 A. FCOSはアンカーボックスのサイズ・アスペクト比・数を事前に設定する。<br>
 B. FCOSはFeature Pyramid Network(FPN)により生成される複数のサイズの特徴マップを用いて、大小様々な物体を検出できる。<br>
 C. FCOS はバウンディングボックスの座標ではなく、各ピクセル座標においてフレームまでの距離を回帰する。<br>
 D. FCOS では対象物体の中心から離れた位置に低品質の予測バウンディングボックスが生成されるため、対策としてCenter-nessブランチが導入された。</p>
-<p><strong>問2</strong></p>
+<p><strong>問３</strong></p>
 <p>R-CNNの英語名(A)を答えよ。 また、この名称の由来となったROIに関して、ROIを見つけ出すアルゴリズムの総称(B)と、R-CNNにおけるアルゴリズムの手法(C)を答えよ。</p>
-<p><strong>問3</strong></p>
+<p><strong>問４</strong></p>
 <p>SSD（Single Shot MultiBox Detector）についての説明として正しいものはどれか。</p>
 <p>A. Single Shot は、2段階の処理（領域提案＋分類）を行うことを意味し、MultiBox は1つの特徴マップから1つのバウンディングボックスしか生成しないことを意味する。<br>
 B. Single Shot は、画像を1回の順伝播で検出することを意味し、MultiBox は複数のデフォルトボックス（異なるスケールやアスペクト比）を各位置で生成することを意味する。<br>

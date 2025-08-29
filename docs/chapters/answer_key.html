@@ -150,7 +150,7 @@ window.Quarto = {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
- <span class="menu-text">1.数学的学習(Mach Basics)</span></a>
+ <span class="menu-text">1.数学的学習(Math Basics)</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -158,7 +158,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/part1/01_statistics.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">1. 確率・統計 (Statistics)</span></a>
+  <a href="../chapters/part1/01_statistics.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">１-１. 確率・統計 (Statistics)</span></a>
   </div>
 </li>
       </ul>
@@ -174,7 +174,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/part2/01_machine_learning_basics.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">1. 機械学習の基礎(Machine Learning Basics)</span></a>
+  <a href="../chapters/part2/01_machine_learning_basics.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">２-１. 機械学習の基礎(Machine Learning Basics)</span></a>
   </div>
 </li>
       </ul>
@@ -190,7 +190,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/part3/01_feedforward_neural_network.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">1. 順伝播型ネットワーク (Feedforward Neural Network)</span></a>
+  <a href="../chapters/part3/01_feedforward_neural_network.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">３-１. 順伝播型ネットワーク (Feedforward Neural Network)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -221,7 +221,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/part4/02_object_detection.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">2. 物体検出(Object Detection)</span></a>
+  <a href="../chapters/part4/02_object_detection.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">４-２. 物体検出(Object Detection)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -356,14 +356,19 @@ window.Quarto = {
 <h1>第1章.数学的学習(Mach Basics)</h1>
 <section id="確率統計-statistics" class="level2">
 <h2 class="anchored" data-anchor-id="確率統計-statistics">1. 確率・統計 (Statistics)</h2>
-<p>問1. D</p>
+<p>問1. D<br>
+問2-I. (あ):C<br>
+(い):B<br>
+(う):D<br>
+問2-II. B</p>
 </section>
 </section>
 <section id="第2章.機械学習machine-learning" class="level1">
 <h1>第2章.機械学習(Machine Learning)</h1>
 <section id="機械学習の基礎machine-learning-basics" class="level2">
 <h2 class="anchored" data-anchor-id="機械学習の基礎machine-learning-basics">1. 機械学習の基礎(Machine Learning Basics)</h2>
-<p>問1. I: A II: C</p>
+<p>問1-I. A<br>
+問1-II. C</p>
 </section>
 </section>
 <section id="第3章.深層学習基礎basic-deep-learning" class="level1">
@@ -483,11 +488,25 @@ f(x) = 1 + e^{-x}, \quad f'(x) = - e^{-x}
 </section>
 <section id="物体検出object-detection" class="level2">
 <h2 class="anchored" data-anchor-id="物体検出object-detection">2. 物体検出(Object Detection)</h2>
-<p>問1. A<br>
-問2. A: Region-based Convolutional Neural Network<br>
+<p>問1. A</p>
+<div class="callout callout-style-default callout-note callout-titled" title="解説">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+解説
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Fast R-CNNでもFaster R-CNNでもbounding box regression の誤差関数は共通で、Huber損失関数を利用している。</p>
+</div>
+</div>
+<p>問2. A<br>
+問3. A: Region-based Convolutional Neural Network<br>
 B: Region Proposal(領域探索)<br>
 C: Selective Search<br>
-問3. B</p>
+問4. B</p>
 </section>
 <section id="semantic-segmentation-semantic-segmentation" class="level2">
 <h2 class="anchored" data-anchor-id="semantic-segmentation-semantic-segmentation">3. Semantic Segmentation (Semantic Segmentation)</h2>
@@ -525,7 +544,22 @@ GRU: リセットゲート(Reset Gate)、更新ゲート(Update Gate)</p>
 <h2 class="anchored" data-anchor-id="深層学習の説明性-explainability-of-deep-learning">9. 深層学習の説明性 (Explainability of Deep-learning)</h2>
 <p>問1. A<br>
 問2. B<br>
-問3. B</p>
+問3. B,C<br>
+問4. A</p>
+<div class="callout callout-style-default callout-note callout-titled" title="解説">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+解説
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Grad-CAM では最終畳み込み層の各特徴マップが特定のクラスの識別にとってどれほど重要であるかを評価するため、勾配を測定した後、空間的に平均するグローバル平均プーリング (Global Average Pooling; GAP)を行う。</p>
+</div>
+</div>
+<p>問5. B</p>
 </section>
 </section>
 <section id="第5章.開発運用環境infrastructure" class="level1">

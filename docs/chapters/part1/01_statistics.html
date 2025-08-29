@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>1. 確率・統計 (Statistics) – E資格 レベルアップ問題集</title>
+<title>１-１. 確率・統計 (Statistics) – E資格 レベルアップ問題集</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -111,7 +111,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../chapters/part1/01_statistics.html">1.数学的学習(Mach Basics)</a></li><li class="breadcrumb-item"><a href="../../chapters/part1/01_statistics.html"><span class="chapter-title">1. 確率・統計 (Statistics)</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../chapters/part1/01_statistics.html">1.数学的学習(Math Basics)</a></li><li class="breadcrumb-item"><a href="../../chapters/part1/01_statistics.html"><span class="chapter-title">１-１. 確率・統計 (Statistics)</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -150,7 +150,7 @@ window.Quarto = {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
- <span class="menu-text">1.数学的学習(Mach Basics)</span></a>
+ <span class="menu-text">1.数学的学習(Math Basics)</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -158,7 +158,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../chapters/part1/01_statistics.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">1. 確率・統計 (Statistics)</span></a>
+  <a href="../../chapters/part1/01_statistics.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">１-１. 確率・統計 (Statistics)</span></a>
   </div>
 </li>
       </ul>
@@ -298,9 +298,9 @@ window.Quarto = {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../chapters/part1/01_statistics.html">1.数学的学習(Mach Basics)</a></li><li class="breadcrumb-item"><a href="../../chapters/part1/01_statistics.html"><span class="chapter-title">1. 確率・統計 (Statistics)</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../chapters/part1/01_statistics.html">1.数学的学習(Math Basics)</a></li><li class="breadcrumb-item"><a href="../../chapters/part1/01_statistics.html"><span class="chapter-title">１-１. 確率・統計 (Statistics)</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-title">1. 確率・統計 (Statistics)</span></h1>
+<h1 class="title"><span class="chapter-title">１-１. 確率・統計 (Statistics)</span></h1>
 </div>
 
 
@@ -317,7 +317,7 @@ window.Quarto = {
 </header>
 
 
-<p><strong>問1</strong></p>
+<p><strong>問１</strong></p>
 <p>KLダイバージェンス <span class="math inline">\(D_{KL}(P||Q)\)</span> と交差エントロピー H(P,Q) の関係式は以下のように表される。<br>
 <span class="math display">\[
 D_{KL}(P||Q) = H(P,Q) - H(P)
@@ -327,6 +327,40 @@ D_{KL}(P||Q) = H(P,Q) - H(P)
 B. 真の分布PのエントロピーH(P)は固定値なので、交差エントロピーの最小化はKLダイバージェンスの最小化と等価である。<br>
 C. KLダイバージェンスは常に非負の値を取り、P=Qの時に最小値0となる。<br>
 D. KLダイバージェンスは対称性を持つため、<span class="math inline">\(D_{KL}(P||Q) = D_{KL}(Q||P)\)</span> が常に成立する。</p>
+<p><strong>問２</strong></p>
+<p>ある分類モデルの性能を評価するため、検証データに対して予測を行った。<br>
+その結果、下表の混同行列を得た。</p>
+<table class="caption-top table">
+<thead>
+<tr class="header">
+<th></th>
+<th>予測 Positive</th>
+<th>予測 Negative</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>実際 Positive</td>
+<td>30</td>
+<td>20</td>
+</tr>
+<tr class="even">
+<td>実際 Negative</td>
+<td>10</td>
+<td>40</td>
+</tr>
+</tbody>
+</table>
+<p>I: (ア) 正解率 (Accuracy)、(イ) 適合率 (Precision)、(ウ) 再現率 (Recall)をそれぞれ次の選択肢から選べ。</p>
+<p>A. 0.8<br>
+B. 0.75<br>
+C. 0.7<br>
+D. 0.6</p>
+<p>II: F1値として最も近い値を次の選択肢から選べ。<br>
+A. 0.90<br>
+B. 0.67<br>
+C. 0.33<br>
+D. 1.35</p>
 
 
 

@@ -28,6 +28,26 @@ D. AlexNet
 
 **問4**
 
+
+Grad-CAM (Gradient-weighted Class Activation Mapping) は、CNN の予測根拠を可視化する代表的な手法である。  
+クラス $c$ に対するスコア $y^c$ の寄与を評価するために、最終畳み込み層の特徴マップ $A^k$ に対する勾配を利用する。  
+
+各特徴マップ $A^k$ の重み $\alpha^c_k$ は次のように定義される。
+
+$$
+\alpha^c_k = \frac{1}{Z} \sum_{i,j} (あ)
+$$
+
+ここで、$A^k_{ij}$ は特徴マップの $(i,j)$ 成分、$Z$ は空間次元における総要素数である。  
+(あ) に入る最も適切な数式を選べ。  
+
+- A. $\dfrac{\partial y^c}{\partial A^k_{ij}}$  
+- B. $\mathrm{ReLU}\!\left(\dfrac{\partial y^c}{\partial A^k_{ij}}\right)$  
+- C. $\left(\dfrac{\partial y^c}{\partial A^k_{ij}}\right)^2$  
+- D. $\log\!\left(1+\dfrac{\partial y^c}{\partial A^k_{ij}}\right)$  
+
+**問5**
+
 Shapley値は協力ゲーム理論に基づき、特徴量の寄与度を計算する。
 次のうち、Shapley値の計算に必ず含まれる考え方として正しいものを選べ。
 

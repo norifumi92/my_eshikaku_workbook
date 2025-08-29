@@ -2,11 +2,18 @@
 
 # 第1章.数学的学習(Mach Basics)
 ## 1. 確率・統計 (Statistics)
-問1. D
+問1. D  
+問2-I. 
+(あ):C  
+(い):B  
+(う):D  
+問2-II. 
+B  
 
 # 第2章.機械学習(Machine Learning)
 ## 1. 機械学習の基礎(Machine Learning Basics)
-問1. I: A II: C  
+問1-I. A  
+問1-II. C  
 
 # 第3章.深層学習基礎(Basic Deep-learning)
 ## 1. 順伝播型ネットワーク (Feedforward Neural Network)
@@ -91,10 +98,16 @@ $MAC=H_{out}​×W_{out}​×C_{in}​×C_{out}​×K^2$
 
 ## 2. 物体検出(Object Detection)
 問1. A  
-問2. A: Region-based Convolutional Neural Network  
+
+::: {.callout-note title="解説"}
+Fast R-CNNでもFaster R-CNNでもbounding box regression の誤差関数は共通で、Huber損失関数を利用している。
+:::
+
+問2. A  
+問3. A: Region-based Convolutional Neural Network  
 B: Region Proposal(領域探索)  
 C: Selective Search  
-問3. B
+問4. B
 
 ## 3. Semantic Segmentation (Semantic Segmentation)
 問1. C  
@@ -126,7 +139,13 @@ C: Selective Search
 問1. A  
 問2. B  
 問3. B,C  
-問4. B  
+問4. A  
+
+::: {.callout-note title="解説"}
+Grad-CAM では最終畳み込み層の各特徴マップが特定のクラスの識別にとってどれほど重要であるかを評価するため、勾配を測定した後、空間的に平均するグローバル平均プーリング (Global Average Pooling; GAP)を行う。
+:::
+
+問5. B  
 
 # 第5章.開発・運用環境(Infrastructure)
 ## 4. アクセラレーター (Accelerator)

@@ -156,7 +156,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
- <span class="menu-text">1.数学的学習(Mach Basics)</span></a>
+ <span class="menu-text">1.数学的学習(Math Basics)</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -164,7 +164,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../chapters/part1/01_statistics.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">1. 確率・統計 (Statistics)</span></a>
+  <a href="../../chapters/part1/01_statistics.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">１-１. 確率・統計 (Statistics)</span></a>
   </div>
 </li>
       </ul>
@@ -298,15 +298,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
-   
-  <ul>
-  <li><a href="#問1" id="toc-問1" class="nav-link active" data-scroll-target="#問1">問1</a></li>
-  <li><a href="#問2" id="toc-問2" class="nav-link" data-scroll-target="#問2">問2</a></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -330,8 +323,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="問1" class="level3">
-<h3 class="anchored" data-anchor-id="問1">問1</h3>
+<p><strong>問1</strong></p>
 <p>次のプログラムはLSTMの各時刻tでの中間層計算の処理を記述したものである。 LSTMは従来のRNNに比べてゲート制御用の重みの重みやバイアスの種類が多く、似たような計算をなんども行う必要がある。計算を効率よく行うために中間層伝播、ゲート3種類を計算するために必要な、「入力」と「前時刻の中間層出力」の重み付き線形和はまとめて計算する。</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>n_input <span class="op">=</span> <span class="dv">100</span>  </span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>n_hidden <span class="op">=</span> <span class="dv">256</span></span>
@@ -352,13 +344,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 B. <code>np.random.randn(n_input * n_hidden, n_hidden * 4)</code><br>
 C. <code>np.random.randn(n_input + n_hidden, n_hidden * 3)</code><br>
 D. <code>np.random.randn(n_input + n_hidden, n_hidden * 4)</code></p>
-</section>
-<section id="問2" class="level3">
-<h3 class="anchored" data-anchor-id="問2">問2</h3>
+<p><strong>問2</strong></p>
 <p>LSTMとGRU(Gated Recurrent Unit)について、それぞれに含まれるゲートの名称を全て答えよ。</p>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

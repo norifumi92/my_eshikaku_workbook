@@ -1,6 +1,14 @@
-# 2. 物体検出(Object Detection)
+# ４-２. 物体検出(Object Detection)
 
-**問1**
+**問１**
+
+Faster R-CNN の説明について間違っているものを一つ選べ。  
+A. Fast R-CNN と Faster R-CNN の違いの一つに矩形領域回帰の誤差関数が挙げられる。  
+B. Faster R-CNNでは提案領域に対してCNNで特徴マップを生成し、 Rol Poolingという手法で固定サイズに変形する。  
+C. Faster R-CNNではRegion Proposal Networkと呼ばれる NNで物体の候補領域を探しだす。  
+D. Faster R-CNNはend-to-end学習が可能なネットワークアーキテクチャである。  
+
+**問２**
 
 以下のうち、FCOSについて誤っているものはどれか。  
 A. FCOSはアンカーボックスのサイズ・アスペクト比・数を事前に設定する。  
@@ -8,12 +16,12 @@ B. FCOSはFeature Pyramid Network(FPN)により生成される複数のサイズ
 C. FCOS はバウンディングボックスの座標ではなく、各ピクセル座標においてフレームまでの距離を回帰する。  
 D. FCOS では対象物体の中心から離れた位置に低品質の予測バウンディングボックスが生成されるため、対策としてCenter-nessブランチが導入された。  
 
-**問2**
+**問３**
 
 R-CNNの英語名(A)を答えよ。
 また、この名称の由来となったROIに関して、ROIを見つけ出すアルゴリズムの総称(B)と、R-CNNにおけるアルゴリズムの手法(C)を答えよ。
 
-**問3**
+**問４**
 
 SSD（Single Shot MultiBox Detector）についての説明として正しいものはどれか。
 

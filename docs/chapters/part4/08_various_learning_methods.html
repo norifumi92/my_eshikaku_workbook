@@ -150,7 +150,7 @@ window.Quarto = {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
- <span class="menu-text">1.数学的学習(Mach Basics)</span></a>
+ <span class="menu-text">1.数学的学習(Math Basics)</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -158,7 +158,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../chapters/part1/01_statistics.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">1. 確率・統計 (Statistics)</span></a>
+  <a href="../../chapters/part1/01_statistics.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">１-１. 確率・統計 (Statistics)</span></a>
   </div>
 </li>
       </ul>
@@ -292,15 +292,8 @@ window.Quarto = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
-   
-  <ul>
-  <li><a href="#問1" id="toc-問1" class="nav-link active" data-scroll-target="#問1">問1</a></li>
-  <li><a href="#問2" id="toc-問2" class="nav-link" data-scroll-target="#問2">問2</a></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -324,19 +317,14 @@ window.Quarto = {
 </header>
 
 
-<section id="問1" class="level3">
-<h3 class="anchored" data-anchor-id="問1">問1</h3>
-<p>深層学習技術を用いた距離学習手法としては他にも、Triplet Networkなどがある。Triplet NetworkもSiamese Networkと同様に、類似サンプル間の距離を近く・非類似サンプル間の距離を遠くするように表現学習が行われる。Siamese Network は2つのサンプルを入力としたが、Triplet Networkでは3つのサンプルをひと組の入力とする。3つのサンプルは、基準となるアンカーサンプルと、アンカーサンプルとの類似サンプル及び非類似サンプルにより構成される。アンカーサンプルと類似サンプル間の距離を<span class="math inline">\({d_p}\)</span>、アンカーサンプルと非類似サンプル間の距離を<span class="math inline">\({d_n}\)</span>、類似サンプルと非類似サンプル間のマージンをmとしたとき、最小化したい目的関数 triplet loss Lは <span class="math display">\[
-L ＝（い）
-\]</span></p>
-<p>と表される。空欄（い）に当てはまる式として正しいものを、以下の選択肢から選べ。</p>
+<p><strong>問1</strong></p>
+<p>深層学習技術を用いた距離学習手法としては他にも、Triplet Networkなどがある。Triplet NetworkもSiamese Networkと同様に、類似サンプル間の距離を近く・非類似サンプル間の距離を遠くするように表現学習が行われる。Siamese Network は2つのサンプルを入力としたが、Triplet Networkでは3つのサンプルをひと組の入力とする。3つのサンプルは、基準となるアンカーサンプルと、アンカーサンプルとの類似サンプル及び非類似サンプルにより構成される。<br>
+アンカーサンプルと類似サンプル間の距離を<span class="math inline">\({d_p}\)</span>、アンカーサンプルと非類似サンプル間の距離を<span class="math inline">\({d_n}\)</span>、類似サンプルと非類似サンプル間のマージンをmとしたとき、最小化したい目的関数 triplet loss Lの式として正しいものを、以下の選択肢から選べ。</p>
 <p>A. <span class="math inline">\({max(d_p - d_n + m, 0)}\)</span><br>
 B. <span class="math inline">\({max(d_p - d_n, m)}\)</span><br>
 C. <span class="math inline">\({max(-d_p + d_n, m)}\)</span><br>
 D. <span class="math inline">\({max(d_p - d_n - m, 0)}\)</span></p>
-</section>
-<section id="問2" class="level3">
-<h3 class="anchored" data-anchor-id="問2">問2</h3>
+<p><strong>問2</strong></p>
 <p>以下の選択肢から、距離学習に関する説明として間違っているものを選べ。</p>
 <p>A. Triplet Network では、学習時の入力ペアの選び方に、学習されたモデルの性能が依存しない。<br>
 B. Siamese Network では、類似しない2つのサンプル間の距離が全てマージンの値に収束するように学習が行われる。<br>
@@ -344,7 +332,6 @@ C. Siamese Network では2つのサンプルが同じ・違うものというコ
 D. Triplet Network では、学習データセットサイズが増えるとペアの数が爆発的に増えるという課題がある。</p>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

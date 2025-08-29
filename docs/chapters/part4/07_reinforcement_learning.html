@@ -150,7 +150,7 @@ window.Quarto = {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
- <span class="menu-text">1.数学的学習(Mach Basics)</span></a>
+ <span class="menu-text">1.数学的学習(Math Basics)</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -158,7 +158,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../chapters/part1/01_statistics.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">1. 確率・統計 (Statistics)</span></a>
+  <a href="../../chapters/part1/01_statistics.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">１-１. 確率・統計 (Statistics)</span></a>
   </div>
 </li>
       </ul>
@@ -292,16 +292,8 @@ window.Quarto = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">Table of contents</h2>
-   
-  <ul>
-  <li><a href="#問1" id="toc-問1" class="nav-link active" data-scroll-target="#問1">問1</a></li>
-  <li><a href="#問2" id="toc-問2" class="nav-link" data-scroll-target="#問2">問2</a></li>
-  <li><a href="#問3" id="toc-問3" class="nav-link" data-scroll-target="#問3">問3</a></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -325,8 +317,7 @@ window.Quarto = {
 </header>
 
 
-<section id="問1" class="level3">
-<h3 class="anchored" data-anchor-id="問1">問1</h3>
+<p><strong>問1</strong></p>
 <p>あるMDP環境で以下の条件が与えられている：</p>
 <hr>
 <p>割引率<span class="math inline">\(𝛾=0.5\)</span><br>
@@ -336,18 +327,14 @@ window.Quarto = {
 <p>このとき、次の値を求めなさい。</p>
 <p>I. <span class="math inline">\(𝑉^𝜋(𝑠_1)\)</span><br>
 II. <span class="math inline">\(𝑄^𝜋(𝑠_0,𝑎_0)\)</span></p>
-</section>
-<section id="問2" class="level3">
-<h3 class="anchored" data-anchor-id="問2">問2</h3>
+<p><strong>問2</strong></p>
 <p>DQNにおいて、Q学習の一部である「TD誤差」は以下のように定義される。 次の空欄（あ）に入る適切な語句を選べ。 <span class="math display">\[
 TD誤差 = [あ] − Q(s, a)
 \]</span> A. Q(s’, a’) の平均値<br>
 B. 実際に得られた報酬<br>
 C. <span class="math inline">\({γ * Q(s, a)}\)</span><br>
 D. <span class="math inline">\({R(s, a) + γ * maxQ(s', a')}\)</span></p>
-</section>
-<section id="問3" class="level3">
-<h3 class="anchored" data-anchor-id="問3">問3</h3>
+<p><strong>問3</strong></p>
 <p>強化学習の基本的なアルゴリズムのうちの一つとして、ベルマン方程式に従って行動価値関数<span class="math inline">\(𝑄(𝑠, 𝑎)\)</span>をモデル化する価値反復に基づく方法が挙げられる。しかしこの方法では行動𝑎が連続な値を取る場合ような場合を自然に扱えないといった欠点がある。そうした問題に対応する方法として、方策自体をパラメータ𝜃を用いて<span class="math inline">\(𝜋_𝜃(𝑎|𝑠)\)</span>のようにモデル化した方策勾配に基づくアルゴリズムが挙げられる。方策勾配に基づくアルゴリズムにおいては方策勾配の定理により目的関数<span class="math inline">\(𝐽_𝜃 = 𝑉(𝑠_0)\)</span>の𝜃に関する勾配<span class="math inline">\(∇_𝜃𝐽(𝜃)\)</span>を以下のように計算できる。 <span class="math display">\[
 ∇_𝜃𝐽(𝜃) = 𝔼_{𝜋_𝜃}[(あ)]
 \]</span></p>
@@ -358,7 +345,6 @@ C. <span class="math inline">\(\frac{∇_𝜃𝜋_𝜃(𝑎|𝑠)}{𝑄^𝜋(�
 D. <span class="math inline">\(\frac{𝑄^𝜋(𝑠,𝑎)}{∇_𝜃𝜋_𝜃(𝑎|𝑠)}\)</span></p>
 
 
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
