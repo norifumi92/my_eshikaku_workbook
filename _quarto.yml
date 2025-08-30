@@ -14,7 +14,7 @@ book:
     - part: "2.機械学習(Machine Learning)"
       chapters:
       - chapters/part2/01_machine_learning_basics.qmd
-    - part: "3.深層学習基礎(Basic Deep-learning)"
+    - part: "3.深層学習基礎(Deep-learning Basics)"
       chapters:
       - chapters/part3/01_feedforward_neural_network.qmd
       - chapters/part3/02_optimization.qmd

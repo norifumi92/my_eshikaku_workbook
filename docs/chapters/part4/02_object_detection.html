@@ -113,11 +113,6 @@ ul.task-list li input[type="checkbox"] {
  <span class="menu-text">前書き</span></a>
   </div>
 </li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../intro.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">目次</span></a>
-  </div>
-</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="true">
@@ -153,7 +148,7 @@ ul.task-list li input[type="checkbox"] {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
- <span class="menu-text">3.深層学習基礎(Basic Deep-learning)</span></a>
+ <span class="menu-text">3.深層学習基礎(Deep-learning Basics)</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
@@ -166,12 +161,12 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../chapters/part3/02_optimization.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">2. 深層学習のための最適化 (Optimization)</span></a>
+  <a href="../../chapters/part3/02_optimization.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">３-２. 深層学習のための最適化 (Optimization)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../chapters/part3/03_convolutional_neural_network.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">3. 畳み込みニューラルネットワーク (Convolutional Neural)</span></a>
+  <a href="../../chapters/part3/03_convolutional_neural_network.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">３-３. 畳み込みニューラルネットワーク (Convolutional Neural)</span></a>
   </div>
 </li>
       </ul>
@@ -187,7 +182,7 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../chapters/part4/01_image_recognition.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">1. 画像認識(Image Recognition)</span></a>
+  <a href="../../chapters/part4/01_image_recognition.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">４-１. 画像認識(Image Recognition)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -197,12 +192,12 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../chapters/part4/03_semantic_segmentation.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">3. Semantic Segmentation (Semantic Segmentation)</span></a>
+  <a href="../../chapters/part4/03_semantic_segmentation.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">４-３. Semantic Segmentation (Semantic Segmentation)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../chapters/part4/04_natural_language_processing.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">4. 自然言語処理 (Natural Language Processing)</span></a>
+  <a href="../../chapters/part4/04_natural_language_processing.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">４-４. 自然言語処理 (Natural Language Processing)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -295,14 +290,20 @@ B. Faster R-CNNでは提案領域に対してCNNで特徴マップを生成し�
 C. Faster R-CNNではRegion Proposal Networkと呼ばれる NNで物体の候補領域を探しだす。<br>
 D. Faster R-CNNはend-to-end学習が可能なネットワークアーキテクチャである。</p>
 <p><strong>問２</strong></p>
+<p>物体検出アルゴリズム YOLO と Faster R-CNN の比較に関する記述として、正しいものをすべて選べ。</p>
+<p>A. YOLO は one-stage 検出器であり、Faster R-CNN は two-stage 検出器である。<br>
+B. Faster R-CNN は領域提案を RPN によって行うため、YOLO よりも一般的に推論速度が速い。<br>
+C. YOLO はグリッドに基づいてバウンディングボックスを予測するため、小物体や密集物体の検出性能が低下する場合がある。<br>
+D. Faster R-CNN は RoI Pooling を利用して固定サイズの特徴を得るため、小物体検出にも比較的強い。</p>
+<p><strong>問３</strong></p>
 <p>以下のうち、FCOSについて誤っているものはどれか。<br>
 A. FCOSはアンカーボックスのサイズ・アスペクト比・数を事前に設定する。<br>
 B. FCOSはFeature Pyramid Network(FPN)により生成される複数のサイズの特徴マップを用いて、大小様々な物体を検出できる。<br>
 C. FCOS はバウンディングボックスの座標ではなく、各ピクセル座標においてフレームまでの距離を回帰する。<br>
 D. FCOS では対象物体の中心から離れた位置に低品質の予測バウンディングボックスが生成されるため、対策としてCenter-nessブランチが導入された。</p>
-<p><strong>問３</strong></p>
-<p>R-CNNの英語名(A)を答えよ。 また、この名称の由来となったROIに関して、ROIを見つけ出すアルゴリズムの総称(B)と、R-CNNにおけるアルゴリズムの手法(C)を答えよ。</p>
 <p><strong>問４</strong></p>
+<p>R-CNNの英語名(A)を答えよ。 また、この名称の由来となったROIに関して、ROIを見つけ出すアルゴリズムの総称(B)と、R-CNNにおけるアルゴリズムの手法(C)を答えよ。</p>
+<p><strong>問５</strong></p>
 <p>SSD（Single Shot MultiBox Detector）についての説明として正しいものはどれか。</p>
 <p>A. Single Shot は、2段階の処理（領域提案＋分類）を行うことを意味し、MultiBox は1つの特徴マップから1つのバウンディングボックスしか生成しないことを意味する。<br>
 B. Single Shot は、画像を1回の順伝播で検出することを意味し、MultiBox は複数のデフォルトボックス（異なるスケールやアスペクト比）を各位置で生成することを意味する。<br>
@@ -713,13 +714,13 @@ D. Single Shot は、YOLOと同じく一度に分類と回帰を同時に行う�
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../chapters/part4/01_image_recognition.html" class="pagination-link" aria-label="1. 画像認識(Image Recognition)">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">1. 画像認識(Image Recognition)</span></span>
+      <a href="../../chapters/part4/01_image_recognition.html" class="pagination-link" aria-label="４-１. 画像認識(Image Recognition)">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">４-１. 画像認識(Image Recognition)</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../chapters/part4/03_semantic_segmentation.html" class="pagination-link" aria-label="3. Semantic Segmentation (Semantic Segmentation)">
-        <span class="nav-page-text"><span class="chapter-title">3. Semantic Segmentation (Semantic Segmentation)</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../chapters/part4/03_semantic_segmentation.html" class="pagination-link" aria-label="４-３. Semantic Segmentation (Semantic Segmentation)">
+        <span class="nav-page-text"><span class="chapter-title">４-３. Semantic Segmentation (Semantic Segmentation)</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

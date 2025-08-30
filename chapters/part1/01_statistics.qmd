@@ -54,6 +54,7 @@ B. $\frac{1}{n} \sum_{i=1}^n x_i$
 C. $\prod_{i=1}^n x_i$  
 D. $\left(\prod_{i=1}^n x_i \right)^{1/n}$  
 
+{{< pagebreak >}}
 
 **問３**
 
