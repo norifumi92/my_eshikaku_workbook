@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>8. 様々な学習方法 (Various Learning Methods) – E資格 レベルアップ問題集</title>
+<title>４-８. 様々な学習方法 (Various Learning Methods) – E資格 レベルアップ問題集</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -111,7 +111,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../chapters/part4/01_image_recognition.html">第4章.深層学習応用(Advanced Deep-learning)</a></li><li class="breadcrumb-item"><a href="../../chapters/part4/08_various_learning_methods.html"><span class="chapter-title">8. 様々な学習方法 (Various Learning Methods)</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../chapters/part4/01_image_recognition.html">第4章.深層学習応用(Advanced Deep-learning)</a></li><li class="breadcrumb-item"><a href="../../chapters/part4/08_various_learning_methods.html"><span class="chapter-title">４-８. 様々な学習方法 (Various Learning Methods)</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -246,7 +246,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../chapters/part4/08_various_learning_methods.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">8. 様々な学習方法 (Various Learning Methods)</span></a>
+  <a href="../../chapters/part4/08_various_learning_methods.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">４-８. 様々な学習方法 (Various Learning Methods)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -293,9 +293,9 @@ window.Quarto = {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../chapters/part4/01_image_recognition.html">第4章.深層学習応用(Advanced Deep-learning)</a></li><li class="breadcrumb-item"><a href="../../chapters/part4/08_various_learning_methods.html"><span class="chapter-title">8. 様々な学習方法 (Various Learning Methods)</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../chapters/part4/01_image_recognition.html">第4章.深層学習応用(Advanced Deep-learning)</a></li><li class="breadcrumb-item"><a href="../../chapters/part4/08_various_learning_methods.html"><span class="chapter-title">４-８. 様々な学習方法 (Various Learning Methods)</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-title">8. 様々な学習方法 (Various Learning Methods)</span></h1>
+<h1 class="title"><span class="chapter-title">４-８. 様々な学習方法 (Various Learning Methods)</span></h1>
 </div>
 
 
@@ -312,14 +312,14 @@ window.Quarto = {
 </header>
 
 
-<p><strong>問1</strong></p>
+<p><strong>問１</strong></p>
 <p>深層学習技術を用いた距離学習手法としては他にも、Triplet Networkなどがある。Triplet NetworkもSiamese Networkと同様に、類似サンプル間の距離を近く・非類似サンプル間の距離を遠くするように表現学習が行われる。Siamese Network は2つのサンプルを入力としたが、Triplet Networkでは3つのサンプルをひと組の入力とする。3つのサンプルは、基準となるアンカーサンプルと、アンカーサンプルとの類似サンプル及び非類似サンプルにより構成される。<br>
 アンカーサンプルと類似サンプル間の距離を<span class="math inline">\({d_p}\)</span>、アンカーサンプルと非類似サンプル間の距離を<span class="math inline">\({d_n}\)</span>、類似サンプルと非類似サンプル間のマージンをmとしたとき、最小化したい目的関数 triplet loss Lの式として正しいものを、以下の選択肢から選べ。</p>
 <p>A. <span class="math inline">\({max(d_p - d_n + m, 0)}\)</span><br>
 B. <span class="math inline">\({max(d_p - d_n, m)}\)</span><br>
 C. <span class="math inline">\({max(-d_p + d_n, m)}\)</span><br>
 D. <span class="math inline">\({max(d_p - d_n - m, 0)}\)</span></p>
-<p><strong>問2</strong></p>
+<p><strong>問２</strong></p>
 <p>以下の選択肢から、距離学習に関する説明として間違っているものを選べ。</p>
 <p>A. Triplet Network では、学習時の入力ペアの選び方に、学習されたモデルの性能が依存しない。<br>
 B. Siamese Network では、類似しない2つのサンプル間の距離が全てマージンの値に収束するように学習が行われる。<br>

@@ -70,6 +70,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -217,7 +246,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../chapters/part4/08_various_learning_methods.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">8. 様々な学習方法 (Various Learning Methods)</span></a>
+  <a href="../../chapters/part4/08_various_learning_methods.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">４-８. 様々な学習方法 (Various Learning Methods)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -319,6 +348,25 @@ D. GPTは主にFew-shot LearningよりもFine-tuningに依存して性能を発�
 B. （あ）ソフトマックス関数、（い）シグモイド関数、（う）一様乱数<br>
 C. （あ）ReLU、（い）ソフトマックス関数、（う）語彙の出現順序<br>
 D. （あ）シグモイド関数、（い）ソフトマックス関数、（う）一様乱数</p>
+<p><strong>問６</strong></p>
+<p>Transformer の Scaled Dot-Product Attention において、QueryとKeyが以下のような場合を考える。</p>
+<p><span class="math display">\[
+Q =
+\begin{bmatrix}1 &amp; 1 &amp; 0\end{bmatrix}
+\]</span></p>
+<p><span class="math display">\[
+K =
+\begin{bmatrix}
+1 &amp; 0 &amp; 0 \\
+0 &amp; 1 &amp; 0 \\
+1 &amp; 1 &amp; 0
+\end{bmatrix}
+\]</span></p>
+<p>この時、Attentionの確率分布（1×3行列）を求めよ。 ただし、最終的にソフトマックス関数で使われるネイピア数<span class="math inline">\(e\)</span>は3で近似することにする。</p>
+<p>A. <span class="math inline">\([0.2, 0.2, 0.6]\)</span><br>
+B. <span class="math inline">\([0.6, 0.2, 0.2]\)</span><br>
+C. <span class="math inline">\([0.5, 0.5, 0.0]\)</span><br>
+D. <span class="math inline">\([0.0, 0.5, 0.5]\)</span></p>
 
 
 

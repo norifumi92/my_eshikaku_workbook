@@ -246,7 +246,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/part4/08_various_learning_methods.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">8. 様々な学習方法 (Various Learning Methods)</span></a>
+  <a href="../chapters/part4/08_various_learning_methods.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">４-８. 様々な学習方法 (Various Learning Methods)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -304,20 +304,20 @@ window.Quarto = {
   <ul class="collapse">
   <li><a href="#順伝播型ネットワーク-feedforward-neural-network" id="toc-順伝播型ネットワーク-feedforward-neural-network" class="nav-link" data-scroll-target="#順伝播型ネットワーク-feedforward-neural-network">3-1. 順伝播型ネットワーク (Feedforward Neural Network)</a></li>
   <li><a href="#深層学習のための最適化-optimization" id="toc-深層学習のための最適化-optimization" class="nav-link" data-scroll-target="#深層学習のための最適化-optimization">3-2. 深層学習のための最適化 (Optimization)</a></li>
+  <li><a href="#畳み込みニューラルネットワーク-convolutional-neural" id="toc-畳み込みニューラルネットワーク-convolutional-neural" class="nav-link" data-scroll-target="#畳み込みニューラルネットワーク-convolutional-neural">3-3. 畳み込みニューラルネットワーク (Convolutional Neural)</a></li>
   </ul></li>
-  <li><a href="#畳み込みニューラルネットワーク-convolutional-neural" id="toc-畳み込みニューラルネットワーク-convolutional-neural" class="nav-link" data-scroll-target="#畳み込みニューラルネットワーク-convolutional-neural">3. 畳み込みニューラルネットワーク (Convolutional Neural)</a></li>
   <li><a href="#第4章.深層学習応用advanced-deep-learning" id="toc-第4章.深層学習応用advanced-deep-learning" class="nav-link" data-scroll-target="#第4章.深層学習応用advanced-deep-learning">第4章.深層学習応用(Advanced Deep-learning)</a>
   <ul class="collapse">
   <li><a href="#画像認識image-recognition" id="toc-画像認識image-recognition" class="nav-link" data-scroll-target="#画像認識image-recognition">4-1. 画像認識(Image Recognition)</a></li>
   <li><a href="#物体検出object-detection" id="toc-物体検出object-detection" class="nav-link" data-scroll-target="#物体検出object-detection">4-2. 物体検出(Object Detection)</a></li>
   <li><a href="#semantic-segmentation-semantic-segmentation" id="toc-semantic-segmentation-semantic-segmentation" class="nav-link" data-scroll-target="#semantic-segmentation-semantic-segmentation">4-3. Semantic Segmentation (Semantic Segmentation)</a></li>
   <li><a href="#自然言語処理-natural-language-processing" id="toc-自然言語処理-natural-language-processing" class="nav-link" data-scroll-target="#自然言語処理-natural-language-processing">4-4. 自然言語処理 (Natural Language Processing)</a></li>
-  </ul></li>
   <li><a href="#recurrent-neural-network-recurrent-neural-network" id="toc-recurrent-neural-network-recurrent-neural-network" class="nav-link" data-scroll-target="#recurrent-neural-network-recurrent-neural-network">4-5. Recurrent Neural Network (Recurrent Neural Network)</a></li>
   <li><a href="#生成モデル-generative-model" id="toc-生成モデル-generative-model" class="nav-link" data-scroll-target="#生成モデル-generative-model">4-6. 生成モデル (Generative Model)</a></li>
   <li><a href="#深層強化学習-reinforcement-learning" id="toc-深層強化学習-reinforcement-learning" class="nav-link" data-scroll-target="#深層強化学習-reinforcement-learning">4-7. 深層強化学習 (Reinforcement Learning)</a></li>
   <li><a href="#様々な学習方法-various-learning-methods" id="toc-様々な学習方法-various-learning-methods" class="nav-link" data-scroll-target="#様々な学習方法-various-learning-methods">4-8. 様々な学習方法 (Various Learning Methods)</a></li>
   <li><a href="#深層学習の説明性-explainability" id="toc-深層学習の説明性-explainability" class="nav-link" data-scroll-target="#深層学習の説明性-explainability">4-9. 深層学習の説明性 (Explainability)</a></li>
+  </ul></li>
   <li><a href="#第5章.開発運用環境infrastructure" id="toc-第5章.開発運用環境infrastructure" class="nav-link" data-scroll-target="#第5章.開発運用環境infrastructure">第5章.開発・運用環境(Infrastructure)</a>
   <ul class="collapse">
   <li><a href="#アクセラレーター-accelerator" id="toc-アクセラレーター-accelerator" class="nav-link" data-scroll-target="#アクセラレーター-accelerator">4. アクセラレーター (Accelerator)</a></li>
@@ -491,11 +491,11 @@ f(x) = 1 + e^{-x}, \quad f'(x) = - e^{-x}
 </div>
 </div>
 </section>
-</section>
-<section id="畳み込みニューラルネットワーク-convolutional-neural" class="level2">
-<h2 class="anchored" data-anchor-id="畳み込みニューラルネットワーク-convolutional-neural">3. 畳み込みニューラルネットワーク (Convolutional Neural)</h2>
+<section id="畳み込みニューラルネットワーク-convolutional-neural" class="level3">
+<h3 class="anchored" data-anchor-id="畳み込みニューラルネットワーク-convolutional-neural">3-3. 畳み込みニューラルネットワーク (Convolutional Neural)</h3>
 <p>問1-I. B<br>
 問1-II. B</p>
+</section>
 </section>
 <section id="第4章.深層学習応用advanced-deep-learning" class="level2">
 <h2 class="anchored" data-anchor-id="第4章.深層学習応用advanced-deep-learning">第4章.深層学習応用(Advanced Deep-learning)</h2>
@@ -549,37 +549,55 @@ C: Selective Search<br>
 <section id="自然言語処理-natural-language-processing" class="level3">
 <h3 class="anchored" data-anchor-id="自然言語処理-natural-language-processing">4-4. 自然言語処理 (Natural Language Processing)</h3>
 <p>問1. A<br>
-問1. B<br>
-問2. C<br>
-問3. B<br>
-問4. A</p>
+問2. B<br>
+問3. C<br>
+問4. B<br>
+問5. A<br>
+問6. A</p>
+<div class="callout callout-style-default callout-note callout-titled" title="解説">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+解説
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>TransformerのAttentionの確率分布は以下のようにして求められる。</p>
+<p>STEP1. 内積<span class="math inline">\(𝑄K^T\)</span>を求める。<br>
+STEP2. <span class="math inline">\(d_k=3\)</span>を利用し、スケーリングする。<br>
+<span class="math display">\[
+\frac{QK^\top}{\sqrt{d_k}} = \frac{[1, 1, 2]}{\sqrt{3}} = \left[\frac{1}{\sqrt{3}}, \frac{1}{\sqrt{3}}, \frac{2}{\sqrt{3}}\right]
+\]</span> STEP3. ソフトマックスにかける。</p>
+</div>
+</div>
 </section>
-</section>
-<section id="recurrent-neural-network-recurrent-neural-network" class="level2">
-<h2 class="anchored" data-anchor-id="recurrent-neural-network-recurrent-neural-network">4-5. Recurrent Neural Network (Recurrent Neural Network)</h2>
+<section id="recurrent-neural-network-recurrent-neural-network" class="level3">
+<h3 class="anchored" data-anchor-id="recurrent-neural-network-recurrent-neural-network">4-5. Recurrent Neural Network (Recurrent Neural Network)</h3>
 <p>問1. D<br>
 問2. LSTM: 忘却ゲート(Forget Gate)、入力ゲート(Input Gate)、出力ゲート(Output Gate)、記憶セル(Memory Cell)<br>
 GRU: リセットゲート(Reset Gate)、更新ゲート(Update Gate)</p>
 </section>
-<section id="生成モデル-generative-model" class="level2">
-<h2 class="anchored" data-anchor-id="生成モデル-generative-model">4-6. 生成モデル (Generative Model)</h2>
+<section id="生成モデル-generative-model" class="level3">
+<h3 class="anchored" data-anchor-id="生成モデル-generative-model">4-6. 生成モデル (Generative Model)</h3>
 <p>問1. C<br>
 問2-I. Deep Convolutional Generative Adversarial Network<br>
 問2-II. B</p>
 </section>
-<section id="深層強化学習-reinforcement-learning" class="level2">
-<h2 class="anchored" data-anchor-id="深層強化学習-reinforcement-learning">4-7. 深層強化学習 (Reinforcement Learning)</h2>
+<section id="深層強化学習-reinforcement-learning" class="level3">
+<h3 class="anchored" data-anchor-id="深層強化学習-reinforcement-learning">4-7. 深層強化学習 (Reinforcement Learning)</h3>
 <p>問1. I: 4 II: 4<br>
 問2. D<br>
 問3. A</p>
 </section>
-<section id="様々な学習方法-various-learning-methods" class="level2">
-<h2 class="anchored" data-anchor-id="様々な学習方法-various-learning-methods">4-8. 様々な学習方法 (Various Learning Methods)</h2>
+<section id="様々な学習方法-various-learning-methods" class="level3">
+<h3 class="anchored" data-anchor-id="様々な学習方法-various-learning-methods">4-8. 様々な学習方法 (Various Learning Methods)</h3>
 <p>問1. A<br>
 問2. A</p>
 </section>
-<section id="深層学習の説明性-explainability" class="level2">
-<h2 class="anchored" data-anchor-id="深層学習の説明性-explainability">4-9. 深層学習の説明性 (Explainability)</h2>
+<section id="深層学習の説明性-explainability" class="level3">
+<h3 class="anchored" data-anchor-id="深層学習の説明性-explainability">4-9. 深層学習の説明性 (Explainability)</h3>
 <p>問1. B<br>
 問2. A<br>
 問3. B<br>
@@ -613,10 +631,11 @@ GRU: リセットゲート(Reset Gate)、更新ゲート(Update Gate)</p>
 </div>
 <p>問5. B</p>
 </section>
-<section id="第5章.開発運用環境infrastructure" class="level1">
-<h1>第5章.開発・運用環境(Infrastructure)</h1>
-<section id="アクセラレーター-accelerator" class="level2">
-<h2 class="anchored" data-anchor-id="アクセラレーター-accelerator">4. アクセラレーター (Accelerator)</h2>
+</section>
+<section id="第5章.開発運用環境infrastructure" class="level2">
+<h2 class="anchored" data-anchor-id="第5章.開発運用環境infrastructure">第5章.開発・運用環境(Infrastructure)</h2>
+<section id="アクセラレーター-accelerator" class="level3">
+<h3 class="anchored" data-anchor-id="アクセラレーター-accelerator">4. アクセラレーター (Accelerator)</h3>
 <p>問1. A</p>
 
 

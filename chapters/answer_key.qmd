@@ -104,7 +104,7 @@ AdaGrad の特徴は「勾配の二乗を累積」して、よく動くパラメ
 :::
 
 
-## 3. 畳み込みニューラルネットワーク (Convolutional Neural)
+### 3-3. 畳み込みニューラルネットワーク (Convolutional Neural)
 問1-I. B  
 問1-II. B  
 
@@ -134,38 +134,52 @@ Fast R-CNNでもFaster R-CNNでもbounding box regression の誤差関数は共�
 A: Region-based Convolutional Neural Network  
 B: Region Proposal(領域探索)  
 C: Selective Search  
-問5. B
+問5. B  
 
 ### 4-3. Semantic Segmentation (Semantic Segmentation)
 問1. C  
 
 ### 4-4. 自然言語処理 (Natural Language Processing)
 問1. A  
-問1. B  
-問2. C  
-問3. B  
-問4. A  
+問2. B  
+問3. C  
+問4. B  
+問5. A  
+問6. A  
 
-## 4-5. Recurrent Neural Network (Recurrent Neural Network)
+::: {.callout-note title="解説"}
+TransformerのAttentionの確率分布は以下のようにして求められる。  
+
+STEP1. 内積$𝑄K^T$を求める。  
+STEP2. $d_k=3$を利用し、スケーリングする。  
+$$
+\frac{QK^\top}{\sqrt{d_k}} = \frac{[1, 1, 2]}{\sqrt{3}} = \left[\frac{1}{\sqrt{3}}, \frac{1}{\sqrt{3}}, \frac{2}{\sqrt{3}}\right]
+$$
+STEP3. ソフトマックスにかける。
+:::
+
+
+
+### 4-5. Recurrent Neural Network (Recurrent Neural Network)
 問1. D  
 問2. LSTM: 忘却ゲート(Forget Gate)、入力ゲート(Input Gate)、出力ゲート(Output Gate)、記憶セル(Memory Cell)  
      GRU: リセットゲート(Reset Gate)、更新ゲート(Update Gate)
 
-## 4-6. 生成モデル (Generative Model)
+### 4-6. 生成モデル (Generative Model)
 問1. C  
 問2-I. Deep Convolutional Generative Adversarial Network  
 問2-II. B  
 
-## 4-7. 深層強化学習 (Reinforcement Learning)
+### 4-7. 深層強化学習 (Reinforcement Learning)
 問1. I: 4 II: 4  
 問2. D  
 問3. A  
 
-## 4-8. 様々な学習方法 (Various Learning Methods)
+### 4-8. 様々な学習方法 (Various Learning Methods)
 問1. A  
 問2. A  
 
-## 4-9. 深層学習の説明性 (Explainability)
+### 4-9. 深層学習の説明性 (Explainability)
 問1. B  
 問2. A  
 問3. B  
@@ -184,6 +198,6 @@ Grad-CAM では最終畳み込み層の各特徴マップが特定のクラス�
 
 問5. B  
 
-# 第5章.開発・運用環境(Infrastructure)
-## 4. アクセラレーター (Accelerator)
+## 第5章.開発・運用環境(Infrastructure)
+### 4. アクセラレーター (Accelerator)
 問1. A

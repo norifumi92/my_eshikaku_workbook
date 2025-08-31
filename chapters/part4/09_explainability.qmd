@@ -59,7 +59,7 @@ B. $\mathrm{ReLU}\!\left(\dfrac{\partial y^c}{\partial A^k_{ij}}\right)$
 C. $\left(\dfrac{\partial y^c}{\partial A^k_{ij}}\right)^2$  
 D. $\log\!\left(1+\dfrac{\partial y^c}{\partial A^k_{ij}}\right)$  
 
-**問5**
+**問６**
 
 Shapley値は協力ゲーム理論に基づき、特徴量の寄与度を計算する。
 次のうち、Shapley値の計算に必ず含まれる考え方として正しいものを選べ。
