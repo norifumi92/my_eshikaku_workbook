@@ -2,12 +2,13 @@
 
 ## 第1章.数学的学習(Math Basics)
 ### 1-1. 確率・統計 (Statistics)
-問1. D  
-問2-I. C  
-問2-II. A  
-問2-III. B  
-問3-I. A  
-問3-II. C  
+問1. C  
+問2. D  
+問3-I. C  
+問3-II. A  
+問3-III. B  
+問4-I. A  
+問4-II. C  
 
 ## 第2章.機械学習(Machine Learning)
 ### 2-1. 機械学習の基礎(Machine Learning Basics)
@@ -24,7 +25,8 @@ $$
 $$
 :::
 
-問2. B,C,D
+問2. B,C,D  
+問3. C  
 
 ## 第3章.深層学習基礎(Deep-learning Basics)
 ### 3-1. 順伝播型ネットワーク (Feedforward Neural Network)
@@ -103,7 +105,8 @@ AdaGrad の特徴は「勾配の二乗を累積」して、よく動くパラメ
 
 
 ## 3. 畳み込みニューラルネットワーク (Convolutional Neural)
-問1. I: B II: B  
+問1-I. B  
+問1-II. B  
 
 ## 第4章.深層学習応用(Advanced Deep-learning)
 ### 4-1. 画像認識(Image Recognition)
@@ -137,6 +140,7 @@ C: Selective Search
 問1. C  
 
 ### 4-4. 自然言語処理 (Natural Language Processing)
+問1. A  
 問1. B  
 問2. C  
 問3. B  
@@ -147,22 +151,31 @@ C: Selective Search
 問2. LSTM: 忘却ゲート(Forget Gate)、入力ゲート(Input Gate)、出力ゲート(Output Gate)、記憶セル(Memory Cell)  
      GRU: リセットゲート(Reset Gate)、更新ゲート(Update Gate)
 
-## 6. 生成モデル (Generative Model)
+## 4-6. 生成モデル (Generative Model)
 問1. C  
+問2-I. Deep Convolutional Generative Adversarial Network  
+問2-II. B  
 
-## 7. 深層強化学習 (Reinforcement Learning)
+## 4-7. 深層強化学習 (Reinforcement Learning)
 問1. I: 4 II: 4  
 問2. D  
 問3. A  
 
-## 8. 様々な学習方法 (Various Learning Methods)
+## 4-8. 様々な学習方法 (Various Learning Methods)
 問1. A  
 問2. A  
 
-## 9. 深層学習の説明性 (Explainability of Deep-learning)
-問1. A  
-問2. B  
-問3. B,C  
+## 4-9. 深層学習の説明性 (Explainability)
+問1. B  
+問2. A  
+問3. B  
+問4. B,C  
+
+::: {.callout-note title="解説"}
+ResNet50やGoogLeNetでは出力する際に全結合を行わず、Global Average Poolingを行う。
+これは出力前の特徴マップのそれぞれのチャネルが特定クラスの特徴を示しているということを仮定しているため。
+:::
+
 問4. A  
 
 ::: {.callout-note title="解説"}

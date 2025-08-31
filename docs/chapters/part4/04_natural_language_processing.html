@@ -202,12 +202,12 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../chapters/part4/05_recurrent_neural_network.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">5. Recurrent Neural Network (Recurrent Neural Network)</span></a>
+  <a href="../../chapters/part4/05_recurrent_neural_network.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">４-５. Recurrent Neural Network (Recurrent Neural Network)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../chapters/part4/06_generative_model.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">6. 生成モデル (Generative Model)</span></a>
+  <a href="../../chapters/part4/06_generative_model.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">４-６. 生成モデル (Generative Model)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -222,7 +222,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../chapters/part4/09_explainability.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">9. 深層学習の説明性 (Explainability of Deep-learning)</span></a>
+  <a href="../../chapters/part4/09_explainability.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">４-９. 深層学習の説明性 (Explainability)</span></a>
   </div>
 </li>
       </ul>
@@ -284,25 +284,33 @@ ul.task-list li input[type="checkbox"] {
 
 
 <p><strong>問１</strong></p>
+<p>以下のSeq2Seqの説明について、空欄（あ）～（う）に埋まる言葉として正しいものを選べ。</p>
+<p>Seq2Seqモデルは、入力系列を処理する（あ）と、出力系列を生成する（い）から構成される。<br>
+（あ）は入力文を順に処理し、系列の最後の隠れ状態を（う）として生成する。このベクトルは入力文全体の意味を表し、Decoder に渡されて出力系列を生成するための初期状態として利用される。</p>
+<p>A. （あ）Encoder、（い）Decoder、（う）コンテキストベクトル<br>
+B. （あ）Decoder、（い）Encoder、（う）Attention重み<br>
+C. （あ）Encoder、（い）Decoder、（う）単語埋め込み（Embedding）<br>
+D. （あ）Embedding、（い）Attention、（う）コンテキストベクトル</p>
+<p><strong>問２</strong></p>
 <p>以下のSeq2Seqの説明について、空欄（ア）～（ウ）に埋まる言葉として正しいものを選べ。</p>
 <p>エンコーダへの入力系列とデコーダからの出力系列は（ア）にすることができる。 最小化する対象は、（イ） で表すことができる。 文脈の長さを固定したとき、入力系列が（ウ）とエンコードの性能を担保することができない。</p>
 <p>A.（ア）異なる長さ（イ）+logP（yの系列|✕の系列）（ウ）短すぎる<br>
 B.（ア） 異なる長さ（イ）-logP（yの系列|xの系列）（ウ） 長すぎる<br>
 C.（ア）同じ重み（イ）+logP（yの系列|✕の系列）（ウ） 長すぎる<br>
 D.（ア） 同じ重み（イ）-logP（yの系列xの系列）（ウ） 短すぎる</p>
-<p><strong>問2</strong></p>
+<p><strong>問３</strong></p>
 <p>Word2Vecに関する記述として正しいものを選べ。</p>
 <p>A. CBOWは中心の単語から周囲の単語を予測するモデルである。<br>
 B. Skip-gramは周囲の単語から中心の単語を予測するモデルである。<br>
 C. ネガティブサンプリングは学習コストを削減するために導入された手法である。<br>
 D. LSIはニューラルネットワークを用いた分散表現の学習手法である。</p>
-<p><strong>問3</strong></p>
+<p><strong>問４</strong></p>
 <p>GPTに関する記述として正しいものを選べ。</p>
 <p>A. GPTは双方向の文脈を同時に考慮する。<br>
 B. GPTは自己回帰型モデルであり、次の単語を順番に予測する。<br>
 C. GPTの事前学習はMasked Language Modelingを用いる。<br>
 D. GPTは主にFew-shot LearningよりもFine-tuningに依存して性能を発揮する。</p>
-<p><strong>問4</strong></p>
+<p><strong>問５</strong></p>
 <p>Word2Vec の Skip-gram モデルにおけるネガティブサンプリングに関する説明として、以下の空欄（あ）、（い）に入る語句の組み合わせとして最も適切なものを選べ。</p>
 <p>ネガティブサンプリングでは、正例ペアと負例ペアに対して（あ）を適用し、「正例は1、負例は0」となるように学習を行う。これは従来の全語彙に対して（い）を適用するアプローチに比べ、計算速度が大幅に上昇した。<br>
 また、負例は（う）に基づいてサンプリングすることで、頻出語ばかりが選ばれるのを防ぎ、学習の安定性を高めている。</p>
@@ -721,8 +729,8 @@ D. （あ）シグモイド関数、（い）ソフトマックス関数、（�
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../chapters/part4/05_recurrent_neural_network.html" class="pagination-link" aria-label="5. Recurrent Neural Network (Recurrent Neural Network)">
-        <span class="nav-page-text"><span class="chapter-title">5. Recurrent Neural Network (Recurrent Neural Network)</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../chapters/part4/05_recurrent_neural_network.html" class="pagination-link" aria-label="４-５. Recurrent Neural Network (Recurrent Neural Network)">
+        <span class="nav-page-text"><span class="chapter-title">４-５. Recurrent Neural Network (Recurrent Neural Network)</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

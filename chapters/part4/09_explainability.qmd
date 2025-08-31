@@ -1,24 +1,38 @@
-# 9. 深層学習の説明性 (Explainability of Deep-learning)
+# ４-９. 深層学習の説明性 (Explainability)
 
-**問1**
+**問１**
+
+機械学習モデルの予測根拠を説明する手法として SHAP と LIME がある。これらの特徴について述べた次の文のうち、選択肢の中から正しいものの組み合わせを選べ。  
+
+a. SHAP はゲーム理論に基づいており、特徴量ごとの寄与度を一貫した方法で算出する。  
+b. LIME は近傍のデータに対して単純なモデル（例: 線形モデル）を学習することで、複雑なモデルの局所的な挙動を近似する。  
+c. SHAP と LIME は特定のモデル構造に依存するため、ディープラーニングや決定木のような複雑なモデルには適用できない。  
+d. SHAP と LIME は、モデルがブラックボックスであっても利用できるため、理論的にはどんなモデルにも適用可能である。  
+
+A. a, b  
+B. a, b, d  
+C. b, c, d  
+D. a, c, d  
+
+**問２**
 
 次の文章は Grad-CAM（Gradient-weighted Class Activation Mapping）の説明である。間違っているものはどれか。
 
-A. AlexNetのように最後が畳み込み層ではなく、全結合層であるCNNには適用出来ない  
-B. Grad-CAMを適用するために、アーキテクチャの変更や再トレーニングを行う必要がない  
-C. Guided Grad-CAMは、Grad-CAMとGuided Backpropagationを組み合わせたものである  
-D. CNNの最終的な畳み込み層の出力値に対する勾配を利用してカラーマップ表示するための値を求める  
+A. AlexNetのように最後が畳み込み層ではなく、全結合層であるCNNには適用出来ない。  
+B. Grad-CAMを適用するために、アーキテクチャの変更や再トレーニングを行う必要がない。  
+C. Guided Grad-CAMは、Grad-CAMとGuided Backpropagationを組み合わせたものである。  
+D. CNNの最終的な畳み込み層の出力値に対する勾配を利用してカラーマップ表示するための値を求める。  
 
-**問2**
+**問３**
 
 以下の説明のうち、正しいものを1つ選べ。
 
 A. CAMはGlobal Average Pooling層がないモデルでも、そのまま適用できる。  
 B. Grad-CAMは最後の畳み込み層の勾配情報を利用するため、Global Average Pooling層は不要である。  
-C. GoogLeNetは最後がFlatten→全結合層なので、オリジナルCAMは適用できない。  
-D. VGGは最後にGlobal Average Pooling層を持つため、オリジナルCAMをそのまま適用できる。  
+C. GoogLeNetは最後が全結合層なので、CAMは適用できない。  
+D. VGGは最後にGlobal Average Pooling層を持つため、CAMをそのまま適用できる。  
 
-**問3**
+**問４**
 
 次のうち、Class Activation Map (CAM) をそのまま適用可能なモデルを２つ選べ。  
 A. VGG16  
@@ -26,8 +40,7 @@ B. ResNet50
 C. GoogLeNet  
 D. AlexNet  
 
-**問4**
-
+**問５**
 
 Grad-CAM (Gradient-weighted Class Activation Mapping) は、CNN の予測根拠を可視化する代表的な手法である。  
 クラス $c$ に対するスコア $y^c$ の寄与を評価するために、最終畳み込み層の特徴マップ $A^k$ に対する勾配を利用する。  
@@ -41,10 +54,10 @@ $$
 ここで、$A^k_{ij}$ は特徴マップの $(i,j)$ 成分、$Z$ は空間次元における総要素数である。  
 (あ) に入る最も適切な数式を選べ。  
 
-- A. $\dfrac{\partial y^c}{\partial A^k_{ij}}$  
-- B. $\mathrm{ReLU}\!\left(\dfrac{\partial y^c}{\partial A^k_{ij}}\right)$  
-- C. $\left(\dfrac{\partial y^c}{\partial A^k_{ij}}\right)^2$  
-- D. $\log\!\left(1+\dfrac{\partial y^c}{\partial A^k_{ij}}\right)$  
+A. $\dfrac{\partial y^c}{\partial A^k_{ij}}$  
+B. $\mathrm{ReLU}\!\left(\dfrac{\partial y^c}{\partial A^k_{ij}}\right)$  
+C. $\left(\dfrac{\partial y^c}{\partial A^k_{ij}}\right)^2$  
+D. $\log\!\left(1+\dfrac{\partial y^c}{\partial A^k_{ij}}\right)$  
 
 **問5**
 

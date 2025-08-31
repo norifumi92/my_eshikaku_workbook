@@ -4,7 +4,8 @@ project:
 
 book:
   title: "E資格 レベルアップ問題集"
-  author: "IRIE NORIFUMI"
+  author: "North Pole Lab"
+  version: "1.0.0"
   chapters:
     - index.qmd
     # - summary.qmd

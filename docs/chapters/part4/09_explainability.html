@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>9. 深層学習の説明性 (Explainability of Deep-learning) – E資格 レベルアップ問題集</title>
+<title>４-９. 深層学習の説明性 (Explainability) – E資格 レベルアップ問題集</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -111,7 +111,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../chapters/part4/01_image_recognition.html">第4章.深層学習応用(Advanced Deep-learning)</a></li><li class="breadcrumb-item"><a href="../../chapters/part4/09_explainability.html"><span class="chapter-title">9. 深層学習の説明性 (Explainability of Deep-learning)</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../chapters/part4/01_image_recognition.html">第4章.深層学習応用(Advanced Deep-learning)</a></li><li class="breadcrumb-item"><a href="../../chapters/part4/09_explainability.html"><span class="chapter-title">４-９. 深層学習の説明性 (Explainability)</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -231,12 +231,12 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../chapters/part4/05_recurrent_neural_network.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">5. Recurrent Neural Network (Recurrent Neural Network)</span></a>
+  <a href="../../chapters/part4/05_recurrent_neural_network.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">４-５. Recurrent Neural Network (Recurrent Neural Network)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../chapters/part4/06_generative_model.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">6. 生成モデル (Generative Model)</span></a>
+  <a href="../../chapters/part4/06_generative_model.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">４-６. 生成モデル (Generative Model)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -251,7 +251,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../chapters/part4/09_explainability.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">9. 深層学習の説明性 (Explainability of Deep-learning)</span></a>
+  <a href="../../chapters/part4/09_explainability.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">４-９. 深層学習の説明性 (Explainability)</span></a>
   </div>
 </li>
       </ul>
@@ -293,9 +293,9 @@ window.Quarto = {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../chapters/part4/01_image_recognition.html">第4章.深層学習応用(Advanced Deep-learning)</a></li><li class="breadcrumb-item"><a href="../../chapters/part4/09_explainability.html"><span class="chapter-title">9. 深層学習の説明性 (Explainability of Deep-learning)</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../chapters/part4/01_image_recognition.html">第4章.深層学習応用(Advanced Deep-learning)</a></li><li class="breadcrumb-item"><a href="../../chapters/part4/09_explainability.html"><span class="chapter-title">４-９. 深層学習の説明性 (Explainability)</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-title">9. 深層学習の説明性 (Explainability of Deep-learning)</span></h1>
+<h1 class="title"><span class="chapter-title">４-９. 深層学習の説明性 (Explainability)</span></h1>
 </div>
 
 
@@ -312,25 +312,40 @@ window.Quarto = {
 </header>
 
 
-<p><strong>問1</strong></p>
+<p><strong>問１</strong></p>
+<p>機械学習モデルの予測根拠を説明する手法として SHAP と LIME がある。これらの特徴について述べた次の文のうち、選択肢の中から正しいものの組み合わせを選べ。</p>
+<ol type="a">
+<li>SHAP はゲーム理論に基づいており、特徴量ごとの寄与度を一貫した方法で算出する。<br>
+</li>
+<li>LIME は近傍のデータに対して単純なモデル（例: 線形モデル）を学習することで、複雑なモデルの局所的な挙動を近似する。<br>
+</li>
+<li>SHAP と LIME は特定のモデル構造に依存するため、ディープラーニングや決定木のような複雑なモデルには適用できない。<br>
+</li>
+<li>SHAP と LIME は、モデルがブラックボックスであっても利用できるため、理論的にはどんなモデルにも適用可能である。</li>
+</ol>
+<p>A. a, b<br>
+B. a, b, d<br>
+C. b, c, d<br>
+D. a, c, d</p>
+<p><strong>問２</strong></p>
 <p>次の文章は Grad-CAM（Gradient-weighted Class Activation Mapping）の説明である。間違っているものはどれか。</p>
-<p>A. AlexNetのように最後が畳み込み層ではなく、全結合層であるCNNには適用出来ない<br>
-B. Grad-CAMを適用するために、アーキテクチャの変更や再トレーニングを行う必要がない<br>
-C. Guided Grad-CAMは、Grad-CAMとGuided Backpropagationを組み合わせたものである<br>
-D. CNNの最終的な畳み込み層の出力値に対する勾配を利用してカラーマップ表示するための値を求める</p>
-<p><strong>問2</strong></p>
+<p>A. AlexNetのように最後が畳み込み層ではなく、全結合層であるCNNには適用出来ない。<br>
+B. Grad-CAMを適用するために、アーキテクチャの変更や再トレーニングを行う必要がない。<br>
+C. Guided Grad-CAMは、Grad-CAMとGuided Backpropagationを組み合わせたものである。<br>
+D. CNNの最終的な畳み込み層の出力値に対する勾配を利用してカラーマップ表示するための値を求める。</p>
+<p><strong>問３</strong></p>
 <p>以下の説明のうち、正しいものを1つ選べ。</p>
 <p>A. CAMはGlobal Average Pooling層がないモデルでも、そのまま適用できる。<br>
 B. Grad-CAMは最後の畳み込み層の勾配情報を利用するため、Global Average Pooling層は不要である。<br>
-C. GoogLeNetは最後がFlatten→全結合層なので、オリジナルCAMは適用できない。<br>
-D. VGGは最後にGlobal Average Pooling層を持つため、オリジナルCAMをそのまま適用できる。</p>
-<p><strong>問3</strong></p>
+C. GoogLeNetは最後が全結合層なので、CAMは適用できない。<br>
+D. VGGは最後にGlobal Average Pooling層を持つため、CAMをそのまま適用できる。</p>
+<p><strong>問４</strong></p>
 <p>次のうち、Class Activation Map (CAM) をそのまま適用可能なモデルを２つ選べ。<br>
 A. VGG16<br>
 B. ResNet50<br>
 C. GoogLeNet<br>
 D. AlexNet</p>
-<p><strong>問4</strong></p>
+<p><strong>問５</strong></p>
 <p>Grad-CAM (Gradient-weighted Class Activation Mapping) は、CNN の予測根拠を可視化する代表的な手法である。<br>
 クラス <span class="math inline">\(c\)</span> に対するスコア <span class="math inline">\(y^c\)</span> の寄与を評価するために、最終畳み込み層の特徴マップ <span class="math inline">\(A^k\)</span> に対する勾配を利用する。</p>
 <p>各特徴マップ <span class="math inline">\(A^k\)</span> の重み <span class="math inline">\(\alpha^c_k\)</span> は次のように定義される。</p>
@@ -339,15 +354,10 @@ D. AlexNet</p>
 \]</span></p>
 <p>ここで、<span class="math inline">\(A^k_{ij}\)</span> は特徴マップの <span class="math inline">\((i,j)\)</span> 成分、<span class="math inline">\(Z\)</span> は空間次元における総要素数である。<br>
 (あ) に入る最も適切な数式を選べ。</p>
-<ul>
-<li>A. <span class="math inline">\(\dfrac{\partial y^c}{\partial A^k_{ij}}\)</span><br>
-</li>
-<li>B. <span class="math inline">\(\mathrm{ReLU}\!\left(\dfrac{\partial y^c}{\partial A^k_{ij}}\right)\)</span><br>
-</li>
-<li>C. <span class="math inline">\(\left(\dfrac{\partial y^c}{\partial A^k_{ij}}\right)^2\)</span><br>
-</li>
-<li>D. <span class="math inline">\(\log\!\left(1+\dfrac{\partial y^c}{\partial A^k_{ij}}\right)\)</span></li>
-</ul>
+<p>A. <span class="math inline">\(\dfrac{\partial y^c}{\partial A^k_{ij}}\)</span><br>
+B. <span class="math inline">\(\mathrm{ReLU}\!\left(\dfrac{\partial y^c}{\partial A^k_{ij}}\right)\)</span><br>
+C. <span class="math inline">\(\left(\dfrac{\partial y^c}{\partial A^k_{ij}}\right)^2\)</span><br>
+D. <span class="math inline">\(\log\!\left(1+\dfrac{\partial y^c}{\partial A^k_{ij}}\right)\)</span></p>
 <p><strong>問5</strong></p>
 <p>Shapley値は協力ゲーム理論に基づき、特徴量の寄与度を計算する。 次のうち、Shapley値の計算に必ず含まれる考え方として正しいものを選べ。</p>
 <p>A. 各特徴量を1つずつ除去したモデルの予測差を合計して寄与度とする。<br>

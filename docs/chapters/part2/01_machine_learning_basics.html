@@ -70,6 +70,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -202,7 +231,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../chapters/part4/05_recurrent_neural_network.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">5. Recurrent Neural Network (Recurrent Neural Network)</span></a>
+  <a href="../../chapters/part4/05_recurrent_neural_network.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">４-５. Recurrent Neural Network (Recurrent Neural Network)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -324,6 +353,12 @@ B. AUCの値が0.5であれば、分類器はランダム予測と同程度の�
 C. ROC曲線は、分類器の閾値を変化させることで得られる一連の点を結んだものである。<br>
 D. AUCが1.0の場合、その分類器は全ての正例と負例を完全に区別できる。<br>
 E. AUC の値は常に0.5以上であり、0.5未満になることはない。</p>
+<p><strong>問３</strong></p>
+<p>RNNでは時間ごとの出力、CNNでは複数クラスの予測値と教師値の比較など、ニューラルネットワークの出力が複数存在する場合、損失関数の表現として最も適切なものを選べ。</p>
+<p>A. <span class="math inline">\(L = \prod_{t=1}^T L_t(y_t, d_t)\)</span><br>
+B. <span class="math inline">\(L = \max_{t} L_t(y_t, d_t)\)</span><br>
+C. <span class="math inline">\(L = \sum_{t=1}^T L_t(y_t, d_t) \quad \text{または} \quad L = \frac{1}{T} \sum_{t=1}^T L_t(y_t, d_t)\)</span><br>
+D. <span class="math inline">\(L = \{L_1(y_1,d_1), L_2(y_2,d_2), \ldots, L_T(y_T,d_T)\}\)</span></p>
 
 
 
