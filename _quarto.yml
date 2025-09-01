@@ -19,7 +19,8 @@ book:
       chapters:
       - chapters/part3/01_feedforward_neural_network.qmd
       - chapters/part3/02_optimization.qmd
-      - chapters/part3/03_convolutional_neural_network.qmd
+      - chapters/part3/03_regularization.qmd
+      - chapters/part3/04_convolutional_neural_network.qmd
     - part: "第4章.深層学習応用(Advanced Deep-learning)"
       chapters:
       - chapters/part4/01_image_recognition.qmd

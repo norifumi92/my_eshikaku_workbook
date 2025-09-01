@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>２-１. 機械学習の基礎(Machine Learning Basics) – E資格 レベルアップ問題集</title>
+<title>３-３. 正則化 (Regularization) – E資格 レベルアップ問題集</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../chapters/part3/01_feedforward_neural_network.html" rel="next">
-<link href="../../chapters/part1/01_statistics.html" rel="prev">
+<link href="../../chapters/part3/04_convolutional_neural_network.html" rel="next">
+<link href="../../chapters/part3/02_optimization.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
@@ -111,7 +111,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../chapters/part2/01_machine_learning_basics.html">2.機械学習(Machine Learning)</a></li><li class="breadcrumb-item"><a href="../../chapters/part2/01_machine_learning_basics.html"><span class="chapter-title">２-１. 機械学習の基礎(Machine Learning Basics)</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../chapters/part3/01_feedforward_neural_network.html">3.深層学習基礎(Deep-learning Basics)</a></li><li class="breadcrumb-item"><a href="../../chapters/part3/03_regularization.html"><span class="chapter-title">３-３. 正則化 (Regularization)</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -169,7 +169,7 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../chapters/part2/01_machine_learning_basics.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">２-１. 機械学習の基礎(Machine Learning Basics)</span></a>
+  <a href="../../chapters/part2/01_machine_learning_basics.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">２-１. 機械学習の基礎(Machine Learning Basics)</span></a>
   </div>
 </li>
       </ul>
@@ -191,6 +191,11 @@ window.Quarto = {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../chapters/part3/02_optimization.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">３-２. 深層学習のための最適化 (Optimization)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../chapters/part3/03_regularization.html" class="sidebar-item-text sidebar-link active"><span class="chapter-title">３-３. 正則化 (Regularization)</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -293,9 +298,9 @@ window.Quarto = {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../chapters/part2/01_machine_learning_basics.html">2.機械学習(Machine Learning)</a></li><li class="breadcrumb-item"><a href="../../chapters/part2/01_machine_learning_basics.html"><span class="chapter-title">２-１. 機械学習の基礎(Machine Learning Basics)</span></a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../chapters/part3/01_feedforward_neural_network.html">3.深層学習基礎(Deep-learning Basics)</a></li><li class="breadcrumb-item"><a href="../../chapters/part3/03_regularization.html"><span class="chapter-title">３-３. 正則化 (Regularization)</span></a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title"><span class="chapter-title">２-１. 機械学習の基礎(Machine Learning Basics)</span></h1>
+<h1 class="title"><span class="chapter-title">３-３. 正則化 (Regularization)</span></h1>
 </div>
 
 
@@ -313,52 +318,21 @@ window.Quarto = {
 
 
 <p><strong>問１</strong></p>
-<p>ある分類モデルの性能を評価するため、検証データに対して予測を行った。<br>
-その結果、下表の混同行列を得た。</p>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th></th>
-<th>予測 Positive</th>
-<th>予測 Negative</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>実際 Positive</td>
-<td>30</td>
-<td>20</td>
-</tr>
-<tr class="even">
-<td>実際 Negative</td>
-<td>10</td>
-<td>40</td>
-</tr>
-</tbody>
-</table>
-<p>I: (ア) 正解率 (Accuracy)、(イ) 適合率 (Precision)、(ウ) 再現率 (Recall)をそれぞれ次の選択肢から選べ。</p>
-<p>A. 0.8<br>
-B. 0.75<br>
-C. 0.7<br>
-D. 0.6</p>
-<p>II: F1値として最も近い値を次の選択肢から選べ。<br>
-A. 0.90<br>
-B. 0.67<br>
-C. 0.33<br>
-D. 1.35</p>
+<p>次のうち、ノルム (norm)の説明として最も適切なものを選びなさい。</p>
+<p>A. ベクトルや行列を任意の形に変換する線形写像のこと。<br>
+B. 損失関数に追加するペナルティ項であり、過学習を防ぐために導入される。<br>
+C. ベクトルや行列の大きさ（長さ）を測るための数学的な関数であり、非負性・斉次性・三角不等式を満たす。<br>
+D. ニューラルネットワークの重みを初期化する際に用いられる確率分布の一種。</p>
 <p><strong>問２</strong></p>
-<p>ROC曲線とAUCに関する次の記述について、正しいものをすべて選べ。</p>
-<p>A. ROC曲線の横軸は真陽性率（TPR）、縦軸は偽陽性率（FPR）である。<br>
-B. AUCの値が0.5であれば、分類器はランダム予測と同程度の性能であるとみなされる。<br>
-C. ROC曲線は、分類器の閾値を変化させることで得られる一連の点を結んだものである。<br>
-D. AUCが1.0の場合、その分類器は全ての正例と負例を完全に区別できる。<br>
-E. AUC の値は常に0.5以上であり、0.5未満になることはない。</p>
-<p><strong>問３</strong></p>
-<p>RNNでは時間ごとの出力、CNNでは複数クラスの予測値と教師値の比較など、ニューラルネットワークの出力が複数存在する場合、損失関数の表現として最も適切なものを選べ。</p>
-<p>A. <span class="math inline">\(L = \prod_{t=1}^T L_t(y_t, d_t)\)</span><br>
-B. <span class="math inline">\(L = \max_{t} L_t(y_t, d_t)\)</span><br>
-C. <span class="math inline">\(L = \sum_{t=1}^T L_t(y_t, d_t) \quad \text{または} \quad L = \frac{1}{T} \sum_{t=1}^T L_t(y_t, d_t)\)</span><br>
-D. <span class="math inline">\(L = \{L_1(y_1,d_1), L_2(y_2,d_2), \ldots, L_T(y_T,d_T)\}\)</span></p>
+<p><span class="math inline">\(M\)</span> 次元ベクトル<br>
+<span class="math display">\[
+w = (w_1, w_2, \dots, w_M)^\top
+\]</span><br>
+の <span class="math inline">\(L^p\)</span> ノルム <span class="math inline">\(\| w \|_p\)</span> の定義として 正しいものを選びなさい。</p>
+<p>A. <span class="math inline">\(\| w \|_p = \sum_{j=1}^M |w_j|^p\)</span><br>
+B. <span class="math inline">\(\| w \|_p = \left( \sum_{j=1}^M |w_j|^p \right)^{\tfrac{1}{p}}\)</span><br>
+C. <span class="math inline">\(\| w \|_p = \max_{1 \leq j \leq M} |w_j|\)</span><br>
+D. <span class="math inline">\(\| w \|_p = \left( \frac{1}{M}\sum_{j=1}^M |w_j|^p \right)^{\tfrac{1}{p}}\)</span></p>
 
 
 
@@ -764,13 +738,13 @@ D. <span class="math inline">\(L = \{L_1(y_1,d_1), L_2(y_2,d_2), \ldots, L_T(y_T
   </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../chapters/part1/01_statistics.html" class="pagination-link" aria-label="１-１. 確率・統計 (Statistics)">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">１-１. 確率・統計 (Statistics)</span></span>
+      <a href="../../chapters/part3/02_optimization.html" class="pagination-link" aria-label="３-２. 深層学習のための最適化 (Optimization)">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text"><span class="chapter-title">３-２. 深層学習のための最適化 (Optimization)</span></span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../chapters/part3/01_feedforward_neural_network.html" class="pagination-link" aria-label="３-１. 順伝播型ネットワーク (Feedforward Neural Network)">
-        <span class="nav-page-text"><span class="chapter-title">３-１. 順伝播型ネットワーク (Feedforward Neural Network)</span></span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../chapters/part3/04_convolutional_neural_network.html" class="pagination-link" aria-label="３-４. 畳み込みニューラルネットワーク (Convolutional Neural)">
+        <span class="nav-page-text"><span class="chapter-title">３-４. 畳み込みニューラルネットワーク (Convolutional Neural)</span></span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

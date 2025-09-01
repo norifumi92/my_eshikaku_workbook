@@ -195,7 +195,12 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../chapters/part3/03_convolutional_neural_network.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">３-３. 畳み込みニューラルネットワーク (Convolutional Neural)</span></a>
+  <a href="../chapters/part3/03_regularization.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">３-３. 正則化 (Regularization)</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../chapters/part3/04_convolutional_neural_network.html" class="sidebar-item-text sidebar-link"><span class="chapter-title">３-４. 畳み込みニューラルネットワーク (Convolutional Neural)</span></a>
   </div>
 </li>
       </ul>
@@ -304,7 +309,8 @@ window.Quarto = {
   <ul class="collapse">
   <li><a href="#順伝播型ネットワーク-feedforward-neural-network" id="toc-順伝播型ネットワーク-feedforward-neural-network" class="nav-link" data-scroll-target="#順伝播型ネットワーク-feedforward-neural-network">3-1. 順伝播型ネットワーク (Feedforward Neural Network)</a></li>
   <li><a href="#深層学習のための最適化-optimization" id="toc-深層学習のための最適化-optimization" class="nav-link" data-scroll-target="#深層学習のための最適化-optimization">3-2. 深層学習のための最適化 (Optimization)</a></li>
-  <li><a href="#畳み込みニューラルネットワーク-convolutional-neural" id="toc-畳み込みニューラルネットワーク-convolutional-neural" class="nav-link" data-scroll-target="#畳み込みニューラルネットワーク-convolutional-neural">3-3. 畳み込みニューラルネットワーク (Convolutional Neural)</a></li>
+  <li><a href="#正則化-regularization" id="toc-正則化-regularization" class="nav-link" data-scroll-target="#正則化-regularization">3-3. 正則化 (Regularization)</a></li>
+  <li><a href="#畳み込みニューラルネットワーク-convolutional-neural" id="toc-畳み込みニューラルネットワーク-convolutional-neural" class="nav-link" data-scroll-target="#畳み込みニューラルネットワーク-convolutional-neural">3-4. 畳み込みニューラルネットワーク (Convolutional Neural)</a></li>
   </ul></li>
   <li><a href="#第4章.深層学習応用advanced-deep-learning" id="toc-第4章.深層学習応用advanced-deep-learning" class="nav-link" data-scroll-target="#第4章.深層学習応用advanced-deep-learning">第4章.深層学習応用(Advanced Deep-learning)</a>
   <ul class="collapse">
@@ -491,10 +497,56 @@ f(x) = 1 + e^{-x}, \quad f'(x) = - e^{-x}
 </div>
 </div>
 </section>
+<section id="正則化-regularization" class="level3">
+<h3 class="anchored" data-anchor-id="正則化-regularization">3-3. 正則化 (Regularization)</h3>
+<p>問1. C</p>
+<div class="callout callout-style-default callout-note callout-titled" title="解説">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+解説
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>(B)は「正則化項」の説明。正則化項にノルムを用いることはあるが、両者は同一ではない。<br>
+<span class="math inline">\(L^p\)</span>正則化は重みの<span class="math inline">\(L^p\)</span>ノルムをp乗してハイパーパラメータ<span class="math inline">\(Λ\)</span>を掛けたものを正則化項として損失関数に加える。</p>
+</div>
+</div>
+<p>問2. B</p>
+</section>
 <section id="畳み込みニューラルネットワーク-convolutional-neural" class="level3">
-<h3 class="anchored" data-anchor-id="畳み込みニューラルネットワーク-convolutional-neural">3-3. 畳み込みニューラルネットワーク (Convolutional Neural)</h3>
+<h3 class="anchored" data-anchor-id="畳み込みニューラルネットワーク-convolutional-neural">3-4. 畳み込みニューラルネットワーク (Convolutional Neural)</h3>
 <p>問1-I. B<br>
-問1-II. B</p>
+問1-II. B<br>
+問2. D</p>
+<div class="callout callout-style-default callout-note callout-titled" title="解説">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+解説
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>各畳み込み層における受容野 (Receptive Field)の広がりは、次の式で表されます。</p>
+<p><span class="math display">\[
+R_{L} = R_{L-1} + (k_{L} - 1) \times S_{L-1}
+\]</span></p>
+<ul>
+<li><span class="math inline">\(R_{L}\)</span> ： L層目までの受容野サイズ<br>
+</li>
+<li><span class="math inline">\(k_{L}\)</span> ： L層目のカーネルサイズ<br>
+</li>
+<li><span class="math inline">\(S_{L-1}\)</span> ： それまでのストライドの積（ストライド=1なら常に1）</li>
+</ul>
+<p>初期条件：<span class="math inline">\(R_{0} = 1\)</span></p>
+<p>これにより、３X３の２層の畳み込みと５X５の１層の畳み込みは受容野が同じになる。</p>
+<p>また、(A)について、5×5が常に「より抽象的」とは限らないので注意。 むしろ 3×3 を2層重ねる方が段階的に特徴を組み合わせられるため、抽象度が高まることが多い。</p>
+</div>
+</div>
 </section>
 </section>
 <section id="第4章.深層学習応用advanced-deep-learning" class="level2">
